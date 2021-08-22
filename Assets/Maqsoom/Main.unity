@@ -291,13 +291,13 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   Blocks:
-  - {fileID: 4327843849220610932, guid: 9c2c29727cafab649b85e38ef0635c64, type: 3}
-  - {fileID: 4327843849220610932, guid: da6a7a4e52a5819429f3acf4c89f7c52, type: 3}
-  - {fileID: 4327843849220610932, guid: 0e23fab5091357c45870f36aa9cabd84, type: 3}
-  - {fileID: 4327843849220610932, guid: efd107aa50d37c5438fd7e9c7eb50c75, type: 3}
-  - {fileID: 4327843849220610932, guid: 665ad839b6179704590f1122323f56d3, type: 3}
-  - {fileID: 4327843849220610932, guid: d72d4db9e877ca84186d054d7474b5c6, type: 3}
-  - {fileID: 4327843849220610932, guid: 5c54fd3af48cc304cbd0a29748f63ccc, type: 3}
+  - {fileID: 4327843849220610932, guid: 8d8414faeb6754b4ca52256684befd62, type: 3}
+  - {fileID: 4327843849220610932, guid: 402f3bbe4a510334c9def36c564cc977, type: 3}
+  - {fileID: 4327843849220610932, guid: d2be1cd903c874649a128907c7eaaa4f, type: 3}
+  - {fileID: 4327843849220610932, guid: 6bc9f277c98d9024ba08cb3a26b57821, type: 3}
+  - {fileID: 4327843849220610932, guid: 6d1556794444c1e4abf91ea12c527842, type: 3}
+  - {fileID: 4327843849220610932, guid: 41cb8133ce06c934cae9800d7d93faa8, type: 3}
+  - {fileID: 4327843849220610932, guid: 47bf6a713c93f2148be9e5952fb6ad48, type: 3}
   secondComingBlock: 0
   thirdComingBlock: 0
   currentBlock: 0
@@ -323,6 +323,9 @@ MonoBehaviour:
   - {fileID: 4327843849220610932, guid: 665ad839b6179704590f1122323f56d3, type: 3}
   - {fileID: 4327843849220610932, guid: d72d4db9e877ca84186d054d7474b5c6, type: 3}
   - {fileID: 4327843849220610932, guid: 5c54fd3af48cc304cbd0a29748f63ccc, type: 3}
+  secondComingBlock: 0
+  thirdComingBlock: 0
+  currentBlock: 0
 --- !u!1 &256534198
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,9 +527,20 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs:
-  - {fileID: 4327843849220610932, guid: a3a358dfa15066043b66dab37267f805, type: 3}
+  - {fileID: 4327843849220610932, guid: 8d8414faeb6754b4ca52256684befd62, type: 3}
+  - {fileID: 4327843849220610932, guid: 402f3bbe4a510334c9def36c564cc977, type: 3}
+  - {fileID: 4327843849220610932, guid: d2be1cd903c874649a128907c7eaaa4f, type: 3}
+  - {fileID: 4327843849220610932, guid: 6bc9f277c98d9024ba08cb3a26b57821, type: 3}
+  - {fileID: 4327843849220610932, guid: 6d1556794444c1e4abf91ea12c527842, type: 3}
+  - {fileID: 4327843849220610932, guid: 41cb8133ce06c934cae9800d7d93faa8, type: 3}
+  - {fileID: 4327843849220610932, guid: 47bf6a713c93f2148be9e5952fb6ad48, type: 3}
   - {fileID: 4327843849220610932, guid: 9c2c29727cafab649b85e38ef0635c64, type: 3}
   - {fileID: 4327843849220610932, guid: da6a7a4e52a5819429f3acf4c89f7c52, type: 3}
+  - {fileID: 4327843849220610932, guid: 0e23fab5091357c45870f36aa9cabd84, type: 3}
+  - {fileID: 4327843849220610932, guid: efd107aa50d37c5438fd7e9c7eb50c75, type: 3}
+  - {fileID: 4327843849220610932, guid: 665ad839b6179704590f1122323f56d3, type: 3}
+  - {fileID: 4327843849220610932, guid: d72d4db9e877ca84186d054d7474b5c6, type: 3}
+  - {fileID: 4327843849220610932, guid: 5c54fd3af48cc304cbd0a29748f63ccc, type: 3}
 --- !u!4 &416375274
 Transform:
   m_ObjectHideFlags: 0
@@ -1426,13 +1440,13 @@ MonoBehaviour:
   secondComingBlock: {fileID: 1006408201}
   thirdComingBlock: {fileID: 1261877603}
   blockSprites:
+  - {fileID: 21300000, guid: e6f73f9d1aae8e74695fdc7055415f6c, type: 3}
+  - {fileID: 21300000, guid: c3475c89cbbf010418176b119ca3155d, type: 3}
   - {fileID: 21300000, guid: 84d184d72b274d14cbf3207b652fff02, type: 3}
-  - {fileID: 21300000, guid: 78bf346d318490748baf32543d2e43dc, type: 3}
+  - {fileID: 21300000, guid: b8ef6a05e0341cb4e8ff2894baa0cb3c, type: 3}
   - {fileID: 21300000, guid: 7b4cfc2f7a0c0e54f861103cceeabe08, type: 3}
   - {fileID: 21300000, guid: e920eb071de74714684c2bc0fb4abfb4, type: 3}
-  - {fileID: 21300000, guid: c3475c89cbbf010418176b119ca3155d, type: 3}
-  - {fileID: 21300000, guid: e6f73f9d1aae8e74695fdc7055415f6c, type: 3}
-  - {fileID: 21300000, guid: b8ef6a05e0341cb4e8ff2894baa0cb3c, type: 3}
+  - {fileID: 21300000, guid: 78bf346d318490748baf32543d2e43dc, type: 3}
 --- !u!1 &1795916705
 GameObject:
   m_ObjectHideFlags: 0

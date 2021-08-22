@@ -3,16 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class net_BlockSpawner2 : NetworkBehaviour
+public class net_BlockSpawner : NetworkBehaviour
 {
     public GameObject[] Blocks;
 
-    public static net_BlockSpawner2 blockSpawner2;
+    public static net_BlockSpawner blockSpawner;
+
+    [SyncVar]
+    public int secondComingBlock;
+    [SyncVar]
+    public int thirdComingBlock;
+    [SyncVar]
+    public int currentBlock;
 
     // Start is called before the first frame update
     void Start()
     {
-        blockSpawner2 = this;
+        blockSpawner = this;
+
+        if (isServer) 
+        {
+            currentBlock = Random.Range(0, Blocks.Length);
+            secondComingBlock = Random.Range(0, Blocks.Length);
+        }
     }
 
     // Update is called once per frame
@@ -22,14 +35,18 @@ public class net_BlockSpawner2 : NetworkBehaviour
     }
 
     public void NewBlock(uint netId) 
-    { 
+    {
         CmdNewBlock(netId);
     }
 
     [Command(requiresAuthority = false)]
     void CmdNewBlock(uint netId) 
     {
-        GameObject a = Instantiate(Blocks[Random.Range(0, Blocks.Length)], transform.position, Quaternion.identity);
+        currentBlock = secondComingBlock;
+        secondComingBlock = thirdComingBlock;
+        thirdComingBlock = Random.Range(0, Blocks.Length);
+
+        GameObject a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
         NetworkIdentity netIdentity = NetworkIdentity.spawned[netId];
         NetworkServer.Spawn(a, netIdentity.connectionToClient);
     }

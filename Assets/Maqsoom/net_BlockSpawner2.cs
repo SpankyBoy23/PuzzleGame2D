@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class net_BlockSpawner : NetworkBehaviour
+public class net_BlockSpawner2 : NetworkBehaviour
 {
     public GameObject[] Blocks;
-
-    public static net_BlockSpawner blockSpawner;
+    
+    public static net_BlockSpawner2 blockSpawner2;
 
     [SyncVar]
     public int secondComingBlock;
@@ -19,9 +19,9 @@ public class net_BlockSpawner : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blockSpawner = this;
+        blockSpawner2 = this;
 
-        if (isServer) 
+        if (isServer)
         {
             currentBlock = Random.Range(0, Blocks.Length);
             secondComingBlock = Random.Range(0, Blocks.Length);
@@ -34,13 +34,13 @@ public class net_BlockSpawner : NetworkBehaviour
         
     }
 
-    public void NewBlock(uint netId) 
+    public void NewBlock(uint netId)
     {
         CmdNewBlock(netId);
     }
 
     [Command(requiresAuthority = false)]
-    void CmdNewBlock(uint netId) 
+    void CmdNewBlock(uint netId)
     {
         currentBlock = secondComingBlock;
         secondComingBlock = thirdComingBlock;
