@@ -9,23 +9,16 @@ public class net_BlockSpawner2 : NetworkBehaviour
     
     public static net_BlockSpawner2 blockSpawner2;
 
-    [SyncVar]
     public int secondComingBlock;
-    [SyncVar]
     public int thirdComingBlock;
-    [SyncVar]
     public int currentBlock;
+
+    public bool first;
 
     // Start is called before the first frame update
     void Start()
     {
         blockSpawner2 = this;
-
-        if (isServer)
-        {
-            currentBlock = Random.Range(0, Blocks.Length);
-            secondComingBlock = Random.Range(0, Blocks.Length);
-        }
     }
 
     // Update is called once per frame
@@ -34,19 +27,15 @@ public class net_BlockSpawner2 : NetworkBehaviour
         
     }
 
-    public void NewBlock(uint netId)
+    public void NewBlock(uint netId, int currentBlockId)
     {
-        CmdNewBlock(netId);
+        CmdNewBlock(netId, currentBlockId);
     }
 
     [Command(requiresAuthority = false)]
-    void CmdNewBlock(uint netId)
+    void CmdNewBlock(uint netId, int currentBlockId)
     {
-        currentBlock = secondComingBlock;
-        secondComingBlock = thirdComingBlock;
-        thirdComingBlock = Random.Range(0, Blocks.Length);
-
-        GameObject a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
+        GameObject a = Instantiate(Blocks[currentBlockId], transform.position, Quaternion.identity);
         NetworkIdentity netIdentity = NetworkIdentity.spawned[netId];
         NetworkServer.Spawn(a, netIdentity.connectionToClient);
     }

@@ -44,11 +44,11 @@ public class GameManager : NetworkBehaviour
                 Player[] players = (Player[])FindObjectsOfType(typeof(Player));
               
 
-                if(players[0].isReady == true && players[1].isReady == true) 
+                /*if(players[0].isReady == true && players[1].isReady == true) 
                 {
                     currentGameState = GameState.Starting;
                     RpcStartMatch();
-                }
+                }*/
             }
         }
         else

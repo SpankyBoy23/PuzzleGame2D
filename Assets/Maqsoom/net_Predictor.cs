@@ -14,6 +14,7 @@ public class net_Predictor : MonoBehaviour
     void LateUpdate()
     {
         if (GameManager.singleton == null) return;
+        if (GameManager.singleton.firstPlayer == null) return;
 
         if (GameManager.singleton.firstPlayer.netId == NetworkClient.localPlayer.GetComponent<Player>().netId)
         {
