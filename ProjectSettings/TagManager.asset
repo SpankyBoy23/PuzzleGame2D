@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Block
+  - Dark
+  - Blue
+  - Green
+  - Grey
+  - Purple
+  - Red
+  - Yellow
+  - PowerWhite
+  - PowerYellow
+  - PowerGreen
+  - PowerRed
+  - PowerBlue
+  - PowerPurple
+  - Missile
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Board#1
+  - Board#2
+  - Blocks
+  - Character
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Boards
+    uniqueID: 2830349381
+    locked: 0
+  - name: Particles
+    uniqueID: 2373417069
+    locked: 0
+  - name: Blocks
+    uniqueID: 402385987
+    locked: 0
+  - name: Characters
+    uniqueID: 1339748001
+    locked: 0
