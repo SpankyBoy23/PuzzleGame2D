@@ -25,13 +25,19 @@ public class Player : NetworkBehaviour
         {
             RpcSetup(GameManager.singleton.firstPlayer.netId);
         }
-        NewBlock();
     }
 
     [ClientRpc]
     void RpcSetup(uint netId) 
     {
-        if (isClient && isServer) return;
+        if (isClient && isServer)
+        {
+            if (hasAuthority) 
+            {
+                NewBlock();
+                return;
+            }
+        }
 
         GameManager.singleton.firstPlayer = NetworkIdentity.spawned[netId].GetComponent<Player>();
         Debug.Log("workingrpcsetup-1");
@@ -48,6 +54,8 @@ public class Player : NetworkBehaviour
 
                 localCam.transform.position = nonLocalCam.transform.position;
                 nonLocalCam.transform.position = localCamPosition;
+
+                NewBlock();
             }
         }
     }
@@ -70,8 +78,11 @@ public class Player : NetworkBehaviour
             {
                 net_BlockSpawner.blockSpawner.currentBlock = Random.Range(0, 7);
                 net_BlockSpawner.blockSpawner.secondComingBlock = Random.Range(0, 7);
+                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 7);
 
                 net_BlockSpawner.blockSpawner.NewBlock(netId , net_BlockSpawner.blockSpawner.currentBlock);
+
+                net_Predictor.predictor.start = true;
                 net_BlockSpawner.blockSpawner.first = true;
             }
             else 
@@ -89,8 +100,10 @@ public class Player : NetworkBehaviour
             {
                 net_BlockSpawner2.blockSpawner2.currentBlock = Random.Range(0, 7);
                 net_BlockSpawner2.blockSpawner2.secondComingBlock = Random.Range(0, 7);
+                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 7);
 
                 net_BlockSpawner2.blockSpawner2.NewBlock(netId, net_BlockSpawner2.blockSpawner2.currentBlock);
+                net_Predictor.predictor.start = true;
                 net_BlockSpawner2.blockSpawner2.first = true;
             }
             else

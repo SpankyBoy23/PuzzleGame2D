@@ -11,10 +11,18 @@ public class net_Predictor : MonoBehaviour
 
     public Sprite[] blockSprites;
 
-    void LateUpdate()
+    public static net_Predictor predictor;
+
+    public bool start;
+
+    void Start()
     {
-        if (GameManager.singleton == null) return;
-        if (GameManager.singleton.firstPlayer == null) return;
+        predictor = this;
+    }
+
+    void Update()
+    {
+        if (start == false) return;
 
         if (GameManager.singleton.firstPlayer.netId == NetworkClient.localPlayer.GetComponent<Player>().netId)
         {
