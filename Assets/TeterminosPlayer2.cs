@@ -14,11 +14,15 @@ public class TeterminosPlayer2 : MonoBehaviour
     float previousTime;
     private float fallTime = 0.8f;
     bool moveable = true;
+    bool canSpawn = true;
 
     public static Transform[,] grid2 = new Transform[width, height];
+    public bool test;
 
     void Update()
     {
+        int roundedX2 = Mathf.RoundToInt(transform.position.x);
+        int roundedY2 = Mathf.RoundToInt(transform.position.y);
         if (moveable)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -43,7 +47,14 @@ public class TeterminosPlayer2 : MonoBehaviour
                 transform.position += new Vector3(0, -1, 0);
                 if (!ValidMove())
                 {
-
+                    if (grid2[roundedX2, 11] != null)
+                    {
+                        Debug.Log("You Lost!");
+                        Time.timeScale = 0;
+                        FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
+                        canSpawn = false;
+                        UIManager.intance.Endgame(1);
+                    }
                     transform.position -= new Vector3(0, -1, 0);
                     AddToGird();
                     if (GetComponent<PowerBlocksPlayer2>())
@@ -52,14 +63,15 @@ public class TeterminosPlayer2 : MonoBehaviour
                         GetComponent<TeterminoBlockPlayer2>().isFallen = true;
                     moveable = false;
                     // this.enabled = false;
+                    if(canSpawn)
                     BlockSpawnerPlayer2.blockSpawner.NewBlock();
                 }
                 previousTime = Time.time;
             }
         }
+       // test = ValidMove();
 
-        int roundedX2 = Mathf.RoundToInt(transform.position.x);
-        int roundedY2 = Mathf.RoundToInt(transform.position.y);
+       
         /* if (!moveable && grid[roundedX2, roundedY2 - 1] == null)
          {
              Debug.Log("Working " + roundedX2 + " ," + roundedY2);
@@ -80,22 +92,36 @@ public class TeterminosPlayer2 : MonoBehaviour
         }*/
         if (!moveable)
         {
-
+            if (!test && ValidMove())
+            {
+                Debug.Log("wrokgin");
+                grid2[Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y)] = null;
+                test = true;
+            }
+          
             transform.position += new Vector3(0, -1, 0);
             if (!ValidMove())
             {
                 // Debug.Log("Working");
                 if (grid2[roundedX2, roundedY2 + 1] != null)
                 {
+                   // Debug.Log("Happening" + roundedX2 + "," + roundedY2);
                     // grid[roundedY2,roundedY2+1].GetComponent<Teterminos>()
-                    grid2[roundedX2, roundedY2 + 1] = null;
+                  //  grid2[roundedX2, roundedY2 + 1] = null;
                 }
-                grid2[roundedX2, roundedY2] = null;
+               
+               // grid2[roundedX2, roundedY2] = null;
                 transform.position -= new Vector3(0, -1, 0);
                 AddToGird();
 
             }
+            else
+            {
+               // grid2[roundedX2, roundedY2 + 1] = null;
+              //  Debug.Log("cLick" + (grid2[roundedX2, roundedY2 + 1] == null));
+            }
           
+
         }
     }
     bool ValidMove()

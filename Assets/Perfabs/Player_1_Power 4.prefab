@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2985077977857983124}
   m_Layer: 7
   m_Name: Player_1_Power 4
-  m_TagString: Untagged
+  m_TagString: Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFallen: 0
+  tP: {fileID: 1996639318384363299}

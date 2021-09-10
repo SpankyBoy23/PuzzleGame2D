@@ -39,7 +39,7 @@ TextureImporter:
       213: 21300022
     second: Finger
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -59,6 +59,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -90,9 +91,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -211,7 +216,7 @@ TextureImporter:
         width: 140
         height: 160
       alignment: 9
-      pivot: {x: 0.5937716, y: 0.5414793}
+      pivot: {x: 0.6189065, y: 0.574469}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,11 +233,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 375
-        y: 352
+        y: 351
         width: 137
         height: 160
       alignment: 9
-      pivot: {x: 0.46447864, y: 0.55866164}
+      pivot: {x: 0.43451262, y: 0.59898245}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -436,7 +441,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca861e9e11595a84e931f3033d6aaed3
     internalID: 0
     vertices: []
     indices: 

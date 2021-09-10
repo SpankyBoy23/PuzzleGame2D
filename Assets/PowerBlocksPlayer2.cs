@@ -6,90 +6,34 @@ using UnityEngine;
 public class PowerBlocksPlayer2 : MonoBehaviour
 {
     public bool isFallen = false;
+    public TeterminosPlayer2 tP;
+    int roundedX, roundedY;
 
     void Update()
     {
         if (isFallen)
         {
-            int roundedX = Mathf.RoundToInt(transform.position.x);
-            int roundedY = Mathf.RoundToInt(transform.position.y);
+             roundedX = Mathf.RoundToInt(transform.position.x);
+             roundedY = Mathf.RoundToInt(transform.position.y);
 
-            // X +1 , y 0
+            // X 0 , y +1
             if (roundedY < 11)
             {
-                Debug.Log("Its Here +1y");
-                if (TeterminosPlayer2.grid2[roundedX, roundedY + 1] != null)
-                {
-                   
-                    if (TeterminosPlayer2.grid2[roundedX, roundedY + 1].GetComponent<TeterminosPlayer2>().blockColor == GetComponent<TeterminosPlayer2>().blockColor)
-                    {
-
-                        if (TeterminosPlayer2.grid2[roundedX, roundedY + 1].GetComponent<TeterminoBlockPlayer2>() != null)
-                            TeterminosPlayer2.grid2[roundedX , roundedY + 1].GetComponent<TeterminoBlockPlayer2>().breakNow = true;
-                        TeterminosPlayer2.grid2[roundedX, roundedY + 1].GetComponent<SpriteRenderer>().color = Color.red;
-                        GetComponent<SpriteRenderer>().color = Color.red;
-                        Destroy(this.gameObject, 0.5f);
-                        Destroy(TeterminosPlayer2.grid2[roundedX, roundedY + 1].gameObject, 0.5f);
-                        
-                    }
-                    
-
-                }
-                else
-                {
-                   
-                }
+                Function(0, 1);
             }
 
 
             // X 0 , y -1
             if (roundedY > 0)
             {
-                if (TeterminosPlayer2.grid2[roundedX, roundedY - 1] != null)
-                {
-
-                    if (TeterminosPlayer2.grid2[roundedX, roundedY - 1].GetComponent<TeterminosPlayer2>().blockColor == GetComponent<TeterminosPlayer2>().blockColor)
-                    {
-                        //  Debug.Log(GetComponent<TeterminoBlockPlayer2>() + "Its Here -1y");
-                        if (TeterminosPlayer2.grid2[roundedX, roundedY - 1].GetComponent<TeterminoBlockPlayer2>() != null)
-                            TeterminosPlayer2.grid2[roundedX, roundedY - 1].GetComponent<TeterminoBlockPlayer2>().breakNow = true;
-                        TeterminosPlayer2.grid2[roundedX, roundedY - 1].GetComponent<SpriteRenderer>().color = Color.red;
-                        GetComponent<SpriteRenderer>().color = Color.red;
-                        Destroy(this.gameObject, 0.5f);
-                        Destroy(TeterminosPlayer2.grid2[roundedX, roundedY - 1].gameObject, 0.5f);
-                        
-                    }
-                    
-                }
-                else
-                {
-                   
-                }
+                Function(0, -1);
             }
 
 
             // X -1 , y 0
             if (roundedX > 0)
             {
-                if (TeterminosPlayer2.grid2[roundedX - 1, roundedY] != null)
-                {
-                 
-                    if (TeterminosPlayer2.grid2[roundedX - 1, roundedY].GetComponent<TeterminosPlayer2>().blockColor == GetComponent<TeterminosPlayer2>().blockColor)
-                    {
-                        //  Debug.Log(GetComponent<TeterminoBlockPlayer2>() + "Its Here -1x");
-                        if (TeterminosPlayer2.grid2[roundedX-1, roundedY].GetComponent<TeterminoBlockPlayer2>() != null)
-                            TeterminosPlayer2.grid2[roundedX - 1, roundedY ].GetComponent<TeterminoBlockPlayer2>().breakNow = true;
-                        TeterminosPlayer2.grid2[roundedX - 1, roundedY].GetComponent<SpriteRenderer>().color = Color.red;
-                        GetComponent<SpriteRenderer>().color = Color.red;
-                        Destroy(this.gameObject, 0.5f);
-                        Destroy(TeterminosPlayer2.grid2[roundedX-1, roundedY].gameObject, 0.5f);
-                    }
-
-                }
-                else
-                {
-                    
-                }
+                Function(-1, 0);  
             }
 
 
@@ -97,54 +41,27 @@ public class PowerBlocksPlayer2 : MonoBehaviour
             // X +1 , y 0
             if (roundedX < 5)
             {
-                if (TeterminosPlayer2.grid2[roundedX + 1, roundedY] != null)
-                {
+                Function(1, 0);
+            }
+        
+        }
+    }
+    void Function(int x,int y)
+    {
+        if (TeterminosPlayer2.grid2[roundedX+x, roundedY + y] != null)
+        {
+            if (TeterminosPlayer2.grid2[roundedX+x, roundedY + y].tag == this.tag)
+            {
+              //  Debug.Log((TeterminosPlayer2.grid2[roundedX + x, roundedY + y].GetComponent<TeterminosPlayer2>().blockColor == tP.blockColor) +":" + tP.blockColor);
 
-                    if (TeterminosPlayer2.grid2[roundedX + 1, roundedY].GetComponent<TeterminosPlayer2>().blockColor == GetComponent<TeterminosPlayer2>().blockColor)
-                    {
-                        // Debug.Log(GetComponent<TeterminoBlockPlayer2>() + "Its Here +1x");
-                        if (TeterminosPlayer2.grid2[roundedX + 1, roundedY].GetComponent<TeterminoBlockPlayer2>() != null)
-                            TeterminosPlayer2.grid2[roundedX + 1, roundedY].GetComponent<TeterminoBlockPlayer2>().breakNow = true;
-                        TeterminosPlayer2.grid2[roundedX + 1, roundedY].GetComponent<SpriteRenderer>().color = Color.red;
-                        GetComponent<SpriteRenderer>().color = Color.red;
-                        Destroy(this.gameObject, 0.5f);
-                        Destroy(TeterminosPlayer2.grid2[roundedX+1, roundedY].gameObject, 0.5f);
-
-                    }
-
-
-                }
-                else
-                {
-                   
-                }
+                if (TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<TeterminoBlockPlayer2>() != null)
+                   TeterminosPlayer2.grid2[roundedX +x, roundedY + y].GetComponent<TeterminoBlockPlayer2>().breakNow = true;
+                TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<SpriteRenderer>().color = Color.red;
+                GetComponent<SpriteRenderer>().color = Color.red;
+                Destroy(this.gameObject, 2f);
+                Destroy(TeterminosPlayer2.grid2[roundedX+x, roundedY + y].gameObject,2f);
 
             }
-
-            // X 0 , y +1
-            /*   if (TeterminosPlayer2.grid2[roundedX , roundedY + 1] != null)
-               {
-                   print(TeterminosPlayer2.grid2[roundedX, roundedY + 1].GetComponent<TeterminosPlayer2>().blockColor);
-               }
-
-               // X 0 , y -1
-               if (TeterminosPlayer2.grid2[roundedX, roundedY - 1] != null)
-               {
-                   print(TeterminosPlayer2.grid2[roundedX, roundedY - 1].GetComponent<TeterminosPlayer2>().blockColor);
-               }
-
-               // X +1 , y 0
-               if (TeterminosPlayer2.grid2[roundedX +1, roundedY] != null)
-               {
-                   print(TeterminosPlayer2.grid2[roundedX +1, roundedY].GetComponent<TeterminosPlayer2>().blockColor);
-               }
-
-               // X -1 , y 0
-               if (TeterminosPlayer2.grid2[roundedX - 1, roundedY] != null)
-               {
-                   print(TeterminosPlayer2.grid2[roundedX -1 , roundedY].GetComponent<TeterminosPlayer2>().blockColor);
-               }*/
-        
         }
     }
 }
