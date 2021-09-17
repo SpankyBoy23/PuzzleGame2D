@@ -12,9 +12,11 @@ public class TeterminosPlayer2 : MonoBehaviour
     public static int height = 12;
     public static int width = 6;
     float previousTime;
-    private float fallTime = 0.8f;
+    public float fallTime = 0.8f;
     bool moveable = true;
     bool canSpawn = true;
+    private int nextUpdate = 1;
+
 
     public static Transform[,] grid2 = new Transform[width, height];
     public bool test;
@@ -69,6 +71,11 @@ public class TeterminosPlayer2 : MonoBehaviour
                 previousTime = Time.time;
             }
         }
+
+      //  if(grid2[roundedX2,roundedY2+1] != gameObject)
+        {
+            //grid2[roundedX2, roundedY2 + 1] = null;
+        }
        // test = ValidMove();
 
        
@@ -98,24 +105,19 @@ public class TeterminosPlayer2 : MonoBehaviour
                 grid2[Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y)] = null;
                 test = true;
             }
-          
-            transform.position += new Vector3(0, -1, 0);
-            if (!ValidMove())
+         
+            
+            //   previousTime = Time.time;
+            if (Time.time >= nextUpdate)
             {
-                // Debug.Log("Working");
-                if (grid2[roundedX2, roundedY2 + 1] != null)
-                {
-                   // Debug.Log("Happening" + roundedX2 + "," + roundedY2);
-                    // grid[roundedY2,roundedY2+1].GetComponent<Teterminos>()
-                  //  grid2[roundedX2, roundedY2 + 1] = null;
-                }
-               
-               // grid2[roundedX2, roundedY2] = null;
-                transform.position -= new Vector3(0, -1, 0);
-                AddToGird();
-
+              //  Debug.Log(Time.time + ">=" + nextUpdate);
+                // Change the next update (current second+1)
+                nextUpdate = Mathf.FloorToInt(Time.time) + 1;
+                // Call your fonction
+                UpdateEverySecond();
             }
-            else
+           
+          //  else
             {
                // grid2[roundedX2, roundedY2 + 1] = null;
               //  Debug.Log("cLick" + (grid2[roundedX2, roundedY2 + 1] == null));
@@ -123,7 +125,33 @@ public class TeterminosPlayer2 : MonoBehaviour
           
 
         }
+      
     }
+    void UpdateEverySecond()
+    {
+        if (ValidMove())
+        {
+            grid2[Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y)+1] = null;
+            Debug.Log("222");
+        }
+        transform.position += new Vector3(0, -1, 0);
+        if (!ValidMove())
+        {
+            // Debug.Log("Working");
+            /*if (grid2[roundedX2, roundedY2 + 1] != null)
+            {
+               // Debug.Log("Happening" + roundedX2 + "," + roundedY2);
+                // grid[roundedY2,roundedY2+1].GetComponent<Teterminos>()
+              //  grid2[roundedX2, roundedY2 + 1] = null;
+            }
+           */
+            // grid2[roundedX2, roundedY2] = null;
+            transform.position -= new Vector3(0, -1, 0);
+            AddToGird();
+
+        }
+    }
+
     bool ValidMove()
     {
 

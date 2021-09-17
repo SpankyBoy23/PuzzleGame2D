@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockColor: 0
+  fallTime: 0.8
+  test: 0
 --- !u!114 &392393439543179258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,4 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFallen: 0
+  breakNow: 0
   tP: {fileID: 1996639318384363299}
