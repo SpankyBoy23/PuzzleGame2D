@@ -19,6 +19,7 @@ TagManager:
   - PowerBlue
   - PowerPurple
   - Missile
+  - Bot
   layers:
   - Default
   - TransparentFX
@@ -59,12 +60,12 @@ TagManager:
   - name: Boards
     uniqueID: 2830349381
     locked: 0
-  - name: Particles
-    uniqueID: 2373417069
-    locked: 0
   - name: Blocks
     uniqueID: 402385987
     locked: 0
   - name: Characters
     uniqueID: 1339748001
+    locked: 0
+  - name: Particles
+    uniqueID: 181960371
     locked: 0
