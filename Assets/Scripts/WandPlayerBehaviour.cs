@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class WandPlayerBehaviour : MonoBehaviour
 {
-    public Transform spawnPos;
-    public GameObject prefab;
-   
+    public Animator anim;
+
     private void Start()
     {
         
       //  SpawnOrb();
     }
 
-    public void SpawnOrb()
+    public void Attack()
     {
-        Debug.Log("Working");
-        GameObject a = Instantiate(prefab, spawnPos.position, Quaternion.identity);
-       
+        if (!LogicManager.intance.finalMove)
+            anim.SetTrigger("Attack");
+        else
+            anim.SetTrigger("ChargeAttack");
     }
+  
 
 }

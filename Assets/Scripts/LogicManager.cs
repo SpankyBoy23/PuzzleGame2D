@@ -15,12 +15,17 @@ public class LogicManager : MonoBehaviour
     bool justBrokeBot = false;
     [SerializeField] float coolDown = 1f;
     [SerializeField] float coolDownBot = 1f;
-    public PlayerBehviour playerBehviour;
-    public BotBehaviour botBehaviour;
+    public GameObject playerBehviour;
+    public GameObject botBehaviour;
+    public bool finalMove;
+    public bool canSpawn = true;
+    [SerializeField] GameObject[] spawners;
+    bool runOnce = true;
 
     private void Awake()
     {
         intance = this;
+        spawners = GameObject.FindGameObjectsWithTag("Spawner");
     }
 
     private void Start()
@@ -30,13 +35,36 @@ public class LogicManager : MonoBehaviour
     }
     private void Update()
     {
+        if (!canSpawn)
+        {
+            LastMove(true);
+            if (spawners[1].GetComponent<BlockSpawnerForBot>())
+            {
+                spawners[1].GetComponent<BlockSpawnerForBot>().enabled = false;
+            }
+            else
+            {
+                spawners[0].GetComponent<BlockSpawnerForBot>().enabled = false;
+            }
+            
+            if (spawners[0].GetComponent<BlockSpawnerPlayer2>())
+            {
+                spawners[0].GetComponent<BlockSpawnerPlayer2>().enabled = false;
+            }
+            else
+            {
+                spawners[1].GetComponent<BlockSpawnerPlayer2>().enabled = false;
+            }
+            
+           // canSpawn = true;
+        }
         if (!playerBehviour)
         {
-            playerBehviour = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehviour>();
+            playerBehviour = GameObject.FindGameObjectWithTag("Player");
         }
         if (!botBehaviour)
         {
-            botBehaviour = GameObject.FindGameObjectWithTag("Bot").GetComponent<BotBehaviour>();
+            botBehaviour = GameObject.FindGameObjectWithTag("Bot");
         }
     }
     void LateUpdate()
@@ -44,6 +72,35 @@ public class LogicManager : MonoBehaviour
         //Debug.Log(objectList.Count);
         DestroyPlayerBlocks();
         DestroyBotBlocks();
+    }
+    public void LastMove(bool callFromPlayer)
+    {
+        finalMove = true;
+        if (runOnce)
+        {
+            if (callFromPlayer)
+            {
+                if (playerBehviour.GetComponent<PlayerBehviour>())
+                    playerBehviour.GetComponent<PlayerBehviour>().Walk();
+                else
+                {
+                    playerBehviour.GetComponent<WandPlayerBehaviour>().Attack();
+                }
+                this.Wait(2f, () => { UIManager.intance.Endgame(1); });
+            }
+            else
+            {
+                if (botBehaviour.GetComponent<BotBehaviour>())
+                    botBehaviour.GetComponent<BotBehaviour>().Walk();
+                else
+                    botBehaviour.GetComponent<BotBehaviour>();
+
+                this.Wait(2f, () => { UIManager.intance.Endgame(0); });
+            }
+            runOnce = false;
+        }
+      
+        
     }
     private void DestroyPlayerBlocks()
     {
@@ -54,7 +111,12 @@ public class LogicManager : MonoBehaviour
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
                 this.Wait(0.2f, () => { Destroy(obj); });
-                playerBehviour.Walk();
+                if(playerBehviour.GetComponent<PlayerBehviour>())
+                   playerBehviour.GetComponent<PlayerBehviour>().Walk();
+                else
+                {
+                    playerBehviour.GetComponent<WandPlayerBehaviour>().Attack();
+                }
             }
             this.Wait(0.4f, () => { ResetList(); });
 
@@ -88,7 +150,10 @@ public class LogicManager : MonoBehaviour
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
                 this.Wait(0.2f, () => { Destroy(obj); });
-                botBehaviour.Walk();
+                if (botBehaviour.GetComponent<BotBehaviour>())
+                    botBehaviour.GetComponent<BotBehaviour>().Walk();
+                else
+                    botBehaviour.GetComponent<BotBehaviour>();
             }
             this.Wait(0.4f, () => { ResetListBot(); });
 

@@ -1801,8 +1801,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5547452845743302106}
   - component: {fileID: 5547452845743302107}
-  - component: {fileID: 5547452845743302108}
   - component: {fileID: 6745134416044092044}
+  - component: {fileID: 103612123380878128}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -1846,22 +1846,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5547452845743302108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5547452845743302105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6503576960649181042, guid: 0e3cb54b96d77904d95d9266e17474f3, type: 3}
-  spawnPoint: {fileID: 5547452846275786612}
-  speed: 3
-  anim: {fileID: 5547452845743302107}
 --- !u!50 &6745134416044092044
 Rigidbody2D:
   serializedVersion: 4
@@ -1883,6 +1867,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &103612123380878128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547452845743302105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 5547452846275786612}
+  prefab: {fileID: 3767356829560019967, guid: c498719075c5a82499de754ad3abfd1c, type: 3}
 --- !u!1 &5547452845747866538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,5 +3575,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38890e65e9baa94ca0f13268e7e5c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 5547452846275786612}
-  prefab: {fileID: 3767356829560019967, guid: c498719075c5a82499de754ad3abfd1c, type: 3}
+  anim: {fileID: 5547452845743302107}

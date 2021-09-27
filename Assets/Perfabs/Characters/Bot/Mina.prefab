@@ -9771,10 +9771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPos: {fileID: 0}
   prefab: {fileID: 6503576960649181042, guid: 0e3cb54b96d77904d95d9266e17474f3, type: 3}
-  spawnPoint: {fileID: 6369888808976661810}
-  speed: -10
-  anim: {fileID: 6369888807430912341}
 --- !u!50 &7287446097741911869
 Rigidbody2D:
   serializedVersion: 4
@@ -12309,8 +12307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38890e65e9baa94ca0f13268e7e5c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 8573196947439868740}
-  prefab: {fileID: 1859229547943123754, guid: 71b72eec9c373d34eae125610e5245b5, type: 3}
+  anim: {fileID: 6369888807430912341}
 --- !u!1 &6369888808908356929
 GameObject:
   m_ObjectHideFlags: 0

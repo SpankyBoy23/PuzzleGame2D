@@ -36,7 +36,15 @@ public class PlayerBehviour : MonoBehaviour
             attacked = true;
             
             animator.SetBool("Walk", false);
-            animator.SetTrigger("Attack");
+            if (!LogicManager.intance.finalMove)
+            {
+                animator.SetTrigger("Attack");
+            }
+            else
+            {
+                animator.SetTrigger("ChargeAttack");
+            }
+            
             this.Wait(1f,()=>{ transform.position = intialPosition;attacked = false; });
            // animator.ResetTrigger("Attack");
   

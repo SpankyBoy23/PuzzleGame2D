@@ -50,10 +50,10 @@ public class TeterminosPlayer2 : MonoBehaviour
                     if (grid2[roundedX2, 11] != null)
                     {
                         Debug.Log("You Lost!");
-                        Time.timeScale = 0;
-                        FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
-                        canSpawn = false;
-                        UIManager.intance.Endgame(1);
+                       // Time.timeScale = 0;
+                      //  FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
+                        LogicManager.intance.canSpawn = false;
+                        
                     }
                     transform.position -= new Vector3(0, -1, 0);
                     AddToGird();

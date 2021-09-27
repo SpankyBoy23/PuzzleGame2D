@@ -41,12 +41,14 @@ public class BotTeterminos : MonoBehaviour
                        
                         if (grid[roundedX2, 11] != null)
                         {
-                            Debug.Log("You Lost!");
-                                Time.timeScale = 0;
-                                FindObjectOfType<BlockSpawnerForBot>().enabled = false;
-                                canSpawn = false;
-                                UIManager.intance.Endgame(1);
-                        }
+                            Debug.Log("You Won!");
+                        //Time.timeScale = 0;
+                        //   FindObjectOfType<BlockSpawnerForBot>().enabled = false;
+                        //  canSpawn = false;
+                        //  LogicManager.intance.LastMove(false);
+                        // this.Wait(2f, () => { UIManager.intance.Endgame(0); });
+                        LogicManager.intance.canSpawn = false;
+                    }
                         transform.position -= new Vector3(0, -1, 0);
                         AddToGird();
                         if (GetComponent<BotTeterminosPower>())

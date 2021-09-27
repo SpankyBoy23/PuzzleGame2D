@@ -23,7 +23,11 @@ public class BlockSpawnerPlayer2 : MonoBehaviour
         secondComingBlock = thirdComingBlock;
         thirdComingBlock = Random.Range(0, Blocks.Length);
         // Debug.Log("Spawning");
-        var a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
-        a.transform.parent = null;
+        if (LogicManager.intance.canSpawn)
+        {
+            var a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
+            a.transform.parent = null;
+        }
+       
     }
 }

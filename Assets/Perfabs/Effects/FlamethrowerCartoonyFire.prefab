@@ -4812,10 +4812,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  targetTransform: {fileID: 0}
   distoryEffect: {fileID: 1859229547943123754, guid: 71b72eec9c373d34eae125610e5245b5,
     type: 3}
   hitRange: 3.5
   speed: 5
+  animatorTarget: {fileID: 0}
+  damageDelay: 0
 --- !u!1 &3767356829560032399
 GameObject:
   m_ObjectHideFlags: 0

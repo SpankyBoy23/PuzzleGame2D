@@ -35,7 +35,14 @@ public class BotBehaviour : MonoBehaviour
         if ((transform.position - target.transform.position).magnitude < attackRange && !attacked)
         {
             attacked = true;
-            animator.SetTrigger("Attack");
+            if (!LogicManager.intance.finalMove)
+            {
+                animator.SetTrigger("Attack");
+            }
+            else
+            {
+                animator.SetTrigger("ChargeAttack");
+            }
 
             this.Wait(0.1f, () => { animator.SetBool("Walk", false); });
             this.Wait(1f, () => {  transform.position = intialPosition; attacked = false; });

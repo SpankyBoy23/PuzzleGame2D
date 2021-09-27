@@ -12,14 +12,9 @@ TagManager:
   - Purple
   - Red
   - Yellow
-  - PowerWhite
-  - PowerYellow
-  - PowerGreen
-  - PowerRed
-  - PowerBlue
-  - PowerPurple
   - Missile
   - Bot
+  - Spawner
   layers:
   - Default
   - TransparentFX

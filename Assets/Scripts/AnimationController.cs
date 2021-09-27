@@ -35,12 +35,15 @@ public class AnimationController : MonoBehaviour
         this.Wait(1f, () => { PlayerAnimation.hit = true; 
           //  hit = true;
         });
-        this.Wait(1.2f, () => { Debug.Log("Setting False" + PlayerAnimation.hit); });
+    //    this.Wait(1.2f, () => { Debug.Log("Setting False" + PlayerAnimation.hit); });
        
     }
     public void TakeDamage()
     {
-        this.Wait(damageDelay, () => { animatorTarget.SetTrigger("Hit"); });
+        this.Wait(damageDelay, () => {
+            if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+            else animatorTarget.SetBool("Die", true);
+        });
     }
     public void HitEnemy()
     {
