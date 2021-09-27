@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2466818436457544397}
   - component: {fileID: 7451069097538175452}
   - component: {fileID: 5616305995772782894}
+  - component: {fileID: 4584788016143786136}
   m_Layer: 7
   m_Name: MP_Block1
-  m_TagString: Untagged
+  m_TagString: Yellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,3 +141,15 @@ MonoBehaviour:
   interpolateRotation: 1
   interpolatePosition: 1
   syncScale: 1
+--- !u!114 &4584788016143786136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327843849220610932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5200a5fe6098a40828bc36dd7183e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

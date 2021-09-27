@@ -76,9 +76,9 @@ public class Player : NetworkBehaviour
         {
             if (net_BlockSpawner.blockSpawner.first == false) 
             {
-                net_BlockSpawner.blockSpawner.currentBlock = Random.Range(0, 7);
-                net_BlockSpawner.blockSpawner.secondComingBlock = Random.Range(0, 7);
-                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 7);
+                net_BlockSpawner.blockSpawner.currentBlock = Random.Range(0, 6);
+                net_BlockSpawner.blockSpawner.secondComingBlock = Random.Range(0, 6);
+                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 6);
 
                 net_BlockSpawner.blockSpawner.NewBlock(netId , net_BlockSpawner.blockSpawner.currentBlock);
 
@@ -89,7 +89,7 @@ public class Player : NetworkBehaviour
             {
                 net_BlockSpawner.blockSpawner.currentBlock = net_BlockSpawner.blockSpawner.secondComingBlock;
                 net_BlockSpawner.blockSpawner.secondComingBlock = net_BlockSpawner.blockSpawner.thirdComingBlock;
-                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 7);
+                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 6);
 
                 net_BlockSpawner.blockSpawner.NewBlock(netId, net_BlockSpawner.blockSpawner.currentBlock);
             }
@@ -98,9 +98,9 @@ public class Player : NetworkBehaviour
         {
             if (net_BlockSpawner2.blockSpawner2.first == false)
             {
-                net_BlockSpawner2.blockSpawner2.currentBlock = Random.Range(0, 7);
-                net_BlockSpawner2.blockSpawner2.secondComingBlock = Random.Range(0, 7);
-                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 7);
+                net_BlockSpawner2.blockSpawner2.currentBlock = Random.Range(0, 6);
+                net_BlockSpawner2.blockSpawner2.secondComingBlock = Random.Range(0, 6);
+                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 6);
 
                 net_BlockSpawner2.blockSpawner2.NewBlock(netId, net_BlockSpawner2.blockSpawner2.currentBlock);
                 net_Predictor.predictor.start = true;
@@ -110,7 +110,7 @@ public class Player : NetworkBehaviour
             {
                 net_BlockSpawner2.blockSpawner2.currentBlock = net_BlockSpawner2.blockSpawner2.secondComingBlock;
                 net_BlockSpawner2.blockSpawner2.secondComingBlock = net_BlockSpawner2.blockSpawner2.thirdComingBlock;
-                net_BlockSpawner2.blockSpawner2.thirdComingBlock = Random.Range(0, 7);
+                net_BlockSpawner2.blockSpawner2.thirdComingBlock = Random.Range(0, 6);
 
                 net_BlockSpawner2.blockSpawner2.NewBlock(netId, net_BlockSpawner2.blockSpawner2.currentBlock);
             }
