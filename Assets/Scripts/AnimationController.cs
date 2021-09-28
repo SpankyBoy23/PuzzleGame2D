@@ -47,6 +47,7 @@ public class AnimationController : MonoBehaviour
     }
     public void HitEnemy()
     {
-        target.GetComponentInChildren<Animator>().SetTrigger("Hit");
+        if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+        else animatorTarget.SetTrigger("Die");
     }
 }

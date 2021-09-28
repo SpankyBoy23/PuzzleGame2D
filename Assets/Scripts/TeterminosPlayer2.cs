@@ -14,7 +14,7 @@ public class TeterminosPlayer2 : MonoBehaviour
     bool moveable = true;
     bool canSpawn = true;
     private float nextUpdate = .2f;
-
+    public float countDown = 2f;
 
     public static Transform[,] grid2 = new Transform[width, height];
     public bool test;
@@ -49,11 +49,18 @@ public class TeterminosPlayer2 : MonoBehaviour
                 {
                     if (grid2[roundedX2, 11] != null)
                     {
-                        Debug.Log("You Lost!");
-                       // Time.timeScale = 0;
-                      //  FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
                         LogicManager.intance.canSpawn = false;
-                        
+                        if (countDown <= 0)
+                        {
+                            Debug.Log("You Lost!");
+                            // Time.timeScale = 0;
+                            //  FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
+                            
+                        }
+                    }
+                    else
+                    {
+                        countDown = 2;
                     }
                     transform.position -= new Vector3(0, -1, 0);
                     AddToGird();

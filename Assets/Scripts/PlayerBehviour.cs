@@ -42,6 +42,8 @@ public class PlayerBehviour : MonoBehaviour
             }
             else
             {
+                Debug.Log("Attacked");
+
                 animator.SetTrigger("ChargeAttack");
             }
             

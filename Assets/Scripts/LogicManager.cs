@@ -38,23 +38,7 @@ public class LogicManager : MonoBehaviour
         if (!canSpawn)
         {
             LastMove(true);
-            if (spawners[1].GetComponent<BlockSpawnerForBot>())
-            {
-                spawners[1].GetComponent<BlockSpawnerForBot>().enabled = false;
-            }
-            else
-            {
-                spawners[0].GetComponent<BlockSpawnerForBot>().enabled = false;
-            }
-            
-            if (spawners[0].GetComponent<BlockSpawnerPlayer2>())
-            {
-                spawners[0].GetComponent<BlockSpawnerPlayer2>().enabled = false;
-            }
-            else
-            {
-                spawners[1].GetComponent<BlockSpawnerPlayer2>().enabled = false;
-            }
+           
             
            // canSpawn = true;
         }
@@ -67,11 +51,32 @@ public class LogicManager : MonoBehaviour
             botBehaviour = GameObject.FindGameObjectWithTag("Bot");
         }
     }
+   
     void LateUpdate()
     {
         //Debug.Log(objectList.Count);
         DestroyPlayerBlocks();
         DestroyBotBlocks();
+    }
+    public void BlockSpawners()
+    {
+        if (spawners[1].GetComponent<BlockSpawnerForBot>())
+        {
+            spawners[1].GetComponent<BlockSpawnerForBot>().enabled = false;
+        }
+        else
+        {
+            spawners[0].GetComponent<BlockSpawnerForBot>().enabled = false;
+        }
+
+        if (spawners[0].GetComponent<BlockSpawnerPlayer2>())
+        {
+            spawners[0].GetComponent<BlockSpawnerPlayer2>().enabled = false;
+        }
+        else
+        {
+            spawners[1].GetComponent<BlockSpawnerPlayer2>().enabled = false;
+        }
     }
     public void LastMove(bool callFromPlayer)
     {
@@ -86,7 +91,7 @@ public class LogicManager : MonoBehaviour
                 {
                     playerBehviour.GetComponent<WandPlayerBehaviour>().Attack();
                 }
-                this.Wait(2f, () => { UIManager.intance.Endgame(1); });
+                this.Wait(3f, () => { UIManager.intance.Endgame(1); });
             }
             else
             {
@@ -111,6 +116,7 @@ public class LogicManager : MonoBehaviour
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
                 this.Wait(0.2f, () => { Destroy(obj); });
+                
                 if(playerBehviour.GetComponent<PlayerBehviour>())
                    playerBehviour.GetComponent<PlayerBehviour>().Walk();
                 else
