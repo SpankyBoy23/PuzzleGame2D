@@ -22,6 +22,8 @@ public class LogicManager : MonoBehaviour
     [SerializeField] GameObject[] spawners;
     bool runOnce = true;
 
+    public GameObject DestoryEffect;
+
     private void Awake()
     {
         intance = this;
@@ -115,7 +117,7 @@ public class LogicManager : MonoBehaviour
             foreach (GameObject obj in objectList)
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
-                this.Wait(0.2f, () => { Destroy(obj); });
+                this.Wait(0.2f, () => {  Destroy(obj); });
                 
                 if(playerBehviour.GetComponent<PlayerBehviour>())
                    playerBehviour.GetComponent<PlayerBehviour>().Walk();

@@ -56,7 +56,7 @@ public class net_BlockMovement : NetworkBehaviour
                 {
                     if (grid2[roundedX2, 11] != null)
                     {
-                        Debug.LogError("You Lost!");
+                        Debug.Log("You Lost!");
                         Time.timeScale = 0;
             //            FindObjectOfType<BlockSpawnerPlayer2>().enabled = false;
                         canSpawn = false;

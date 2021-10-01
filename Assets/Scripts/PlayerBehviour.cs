@@ -11,7 +11,7 @@ public class PlayerBehviour : MonoBehaviour
     public bool attacked = false;
     [SerializeField] Vector3 intialPosition;
    public GameObject target;
-
+    
 
     private void Start()
     {
@@ -53,6 +53,6 @@ public class PlayerBehviour : MonoBehaviour
             
         }
     }
-  
 
+   
 }

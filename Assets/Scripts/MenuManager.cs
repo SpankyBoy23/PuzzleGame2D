@@ -39,4 +39,8 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
+    public void OpenLink(string Link)
+    {
+        Application.OpenURL(Link);
+    }
 }

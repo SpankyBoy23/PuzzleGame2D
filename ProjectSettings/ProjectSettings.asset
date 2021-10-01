@@ -147,7 +147,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.SkardGames.Tetris
-    Standalone: unity.SkardGames.Tetris
+    Standalone: com.DefaultCompany.PuzzleFightingGame2D
     iPhone: com.SkardGames.Tetris
     tvOS: com.SkardGames.Tetris
   buildNumber:

@@ -38,11 +38,11 @@ public class CharactersManager : MonoBehaviour
         }
         if (!PlayerPrefs.HasKey("LevelNumber"))
         {
-            PlayerPrefs.SetInt("LevelNumber", 1);
+            PlayerPrefs.SetInt("LevelNumber", 2);
         }
         if (!PlayerPrefs.HasKey("CharacterUnlocked"))
         {
-            PlayerPrefs.SetInt("CharacterUnlocked", 1);
+            PlayerPrefs.SetInt("CharacterUnlocked", 2);
         }
         CharacterManagement();
     }
