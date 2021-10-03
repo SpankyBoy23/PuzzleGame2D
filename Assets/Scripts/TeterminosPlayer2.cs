@@ -37,8 +37,12 @@ public class TeterminosPlayer2 : MonoBehaviour
     private bool swipeRightOn;
     private bool swipeLeftOn;
 
-
+    [Space]
+    [Header("Effects")]
     public GameObject DestoryEffect;
+    public GameObject PlacedEffect;
+
+
     private void Start()
     {
         dragDistance = Screen.height * 15 / 200;
@@ -126,6 +130,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                             //initiate stuff on swipe right
                             swipeRightOn = true;
                             Debug.Log("Swipe right initiated");
+                            FindObjectOfType<AudioManager>().Play("Move");
                             transform.position += new Vector3(1, 0, 0);
                             if (!ValidMove())
                             {
@@ -261,6 +266,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                     if (grid2[roundedX2, 11] != null)
                     {
                         LogicManager.intance.canSpawn = false;
+                        LogicManager.intance.LastMove(false);
                         if (countDown <= 0)
                         {
                             Debug.Log("You Lost!");
@@ -374,6 +380,7 @@ public class TeterminosPlayer2 : MonoBehaviour
     }
     void AddToGird()
     {
+      //  Instantiate(PlacedEffect, transform.position, Quaternion.identity);
         int roundedX = Mathf.RoundToInt(transform.position.x);
         int roundedY = Mathf.RoundToInt(transform.position.y);
 

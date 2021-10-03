@@ -12,14 +12,21 @@ public class EnvironmentManager : MonoBehaviour
         {
             environment.SetActive(false);
         }
-        if (PlayerPrefs.GetInt("Level") == 8)
+      
+            int a = Random.Range(0, environments.Length);
+        if(a < 2)
         {
-           
-            environments[5].SetActive(true);
+            MusicManager.instance.Play("1");
+        }else if(a == 2)
+        {
+            MusicManager.instance.Play("2");
         }
         else
         {
-            environments[Random.Range(0, environments.Length - 1)].SetActive(true);
+            MusicManager.instance.Play("3");
         }
+          
+            environments[a].SetActive(true);
+   
     }
 }

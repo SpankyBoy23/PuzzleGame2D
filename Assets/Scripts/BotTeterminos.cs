@@ -18,7 +18,9 @@ public class BotTeterminos : MonoBehaviour
 
     public static Transform[,] grid = new Transform[width, height];
     public bool test;
-
+    [Space]
+    [Header("Effects")]
+    public GameObject DestoryEffect;
 
     private void Start()
     {
@@ -161,5 +163,10 @@ public class BotTeterminos : MonoBehaviour
             }
         }
     }
-   
+    private void OnDestroy()
+    {
+        Instantiate(DestoryEffect, transform.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("BotBreak");
+    }
+
 }

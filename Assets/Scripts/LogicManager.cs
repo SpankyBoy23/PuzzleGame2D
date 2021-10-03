@@ -37,13 +37,7 @@ public class LogicManager : MonoBehaviour
     }
     private void Update()
     {
-        if (!canSpawn)
-        {
-            LastMove(true);
-           
-            
-           // canSpawn = true;
-        }
+      
         if (!playerBehviour)
         {
             playerBehviour = GameObject.FindGameObjectWithTag("Player");

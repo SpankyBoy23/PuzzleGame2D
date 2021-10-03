@@ -97,7 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTime: 0.8
+  botMoves: 0
   test: 0
+  DestoryEffect: {fileID: 1944033325554485321, guid: f3fa876d7a55ab04bb3500e707da542d,
+    type: 3}
 --- !u!114 &6185559098298101530
 MonoBehaviour:
   m_ObjectHideFlags: 0

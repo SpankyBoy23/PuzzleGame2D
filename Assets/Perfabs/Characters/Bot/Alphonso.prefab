@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8667942285454507207}
-  attackRange: 8
+  attackRange: 3
 --- !u!1 &8667942284700181726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4510,7 +4510,7 @@ Animator:
   m_GameObject: {fileID: 8667942285454507209}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ccac68f55a2ec794ab4f67e631de2c2f, type: 2}
+  m_Controller: {fileID: 9100000, guid: cae55e6d33229e04a98b89b03b35301f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

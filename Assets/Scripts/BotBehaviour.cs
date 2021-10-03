@@ -7,11 +7,11 @@ public class BotBehaviour : MonoBehaviour
     public Animator animator;
 
     private float distance;
-    public float attackRange = 8;
+    public float attackRange = -2;
     bool attacked = false;
     Vector3 intialPosition;
      GameObject target;
-
+    public bool isLucas;
 
     private void Start()
     {
@@ -21,8 +21,11 @@ public class BotBehaviour : MonoBehaviour
     }
     public void Walk()
     {
-        
-        animator.SetBool("Walk", true);
+
+        if (isLucas && LogicManager.intance.finalMove)
+            animator.Play("ChargeAttack");
+        else
+            animator.SetBool("Walk", true);
     }
     private void Update()
     {
@@ -32,21 +35,20 @@ public class BotBehaviour : MonoBehaviour
     private void Function()
     {
 
-        if ((transform.position - target.transform.position).magnitude < attackRange && !attacked)
+        if (transform.position.x < attackRange && !attacked)
         {
             attacked = true;
             if (!LogicManager.intance.finalMove)
             {
-                animator.SetTrigger("Attack");
+                animator.Play("Attack#1");
             }
             else
             {
-                animator.SetTrigger("ChargeAttack");
+                animator.Play("ChargeAttack");
             }
 
             this.Wait(0.1f, () => { animator.SetBool("Walk", false); });
             this.Wait(1f, () => {  transform.position = intialPosition; attacked = false; });
-            
 
         }
     }

@@ -15,9 +15,9 @@ public class WandPlayerBehaviour : MonoBehaviour
     public void Attack()
     {
         if (!LogicManager.intance.finalMove)
-            anim.SetTrigger("Attack");
+            anim.Play("Attack");
         else
-            anim.SetTrigger("ChargeAttack");
+            anim.Play("ChargeAttack");
     }
   
 

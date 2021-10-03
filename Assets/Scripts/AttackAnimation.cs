@@ -21,7 +21,7 @@ public class AttackAnimation : StateMachineBehaviour
     {
 
 
-        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("ChargeAttack");
 
     }
   

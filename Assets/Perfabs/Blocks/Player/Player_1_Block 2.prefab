@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7932894279750628348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53331155, y: 7.8483133, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +102,8 @@ MonoBehaviour:
   test: 0
   drag: 0
   DestoryEffect: {fileID: 1944033325554485321, guid: f3fa876d7a55ab04bb3500e707da542d,
+    type: 3}
+  PlacedEffect: {fileID: 7696325898009484874, guid: 3b45e63b30b23614c9fc4c2545f0ae84,
     type: 3}
 --- !u!114 &4407936009050121576
 MonoBehaviour:
