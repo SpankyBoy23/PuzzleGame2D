@@ -2538,6 +2538,7 @@ MonoBehaviour:
   attacked: 0
   intialPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
+  isLucas: 0
   pos: {x: 0, y: 0}
 --- !u!1 &8667942284700181726
 GameObject:
@@ -4481,7 +4482,6 @@ GameObject:
   - component: {fileID: 8667942285454507207}
   - component: {fileID: 8667942285454507206}
   - component: {fileID: 3959595240855405361}
-  - component: {fileID: 8435829265304545}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -4561,21 +4561,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8435829265304545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8667942285454507209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54de9d3101b310545bcf2b8251d6606d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  animatorTarget: {fileID: 0}
-  damageDelay: 0.6
 --- !u!1 &8667942285484160844
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,18 @@ public class UIManager : MonoBehaviour
     {
         endGamePanel.SetActive(true);
         endGameImage.sprite = endGameSprites[a];
+        if (a == 0)
+        {
+            if (PlayerPrefs.GetInt("LevelNumber") < 9)
+            {
+                PlayerPrefs.SetInt("LevelNumber", PlayerPrefs.GetInt("LevelNumber") + 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("LevelNumber", 2);
+            }
+        }
+
     }
 
     public void OnClick_LoadScene(int index)

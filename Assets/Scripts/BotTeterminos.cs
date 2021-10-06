@@ -24,7 +24,7 @@ public class BotTeterminos : MonoBehaviour
 
     private void Start()
     {
-        botMoves = Random.Range(-1, 5);
+        //botMoves = Random.Range(-1, 5);
     }
     void Update()
     {
@@ -47,7 +47,7 @@ public class BotTeterminos : MonoBehaviour
                         //Time.timeScale = 0;
                         //   FindObjectOfType<BlockSpawnerForBot>().enabled = false;
                         //  canSpawn = false;
-                        //  LogicManager.intance.LastMove(false);
+                          LogicManager.intance.LastMoveBot();
                         // this.Wait(2f, () => { UIManager.intance.Endgame(0); });
                         LogicManager.intance.canSpawn = false;
                     }

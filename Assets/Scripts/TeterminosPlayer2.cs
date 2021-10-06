@@ -112,7 +112,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                 {
                     fingerInitialPositionX = FingerTouch.position.x; //get initial X position of touch
                     fingerInitialPositionY = FingerTouch.position.y; //get initial Y position of touch
-                    Debug.Log("Touch initiated");
+                 //   Debug.Log("Touch initiated");
                 }
 
                 //do things as soon as finger is moved (and make it not repeat theinformation every frame)
@@ -129,7 +129,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe right
                             swipeRightOn = true;
-                            Debug.Log("Swipe right initiated");
+                          //  Debug.Log("Swipe right initiated");
                             FindObjectOfType<AudioManager>().Play("Move");
                             transform.position += new Vector3(1, 0, 0);
                             if (!ValidMove())
@@ -146,7 +146,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe left
                             swipeLeftOn = true;
-                            Debug.Log("Swipe left initiated");
+                           // Debug.Log("Swipe left initiated");
                             FindObjectOfType<AudioManager>().Play("Move");
                             transform.position -= new Vector3(1, 0, 0);
                             if (!ValidMove())
@@ -164,7 +164,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe up
                             swipeUpOn = true;
-                            Debug.Log("Swipe up initiated");
+                          //  Debug.Log("Swipe up initiated");
                         }
                     }
 
@@ -176,7 +176,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe down
                             swipeDownOn = true;
-                            Debug.Log("Swipe down initiated");
+                          //  Debug.Log("Swipe down initiated");
                             drag = true;
                         }
                     }
@@ -192,22 +192,22 @@ public class TeterminosPlayer2 : MonoBehaviour
                     if (swipeRightOn == true)
                     {
                         swipeRightOn = false;
-                        Debug.Log("Swipe right released");
+                      //  Debug.Log("Swipe right released");
                     }
                     else if (swipeLeftOn == true)
                     {
                         swipeLeftOn = false;
-                        Debug.Log("Swipe left released");
+                        //Debug.Log("Swipe left released");
                     }
                     else if (swipeUpOn == true)
                     {
                         swipeUpOn = false;
-                        Debug.Log("Swipe up released");
+                     //   Debug.Log("Swipe up released");
                     }
                     else if (swipeDownOn == true)
                     {
                         swipeDownOn = false;
-                        Debug.Log("Swipe down released");
+                      //  Debug.Log("Swipe down released");
                         drag = false;
                     }
                 }
@@ -222,22 +222,22 @@ public class TeterminosPlayer2 : MonoBehaviour
                     if (swipeRightOn == true)
                     {
                         //swipe right is held
-                        Debug.Log("Swipe right is held");
+                       // Debug.Log("Swipe right is held");
                     }
                     else if (swipeLeftOn == true)
                     {
                         //swipe left is held
-                        Debug.Log("Swipe left is held");
+                      //  Debug.Log("Swipe left is held");
                     }
                     else if (swipeUpOn == true)
                     {
                         //swipe up is held
-                        Debug.Log("Swipe up is held");
+                       // Debug.Log("Swipe up is held");
                     }
                     else if (swipeDownOn == true)
                     {
                         //swipe down is held
-                        Debug.Log("Swipe down is held");
+                        //Debug.Log("Swipe down is held");
                     }
                 }
             }
@@ -266,7 +266,7 @@ public class TeterminosPlayer2 : MonoBehaviour
                     if (grid2[roundedX2, 11] != null)
                     {
                         LogicManager.intance.canSpawn = false;
-                        LogicManager.intance.LastMove(false);
+                        LogicManager.intance.LastMovePlayer();
                         if (countDown <= 0)
                         {
                             Debug.Log("You Lost!");

@@ -74,38 +74,39 @@ public class LogicManager : MonoBehaviour
             spawners[1].GetComponent<BlockSpawnerPlayer2>().enabled = false;
         }
     }
-    public void LastMove(bool callFromPlayer)
+    public void LastMovePlayer()
+    {
+        finalMove = true;
+        if (runOnce)
+        {  
+                if (botBehaviour.GetComponent<BotBehaviour>())
+                    botBehaviour.GetComponent<BotBehaviour>().Walk();
+                else
+                    botBehaviour.GetComponent<WandBotBehaviour>().Attack();
+
+                this.Wait(2f, () => { UIManager.intance.Endgame(1); });
+          
+            runOnce = false;
+        } 
+    }  public void LastMoveBot()
     {
         finalMove = true;
         if (runOnce)
         {
-            if (callFromPlayer)
-            {
-                if (playerBehviour.GetComponent<PlayerBehviour>())
-                    playerBehviour.GetComponent<PlayerBehviour>().Walk();
-                else
-                {
-                    playerBehviour.GetComponent<WandPlayerBehaviour>().Attack();
-                }
-                this.Wait(3f, () => { UIManager.intance.Endgame(1); });
-            }
+            if (playerBehviour.GetComponent<PlayerBehviour>())
+                playerBehviour.GetComponent<PlayerBehviour>().Walk();
             else
             {
-                if (botBehaviour.GetComponent<BotBehaviour>())
-                    botBehaviour.GetComponent<BotBehaviour>().Walk();
-                else
-                    botBehaviour.GetComponent<BotBehaviour>();
-
-                this.Wait(2f, () => { UIManager.intance.Endgame(0); });
+                playerBehviour.GetComponent<WandPlayerBehaviour>().Attack();
             }
+            this.Wait(3f, () => { UIManager.intance.Endgame(0); });
+
             runOnce = false;
-        }
-      
-        
+        } 
     }
     private void DestroyPlayerBlocks()
     {
-        if (objectList.Count > 1)
+        if (objectList.Count > 1 && finalMove == false)
         {
             noOfBlocksLastDestoryed = objectList.Count;
             foreach (GameObject obj in objectList)
@@ -145,7 +146,7 @@ public class LogicManager : MonoBehaviour
 
     private void DestroyBotBlocks()
     {
-        if (objectListForBot.Count > 1)
+        if (objectListForBot.Count > 1 && finalMove == false)
         {
             noOfBlocksLastDestoryedBot = objectListForBot.Count;
             foreach (GameObject obj in objectListForBot)
@@ -155,7 +156,7 @@ public class LogicManager : MonoBehaviour
                 if (botBehaviour.GetComponent<BotBehaviour>())
                     botBehaviour.GetComponent<BotBehaviour>().Walk();
                 else
-                    botBehaviour.GetComponent<BotBehaviour>();
+                    botBehaviour.GetComponent<WandBotBehaviour>().Attack();
             }
             this.Wait(0.4f, () => { ResetListBot(); });
 
