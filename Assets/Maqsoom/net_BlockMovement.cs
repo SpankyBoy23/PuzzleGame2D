@@ -345,6 +345,10 @@ public class net_BlockMovement : NetworkBehaviour
     private void OnDestroy()
     {
         Instantiate(DestoryEffect, transform.localPosition, Quaternion.identity);
-     //   FindObjectOfType<AudioManager>().Play("BlockBreak");
+
+        if (hasAuthority == true)
+        {
+            FindObjectOfType<AudioManager>().Play("BlockBreak");
+        }
     }
 }

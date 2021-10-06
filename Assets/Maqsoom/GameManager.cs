@@ -16,12 +16,40 @@ public class GameManager : NetworkBehaviour
 
     public Player firstPlayer;
 
+    [SyncVar(hook = nameof(OnNameChange))]
+    public int mapId;
+
     public static GameManager singleton;
 
     // Start is called before the first frame update
     void Start()
     {
         singleton = this;
+
+        if(isServer == true)
+        {
+            mapId = Random.Range(0, FindObjectOfType<EnvironmentManager>().environments.Length);
+        }
+    }
+
+    void OnNameChange(int oldValue , int newValue) 
+    {
+        int a = newValue;
+
+        if (a < 2)
+        {
+            MusicManager.instance.Play("1");
+        }
+        else if (a == 2)
+        {
+            MusicManager.instance.Play("2");
+        }
+        else
+        {
+            MusicManager.instance.Play("3");
+        }
+
+        FindObjectOfType<EnvironmentManager>().environments[a].SetActive(true);
     }
 
     // Update is called once per frame
@@ -68,6 +96,11 @@ public class GameManager : NetworkBehaviour
     {
         Player[] players = (Player[])FindObjectsOfType(typeof(Player));
         statusText.text = $"{players[0].username} vs {players[1].username}";
+    }
+
+    private void OnDisable()
+    {
+        firstPlayer = null;
     }
 }
 

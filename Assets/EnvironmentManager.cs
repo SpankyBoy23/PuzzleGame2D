@@ -12,6 +12,8 @@ public class EnvironmentManager : MonoBehaviour
         {
             environment.SetActive(false);
         }
+
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Main") return;
       
             int a = Random.Range(0, environments.Length);
         if(a < 2)
