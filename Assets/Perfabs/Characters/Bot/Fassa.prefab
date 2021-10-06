@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 4741772202789038595}
   - component: {fileID: 4741772202789038592}
   - component: {fileID: 8693324586861254319}
+  - component: {fileID: 5866504735330870780}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -394,7 +395,7 @@ Animator:
   m_GameObject: {fileID: 4741772202789038594}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a3710c74cac8e64fa60504944486908, type: 2}
+  m_Controller: {fileID: 9100000, guid: de8f9f41f6077804d968673f67074dc1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -424,6 +425,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5866504735330870780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741772202789038594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 3097959127859262260}
+  prefab: {fileID: 7580216950177337274, guid: 5b24d14ce7978914c99010f7a9edd55f, type: 3}
 --- !u!1 &4741772202855488595
 GameObject:
   m_ObjectHideFlags: 0
@@ -17379,7 +17394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4741772204164759689}
-  - component: {fileID: 5260824871897730943}
+  - component: {fileID: 3321352371679251504}
   m_Layer: 0
   m_Name: Fassa
   m_TagString: Bot
@@ -17402,7 +17417,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5260824871897730943
+--- !u!114 &3321352371679251504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17411,11 +17426,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4741772204164759688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38890e65e9baa94ca0f13268e7e5c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 3509ba402fafc074b9c0e7cb5cff515f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 3097959127859262260}
-  prefab: {fileID: 7580216950177337274, guid: 0447d53fef7b1f546b19b524b16ba51e, type: 3}
+  anim: {fileID: 4741772202789038592}
 --- !u!1 &4741772204188393495
 GameObject:
   m_ObjectHideFlags: 0

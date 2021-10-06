@@ -2835,7 +2835,7 @@ MonoBehaviour:
   characterSpirtes:
   - {fileID: 21300000, guid: b4add7c1fbdd86d4baa422bc54550568, type: 3}
   - {fileID: 21300000, guid: deada29e6e4db6f428212d6f8e026253, type: 3}
-  - {fileID: 21300000, guid: f9ce1e66e978ee64296386b4ca18e1a2, type: 3}
+  - {fileID: 21300000, guid: a5ba66a44064e7042be582d02924f35a, type: 3}
   - {fileID: 21300000, guid: f9ce1e66e978ee64296386b4ca18e1a2, type: 3}
   - {fileID: 21300000, guid: d9731472a39e2e84a9bb31cf1422d7c8, type: 3}
   - {fileID: 21300000, guid: ccacd7959701ef24f8f67cb0496bb37a, type: 3}
@@ -2853,6 +2853,7 @@ MonoBehaviour:
   - {fileID: 1922805447}
   characterIntroSprites:
   - {fileID: 21300000, guid: cb71ecc4966a1a84890b52c80cab90f9, type: 3}
+  - {fileID: 21300000, guid: 8192569f58512104390b16ed39813c91, type: 3}
   - {fileID: 21300000, guid: 43217bdd68a09aa4c8179c509213677b, type: 3}
   - {fileID: 21300000, guid: f2d1b77dd9d5cf742933e1669593f77d, type: 3}
   - {fileID: 21300000, guid: 37f158f37961b4e4caff3c7d72196796, type: 3}
@@ -2860,8 +2861,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8497faebaa9f4bf42809ecd7170ce564, type: 3}
   - {fileID: 21300000, guid: 6f52192f75296ec448de5e9ca02a846c, type: 3}
   - {fileID: 21300000, guid: 70b0f70db336a874db46022eab7dd81b, type: 3}
-  - {fileID: 21300000, guid: 8192569f58512104390b16ed39813c91, type: 3}
   - {fileID: 21300000, guid: 3d7cb34978c5110419a9300f3dc89b1a, type: 3}
+  timeToAnimate: 5
+  topReach: 0
 --- !u!4 &1392448299
 Transform:
   m_ObjectHideFlags: 0
@@ -3132,8 +3134,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1392448298}
         m_TargetAssemblyTypeName: CharactersManager, Assembly-CSharp
-        m_MethodName: CharacterSelection
-        m_Mode: 3
+        m_MethodName: Random
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3465,7 +3467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 91, y: -296.99997}
+  m_AnchoredPosition: {x: 91, y: -297}
   m_SizeDelta: {x: 2762.83, y: 1462.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600067451

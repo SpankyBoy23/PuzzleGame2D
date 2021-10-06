@@ -4816,7 +4816,7 @@ MonoBehaviour:
   distoryEffect: {fileID: 1859229547943123754, guid: 71b72eec9c373d34eae125610e5245b5,
     type: 3}
   hitRange: 3.5
-  speed: 5
+  speed: -6
   animatorTarget: {fileID: 0}
   damageDelay: 0
 --- !u!1 &3767356829560032399

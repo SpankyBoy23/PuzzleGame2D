@@ -99,7 +99,7 @@ MonoBehaviour:
   fallTime: 0.8
   botMoves: 0
   test: 0
-  DestoryEffect: {fileID: 1944033325554485321, guid: f3fa876d7a55ab04bb3500e707da542d,
+  DestoryEffect: {fileID: 1944033325554485321, guid: 5b9c74e807abb0a4593e0da58cf9bdc4,
     type: 3}
 --- !u!114 &1875756750197576181
 MonoBehaviour:

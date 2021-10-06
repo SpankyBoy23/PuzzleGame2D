@@ -12,6 +12,6 @@ public class CharacterSetup : MonoBehaviour
     private void Start()
     {
         Instantiate(characters[PlayerPrefs.GetInt("CharacterIndex")], playerPos.position,playerPos.rotation);
-        Instantiate(bots[PlayerPrefs.GetInt("LevelNumber")], botPos.position,botPos.rotation);
+        Instantiate(bots[PlayerPrefs.GetInt("LevelNumber")-2], botPos.position,botPos.rotation);
     }
 }

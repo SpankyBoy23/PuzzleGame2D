@@ -19,9 +19,19 @@ public class CharactersManager : MonoBehaviour
     [SerializeField] Image[] characterIntroCubbyImage;
     [SerializeField] Sprite[] characterIntroSprites;
 
+    [Space]
+    [Header("RandomPick")]
+    public float maxTime = 3;
+    public float timeToAnimate = 3;
+    bool isRandom;
+    int randomNumber;
+    public int topReach;
+    public int effect;
+
     private void Awake()
     {
-        if(charactersManager == null)
+        timeToAnimate = maxTime;
+        if (charactersManager == null)
         {
             charactersManager = this;
         }
@@ -43,8 +53,13 @@ public class CharactersManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("CharacterUnlocked"))
         {
             PlayerPrefs.SetInt("CharacterUnlocked", 2);
+        }else
+        {
+            if(PlayerPrefs.GetInt("LevelNumber") >= PlayerPrefs.GetInt("CharacterUnlocked"))
+                 PlayerPrefs.SetInt("CharacterUnlocked", PlayerPrefs.GetInt("LevelNumber"));
         }
         CharacterManagement();
+        topReach = PlayerPrefs.GetInt("CharacterUnlocked") -1;
     }
 
     public void UnlockAll()
@@ -72,6 +87,11 @@ public class CharactersManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("CharacterIndex", index);
         characterImage.sprite = characterSpirtes[index];
+        foreach (Button btn in charactersBtn)
+        {
+            btn.GetComponent<Image>().color = Color.white;
+        }
+        charactersBtn[index].GetComponent<Image>().color = Color.gray;
     }
     public void StartBtn()
     {
@@ -81,5 +101,49 @@ public class CharactersManager : MonoBehaviour
         characterIntroCubbyImage[0].sprite = characterSpirtes[PlayerPrefs.GetInt("CharacterIndex")];
         characterIntroCubbyImage[1].sprite = characterSpirtes[PlayerPrefs.GetInt("LevelNumber")];
         this.Wait(2f, () => { SceneManager.LoadScene("OfflineMode"); });
+    }
+
+    public void Random()
+    {
+        isRandom = true;
+    }
+    bool test = false;
+    private void LateUpdate()
+    {
+        if (isRandom)
+        {
+           
+            if(timeToAnimate > 0)
+            {
+                timeToAnimate -= Time.deltaTime;
+                if(test)
+                {
+                    effect--;
+                    
+                }
+                else if (!test)
+                {
+                    effect++;
+                }
+                if (effect == 0)
+                    test = false;
+                else if (effect == topReach)
+                    test = true;
+                foreach(Button btn in charactersBtn)
+                {
+                    btn.GetComponent<Image>().color = Color.white;
+                }
+                charactersBtn[effect].GetComponent<Image>().color = Color.gray;
+            }
+            else
+            {
+                Debug.Log("Character: " + effect);
+                isRandom = false;
+                timeToAnimate = maxTime;
+                PlayerPrefs.SetInt("CharacterIndex", effect);
+                charactersBtn[effect ].GetComponent<Image>().color = Color.gray;
+                characterImage.sprite = characterSpirtes[effect];
+            }
+        }
     }
 }

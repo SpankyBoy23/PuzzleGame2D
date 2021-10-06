@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -26,7 +27,42 @@ public class MusicManager : MonoBehaviour
     }
     private void Start()
     {
-       // Play("Theme");
+        // Play("Theme");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Pause("CharacterSelection");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+            Play("MainMenu");
+        }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.buildIndex == 0)
+        {
+            Pause("CharacterSelection");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+            Play("MainMenu");
+        }else if(scene.buildIndex == 1)
+        {
+            Play("CharacterSelection");
+            Pause("MainMenu");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+        }else if(scene.buildIndex == 2)
+        {
+            Pause("CharacterSelection");
+            Pause("MainMenu");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+            FindObjectOfType<EnvironmentManager>().SetUpEnviorment();
+        }
     }
     public void Play(string name)
     {

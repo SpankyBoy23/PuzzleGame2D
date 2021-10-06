@@ -9580,7 +9580,7 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
-  hitRange: 5
+  hitRange: 6
   speed: 5
   animatorTarget: {fileID: 0}
   damageDelay: 0

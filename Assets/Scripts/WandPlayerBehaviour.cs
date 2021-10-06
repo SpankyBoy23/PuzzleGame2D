@@ -14,8 +14,9 @@ public class WandPlayerBehaviour : MonoBehaviour
 
     public void Attack()
     {
+        //Debug.Log("MinaAttacked");
         if (!LogicManager.intance.finalMove)
-            anim.Play("Attack");
+            anim.Play("Attack#1");
         else
             anim.Play("ChargeAttack");
     }

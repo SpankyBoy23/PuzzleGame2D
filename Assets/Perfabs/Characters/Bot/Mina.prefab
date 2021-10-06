@@ -9750,7 +9750,7 @@ Animator:
   m_GameObject: {fileID: 6369888807430912339}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ea22496d59723948bc33d892257d1f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8403dde11a52d1443b1cef967480cdae, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9771,8 +9771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 0}
-  prefab: {fileID: 6503576960649181042, guid: 0e3cb54b96d77904d95d9266e17474f3, type: 3}
+  spawnPos: {fileID: 4849502594489062663}
+  prefab: {fileID: 5944837130740583784, guid: ee78f9811b48a714ca0c12a0c269b336, type: 3}
 --- !u!50 &7287446097741911869
 Rigidbody2D:
   serializedVersion: 4
@@ -12272,7 +12272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6369888808875396930}
-  - component: {fileID: 2573070857753205647}
+  - component: {fileID: 1356263360}
   m_Layer: 0
   m_Name: Mina
   m_TagString: Bot
@@ -12295,7 +12295,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2573070857753205647
+--- !u!114 &1356263360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12304,7 +12304,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6369888808875396931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38890e65e9baa94ca0f13268e7e5c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 3509ba402fafc074b9c0e7cb5cff515f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6369888807430912341}
