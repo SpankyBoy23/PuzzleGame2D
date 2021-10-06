@@ -39,6 +39,9 @@ public class net_LogicManager : MonoBehaviour
     void LateUpdate()
     {
         //Debug.Log(objectList.Count);
+
+        if (Mirror.NetworkServer.active == false) return;
+
         DestroyPlayerBlocks();
     }
     private void DestroyPlayerBlocks()
@@ -50,7 +53,7 @@ public class net_LogicManager : MonoBehaviour
             {
                 if(obj!=null)
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
-                this.Wait(0.2f, () => { Destroy(obj); });
+                this.Wait(0.2f, () => { Mirror.NetworkServer.Destroy(obj); });
                
                 //playerBehviour.Walk();
             }

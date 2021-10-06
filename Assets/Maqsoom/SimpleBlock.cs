@@ -55,6 +55,13 @@ public class SimpleBlock : NetworkBehaviour
 
         }
     }
+
+    [Command]
+    void CmdFunction(GameObject go) 
+    {
+        net_LogicManager.intance.objectList.Add(go);
+    }
+
     void Function(int x, int y, int call)
     {
         //Debug.Log(call);
@@ -69,7 +76,7 @@ public class SimpleBlock : NetworkBehaviour
                 //TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<SpriteRenderer>().color = Color.red;
                 if (!net_LogicManager.intance.objectList.Contains(net_BlockMovement.grid2[roundedX, roundedY].gameObject))
                 {
-                    net_LogicManager.intance.objectList.Add(net_BlockMovement.grid2[roundedX, roundedY].gameObject);
+                    CmdFunction(net_BlockMovement.grid2[roundedX, roundedY].gameObject);
                 }
 
                 //    GetComponent<SpriteRenderer>().color = Color.red;

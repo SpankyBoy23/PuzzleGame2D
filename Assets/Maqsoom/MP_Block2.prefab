@@ -117,6 +117,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  fallTime: 0.8
+  countDown: 2
+  dragDistance: 0
+  test: 0
+  drag: 0
+  DestoryEffect: {fileID: 1944033325554485321, guid: 9ddcd9bfd3c49534c9d5cca42a928da3,
+    type: 3}
+  PlacedEffect: {fileID: 7696325898009484874, guid: 3b45e63b30b23614c9fc4c2545f0ae84,
+    type: 3}
   net_Start: 0
 --- !u!114 &5616305995772782894
 MonoBehaviour:
