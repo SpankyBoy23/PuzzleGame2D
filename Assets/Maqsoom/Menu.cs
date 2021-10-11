@@ -7,43 +7,21 @@ using LightReflectiveMirror;
 
 public class Menu : MonoBehaviour
 {
-    public static string username;
-
-    public GameObject menuObj;
-    public GameObject gameObj;
-
-    public InputField usernameField;
-    public Text usernameText;
-
     public LightReflectiveMirrorTransport lightReflectiveMirrorTransport;
-
     bool firstTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        usernameField.text = PlayerPrefs.GetString("Username");
-
         lightReflectiveMirrorTransport.serverListUpdated.AddListener(() => OnRefreshServersList());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!string.IsNullOrEmpty(usernameField.text) && usernameField.text != username) 
-        {
-            username = usernameField.text;
-            usernameText.text = username;
 
-            PlayerPrefs.SetString("Username", username);
-        }
     }
 
-    public void ShowGameMenu() 
-    {
-        menuObj.SetActive(false);
-        gameObj.SetActive(true);
-    }
     public void RequestServersList()
     {
         lightReflectiveMirrorTransport.RequestServerList();
@@ -51,7 +29,7 @@ public class Menu : MonoBehaviour
 
     public void OnRefreshServersList()
     {
-        if(firstTime == false)
+        if (firstTime == false)
         {
             firstTime = true;
             return;
@@ -68,7 +46,10 @@ public class Menu : MonoBehaviour
 
         foreach (var server in lightReflectiveMirrorTransport.relayServerList)
         {
+            string[] data = server.serverData.Split('|');
+
             if (server.currentPlayers == server.maxPlayers) continue;
+            if (data[1] != "PuzzleGame") continue;
 
             /*    statusText.text = "CONNECTED TO ROOM...";
     */

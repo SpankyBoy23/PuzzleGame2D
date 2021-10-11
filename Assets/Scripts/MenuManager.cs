@@ -83,7 +83,7 @@ public class MenuManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Sound") == 0)
         {
-            sound.isOn = true;
+            //sound.isOn = true;
             this.Wait(0.5f, () =>
             {
 
@@ -91,7 +91,7 @@ public class MenuManager : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("Sound") == 1)
         {
-            sound.isOn = false;
+           // sound.isOn = false;
             this.Wait(0.5f, () =>
             {
                 FindObjectOfType<MusicManager>().PauseAll();
@@ -102,11 +102,11 @@ public class MenuManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Music") == 0)
         {
-            music.isOn = true;
+         //   music.isOn = true;
         }
         else if (PlayerPrefs.GetInt("Music") == 1)
         {
-            music.isOn = false;
+        //    music.isOn = false;
         }
     }
 }

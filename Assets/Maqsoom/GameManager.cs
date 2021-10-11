@@ -21,6 +21,12 @@ public class GameManager : NetworkBehaviour
 
     public static GameManager singleton;
 
+    public GameObject winOrLoseObj;
+    public Image i;
+    public Sprite loseSprite;
+    public Sprite winSprite;
+    public bool decide;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +64,29 @@ public class GameManager : NetworkBehaviour
         if (isServer == false) return;
 
         ProcessGameStateOnServer();
+    }
+
+    [Command(requiresAuthority = false)]
+    public void CmdLoseGame(uint netId) 
+    {
+        if (decide == true) return;
+        decide = true;
+
+        RpcLoseGame(netId);
+    }
+    [ClientRpc]
+    void RpcLoseGame(uint netId) 
+    {
+        winOrLoseObj.SetActive(true);
+
+        if(NetworkClient.localPlayer.netId == netId) 
+        {
+            i.sprite = loseSprite;
+        }
+        else 
+        {
+            i.sprite = winSprite;
+        }
     }
 
     [Server]
