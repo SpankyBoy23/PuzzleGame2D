@@ -38,7 +38,7 @@ public class MusicManager : MonoBehaviour
             Play("MainMenu");
         }
     }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if(scene.buildIndex == 0)
         {
@@ -64,19 +64,62 @@ public class MusicManager : MonoBehaviour
             FindObjectOfType<EnvironmentManager>().SetUpEnviorment();
         }
     }
+    public void SceneLaod(int a)
+    {
+        if (a == 0)
+        {
+            Pause("CharacterSelection");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+            Play("MainMenu");
+        }
+        else if (a == 1)
+        {
+            Play("CharacterSelection");
+            Pause("MainMenu");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+        }
+        else if (a == 2)
+        {
+            Pause("CharacterSelection");
+            Pause("MainMenu");
+            Pause("1");
+            Pause("2");
+            Pause("3");
+            FindObjectOfType<EnvironmentManager>().SetUpEnviorment();
+        }
+    }
     public void Play(string name)
     {
+
+        Debug.Log("Playing: " + name+ " "+ PlayerPrefs.GetInt("Music"));
         Sound s = Array.Find(sounds, Sound => Sound.name == name);
-        s.source.Play();
-        if (s == null)
-        {
-            Debug.LogWarning("Sound:" + name + "not Found!");
-            return;
-        }
+        
+            if (PlayerPrefs.GetInt("Music") == 0)
+                s.source.Play();
+            if (s == null)
+            {
+                Debug.LogWarning("Sound:" + name + "not Found!");
+                return;
+            }
+        
+    
     }
     public void Pause(string name)
     {
+        Debug.Log("Paused");
         Sound s = Array.Find(sounds, Sound => Sound.name == name);
         s.source.Pause();
+    }
+    public void PauseAll()
+    {
+        Pause("CharacterSelection");
+        Pause("MainMenu");
+        Pause("1");
+        Pause("2");
+        Pause("3");
     }
 }

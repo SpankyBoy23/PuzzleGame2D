@@ -109,6 +109,7 @@ public class LogicManager : MonoBehaviour
         if (objectList.Count > 1 && finalMove == false)
         {
             noOfBlocksLastDestoryed = objectList.Count;
+            FindObjectOfType<BlockSpawnerForBot>().blackBlock = noOfBlocksLastDestoryed;
             foreach (GameObject obj in objectList)
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;
@@ -149,6 +150,7 @@ public class LogicManager : MonoBehaviour
         if (objectListForBot.Count > 1 && finalMove == false)
         {
             noOfBlocksLastDestoryedBot = objectListForBot.Count;
+            FindObjectOfType<BlockSpawnerPlayer2>().blackBlock = noOfBlocksLastDestoryedBot;
             foreach (GameObject obj in objectListForBot)
             {
                 obj.GetComponent<SpriteRenderer>().color = Color.red;

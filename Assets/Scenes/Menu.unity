@@ -357,6 +357,245 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &53415791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53415792}
+  - component: {fileID: 53415796}
+  - component: {fileID: 53415795}
+  - component: {fileID: 53415794}
+  - component: {fileID: 53415793}
+  m_Layer: 5
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &53415792
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53415791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1639370546}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 612.24, y: 71.78}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!95 &53415793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53415791}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28e358eaf74c17f458b9d72d0e39095b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &53415794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53415791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 3
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 53415795}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1639370545}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "https://cc.loginfra.com/cc?a=enc.list&r=&i=&bw=1531&px=570&py=795&sx=570&sy=3
+            42&m=1&nsc=webtoons.all&g=en_en&u=https%3A%2F%2Fwww.webtoons.com%2Fen
+            %2Fchallenge%2Fcrusadia-connected%2Fs1-ch-1-the-announcement-part\x021%2Fviewer%3Ftitle_no%3D576083%26episode_no%3D1"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 513192724}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1124051111}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Btn
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &53415795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53415791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Back
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ff41060de66fd4746a8551884ea54e02, type: 2}
+  m_sharedMaterial: {fileID: -5372527604998566929, guid: ff41060de66fd4746a8551884ea54e02,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: c6418b1980b6bcd4fb8629e63596058e,
+    type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 6
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 10
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &53415796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53415791}
+  m_CullTransparentMesh: 1
 --- !u!1 &68293057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +2763,96 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &220450078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220450079}
+  - component: {fileID: 220450082}
+  - component: {fileID: 220450081}
+  - component: {fileID: 220450080}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &220450079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220450078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 721738399}
+  m_Father: {fileID: 2116855053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -2.77}
+  m_SizeDelta: {x: 565.86, y: 690.62}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &220450080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220450078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &220450081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220450078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &220450082
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220450078}
+  m_CullTransparentMesh: 1
 --- !u!1 &225786008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,6 +3206,7 @@ RectTransform:
   - {fileID: 513192725}
   - {fileID: 286409886}
   - {fileID: 206805428}
+  - {fileID: 1639370546}
   m_Father: {fileID: 2104443646}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4688,7 +5018,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 286409885}
+      - m_Target: {fileID: 1639370545}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5386,6 +5716,339 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703722408}
+  m_CullTransparentMesh: 1
+--- !u!1 &721738398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721738399}
+  - component: {fileID: 721738402}
+  - component: {fileID: 721738401}
+  - component: {fileID: 721738400}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &721738399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721738398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 220450079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.0014038086}
+  m_SizeDelta: {x: -26.289978, y: 44032.67}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &721738400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721738398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &721738401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721738398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Crusadia Connected Duel of Heroes\r\nTerms of Service\r\n10/03/21\r\nPlease
+    read this end user license agreement (\u201CEULA\u201D) very carefully. By \r\ndownloading/installing
+    the Crusadia Connected: Duel of Heroes (\u201CSoftware\u201D), you \r\nare agreeing
+    to the terms of this EULA. If you do not agree to the terms of this \r\nEULA,
+    you must not access, download, install or use the Software.\r\nSection 1: Introduction\r\nThis
+    EULA is a legal agreement between you and Grant Films, LLC (\u201CCrusadia \r\nConnected:
+    Duel of Heroes \u201C,\u201Cwe\u201D,\u201Dour\u201D, or \u201Cus\u201D). This
+    EULA governs your use of the\r\nSoftware. In addition, this EULA also applies
+    to automatic updates, add-ons, \r\nsupplements and Internet-based services relating
+    to the Software that we may \r\nprovide or make available to you. Our Privacy
+    Policy describes what information \r\nwe collect and how we use and share such
+    information. It can be found by clicking \r\non its link located on the bottom
+    of this page.\r\nSection 2: Advertising through the Software\r\nWhen you install
+    the Software, you will be given free access to our library of \r\nengaging premium
+    games that are not available unless the Software is installed. \r\nBy installing
+    the Software, advertisements such as video, textlink, interstitial and \r\npop-ups
+    will be served to you via the Software based on the web content you view \r\n(such
+    advertisements will be referred as \u201CAdvertisements\u201D). We utilize the
+    content \r\nof the webpage and the URLs you visit so that we can display more
+    relevant ads to \r\nyou. The support from Advertisements is necessary so that
+    we can provide you with \r\nthe free premium gaming content. As such, you will
+    see additional offers & display \r\nads when using this service. These Advertisements
+    are not associated with any \r\nunderlying website, and further information about
+    these ads is available by clicking \r\nthe \u201Cabout this ad\u201D link in
+    the ad display frame or as expressed in this EULA \r\nhereunder. You can easily
+    uninstall or disable our product from the Add/Remove \r\ncontrol panel (if you
+    installed via a downloaded executable) or from within your \r\nbrowser.\r\nSection
+    3: Privacy Policy\r\nAs explained in more detail, the Privacy Policy, no personally
+    identifiable \r\ninformation is collected by the Software. The Software may be
+    automatically \r\nupdated on a regular basis so that we can upkeep our technology
+    and push out \r\nnew functions and features as appropriate. Such periodic updates
+    to the Software \r\nmay include updates to our security database; and/or additions,
+    changes or \r\nmodifications to the Software, as well as the addition of other
+    functionalities that \r\nmay enhance the relevancy of your advertisement experience.
+    We reserve the right \r\nto add, change or discontinue any portion of our Software
+    in any way, solely as a \r\nmatter of our discretion. Please let us know any
+    questions or issues you have \r\nrelating to the Site or Software by contacting
+    us at \r\nfgrant.crusadiaconnected@gmail.com\r\nAs the Privacy Policy explains
+    in more detail, we use cookies, web beacons, and \r\nother tracking technologies
+    to collect certain information about you and when you \r\nuse the Software. Specifically,
+    we collect non-personally identifiable information, \r\nsuch as your IP address,
+    browser type, operating system, date and time of your visit \r\nand time spent
+    on the site, and/or referral information.\r\nSection 4: License Grant\r\nSubject
+    to the terms of this EULA, Crusadia Connected: Duel of Heroes grants you \r\na
+    revocable, non-exclusive, limited, non-sublicense able license to install and
+    use \r\none copy of the Software on a single device. Crusadia Connected: Duel
+    of Heroes\r\nmaintains all ownership rights of the Software, including all title,
+    interest in, and \r\nintellectual property rights therein. All rights not expressly
+    granted herein are \r\nreserved by Crusadia Connected: Duel of Heroes. All title
+    and copyrights in and to \r\nthe Software (including but not limited to any content,
+    images, graphics, video, \r\naudio, text and other features incorporated in the
+    Software), and any copies of the \r\nSoftware are protected by the copyright
+    laws and international treaty provisions, \r\nas well as other intellectual property
+    laws. Therefore, you must treat the Software \r\nlike any other protected copyrighted
+    material. Except as expressly set forth in this \r\nEULA, you may not copy the
+    Software or any accompanying materials therein. \r\nBecause the Software contain
+    Crusadia Connected: Duel of Heroes\u2019 proprietary \r\ninformation, you agree:
+    (a) to hold in the strictest confidence all code and other \r\ntechnical elements
+    of the Software, (b) to not directly or indirectly copy, reproduce, \r\ndistribute,
+    manufacture, reveal, report, publish, case to be disclosed or otherwise \r\ntransfer
+    anything on or in the Software to any third party, and (c) not to make use \r\nof
+    the Software other than for your own personal and non-commercial purpose.\r\nSection
+    5: Responsibility\r\nYou are fully and solely responsible for your activities
+    when using the Software. \r\nYou shall not use the Software in any way that is
+    unlawful or that harms us or any \r\nother party in anyway.\r\nSection 6: Uninstallation\r\nThe
+    Software may be uninstalled from your iOS and/or Android Device at any time\r\naccording
+    to that operating system\u2019s processes and procedures.\r\nIf you encounter
+    difficulties removing the Software, please contact us at \r\nfgrant.crusadiaconnected@gmail.com.\r\nSection
+    7: Automatic Updates\r\nOur Software is updated periodically. Crusadia Connected:
+    Duel of Heroes in its \r\nsole discretion may or may not update the Software
+    on your device, but has no \r\nobligation to provide you with any updates. We
+    reserve the right to add, change \r\nor to discontinue any part of our Software
+    in any way, solely in our discretion. Due \r\nto the rapidly evolving nature
+    of the Internet and continuous improvements to our \r\nSoftware, Crusadia Connected:
+    Duel of Heroes reserves the right to make changes \r\nto this EULA. Please check
+    this page periodically for changes. Any such modification \r\nconstitutes a successor
+    EULA, and therefore, continued us of the Software indicates \r\nyour acceptance
+    of such modified EULA. If you do not accept any such successor \r\nEULAs you
+    must uninstall the Software from your device and cease and your use \r\nof the
+    Site. Failure to uninstall the Software or your continued use of the Site \r\nconstitutes
+    acceptance of the modified EULA.\r\nSection 8: Termination\r\nYou may terminate
+    this EULA at any time by uninstalling the Software and ceasing \r\nyour use of
+    the Site. This EULA is terminated automatically if you do not comply \r\nwith
+    all of the terms and conditions of the EULA. Crusadia Connected: Duel of \r\nHeroes
+    also may terminate this EULA at any time for any reason, without notice to \r\nyou
+    and in its sole discretion. In the event that EULA is terminated for any reason,
+    \r\nyour rights to use the Software will immediately cease and you must uninstall
+    the \r\nSoftware and cease your use of the Site.\r\nSection 9: Disclaimer\r\nTO
+    THE MAIXUM EXTENT PERMITTED BY LAW, Crusadia Connected: Duel of Heroes\r\nEXPRESSLY
+    DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, \r\nEITHER EXPRESS OR IMPLIED
+    OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, \r\nIMPLIED WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR \r\nPURPOSE, QUALITY, TITLE COMPLETENESS, ACCURACY AND
+    NON\x02INFRINGEMENT WITH REGARD TO THE SOFTWARE. THE SITE AND SOFTWARE ARE \r\nPROVIDED
+    \u201CAS IS\u2019 AND \u201CAS AVAILABLE\u2019. THERE ARE NO WARRANTIES THAT
+    YOUR \r\nACCESS TO OR USE OF THE SITE AND SOFTWARE OR ANY PART THEREFORE WILL
+    \r\nBE ERROR FREE, UNINTERRUPTED OR COMPLETELY SECURE. THIS LIMITED \r\nWARRANTY
+    GIVES YOU SPECIFIC LEGAL RIGHTS. ACCORDINGLY, YOUR USE OF \r\nTHE SITE AND SOFTWARE
+    IS SOLELY AT YOUR OWN RISK, INCLUDING WITHOUT \r\nLIMIT ALL RISKS ASSOCIATED
+    WITH THE STIE AND SOFTWARE NOT FUNCTIONING \r\nAS INTENDED OR FAILURE OF THE
+    SITE AND SOFTWARE RESULTING FROM \r\nACCIDENT, ABUSE, MISAPPLICATION OR A VIRUS.\r\nSection
+    10: Additional Terms\r\nYour not allowed to make any changes or ask others to
+    make changes to the \r\nSoftware, including reverse engineering or decompiling
+    the Software, or modifying \r\nit an any way or disassembling the Software. Any
+    modification to the Software shall \r\nremain the exclusive property of Crusadia
+    Connected: Duel of Heroes. Crusadia \r\nConnected: Duel of Heroes may in its
+    sole discretion and for any reason discontinue \r\nyour right to access and use
+    of the Software. Without prejudice to any other rights, \r\nwe reserve the right
+    immediately to terminate this EULA in the event you violate \r\nany terms of
+    this EULA, and to investigate and cooperate with our appropriate legal \r\nauthorities
+    regarding any illegal or unauthorized actives involving your use of the \r\nSoftware
+    or this EULA. You must be at least 18 years of age in order to enter into \r\nthis
+    EULA for the licensing of the Software. As a condition of your using our \r\nSoftware,
+    you represent that you are at least 18 years old. Crusadia Connected: \r\nDuel
+    of Heroes has no control over third party sites which you may have access, \r\nincluding
+    those sites which are linked to our Site and through those sites accessed \r\nvia
+    Advertisements. Therefore, Crusadia Connected: Duel of Heroes is not \r\nresponsible
+    for the content or function of any other website, and disclaims any \r\nliability
+    for any aspects of any websites you access via direct access or access \r\nthrough
+    our Software functionality. The applicable terms and privacy policies of \r\nthose
+    websites shall govern your use of such websites.\r\nSection 11: Resolution through
+    Arbitration\r\nAny claims and/or disputes arising out of or related to this EULA,
+    the Site and \r\nSoftware and/or any services or products acquired under or relating
+    to this EULA \r\nshall be exclusively resoled through binding arbitration. Such
+    arbitration shall be \r\nsubject to the Federal Arbitration Act and the rules
+    of the American Arbitration \r\nAssociation, which shall govern such arbitration
+    and be conducted before a single \r\narbitrator in Georgia. No claimants shall
+    have their claims/disputes resolved on a \r\nclass basis and accordingly, class
+    action or join our respective claims in arbitration \r\nby or against other user
+    or arbitrate any claims as a member of a class or in a \r\nprivate capacity.
+    Both parties shall share the costs of the arbitration and the us of \r\nthe arbitrator.
+    Except for the cost of the arbitrator, each party shall bear its own \r\ncosts
+    (including respective attorneys fee). Any aware rendered in arbitration shall
+    \r\nbe final and binding, and may be enforced in any court having competent \r\njurisdiction.
+    In addition to any other available remedies, we shall have the right to \r\nseek
+    injunctive relief to protect our intellectual property rights to our Software.\r\nSection
+    12: Limitation of Liability and Exclusive Remedy\r\nTO THE MAXIMUM EXTENT PERMITTED
+    BY APPLICABLE LAW, IN NO EVENT SHALL \r\nCrusadia Connected: Duel of Heroes GAMES
+    OR ANY OF ITS MEMBERS, OFFICERS, \r\nEMPLOYEES, DIRECTORS, CONSULTANTS, AFFILIATES
+    OR SUBSIDIARIES BE LIABLE \r\nFOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL,
+    PUNITIVE OR \r\nEXEMPLARY DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION,
+    \r\nDAMES FOR LOSS DUE TO BUSINESS INTERRUPTION, LOSS OF PROFITS, LOSS OF \r\nINFORMATION
+    OR ANY OTHER KIND OF PECUNIARY LOSS) ARISING OUT OF OR \r\nRELATED TO THE USE
+    OR INABILITY TO USE THE SITE AND SOFTWARE OR THE \r\nPROVISION OF OR FAILURE
+    TO PROVIDE SUPPORT SERVICES, EVEN IF Crusadia \r\nConnected: Duel of Heroes HAS
+    BEEN ADVISED OF THE POSSIBILITY OF SUCH \r\nDAMAGES. FURTHERMORE, Crusadia Connected:
+    Duel of Heroes SHALL HAVE NO \r\nLIABILITY FOR ANY DAMAGES CAUSED TO ANY HARDWARE
+    OR BY THE \r\nCOMBINATION OF OUR SITE AND SOFTWARE WITH ANY OTHER APPLICATION
+    \r\nOR SOFTWARE. IN ANY CASE, OUR ENTIRE LIABILITY, THAT THAT OF OUR \r\nMEMBERS,
+    OFFICERS, EMPLOYEES, DIRECTORS, CONSULTANTS, AFFILIATES OR \r\nSUBSIDIARIES,
+    UNDER ANY PROVISION OF THIS EULA SHALL BE LIMITED TO \r\n$1,000. TO THE EXTENT
+    SOME STATES AND JURISDICTION DO NOT ALLOW THE \r\nEXCLUSION OR LIMITATION OF
+    LIABILITY, THE ABOVE LIMITATION MAY NOT \r\nAPPLY TO YOU IN SUCH STATES.\r\nIN
+    AN OF THE FOREGOING EXCLUSIONS OF LIABILITY IS HELD TO FAIL OF ITS \r\nESSENTIAL
+    PURPOSE OR IS OTHERWISE DEEMED TO BE VOIDABLE OR \r\nUNENFORCEABLE, WHETHER IN
+    WHOLE OR IN PART, FOR ANY REASON, THEN \r\nTHE MAXIMUM AGGREGATE, CUMULATIVE
+    LIABILITY OF Crusadia Connected: Duel \r\nof Heroes AND THE OF OUR MEMBERS, OFFICERS,
+    EMPLOYEES, DIRECTORS, \r\nCONSULTANTS, AFFILIATES SOFTWARE, WHALL NOT EXCEED
+    YOUR DIRECT \r\nDAMAGES, IF ANY, UP TO ONE HUNDRED DOLLARS ($100.00). RECOVER
+    OF SUCH \r\nDAMES UP TO SUCH ABOUT SHALL BE YOUR SOLE AND EXCLUSIVE REMEDY.\r\nTHE
+    LIMITATIONS IN THIS SECTION SHALL BE DEEMED TO APPLY TO ALL CLAIMS, \r\nCAUSES
+    OF ACTION AND ALL LEGAL THEORIES, WITHOUT REGARD TO WHETHER \r\nTHE DAMAGES ARISE
+    FROM OR RELATE TO A BREACH OF CONTRACT, BREACH OF \r\nWARRANTY, NEGLIGENCE OR
+    OTHER TORTS, OR ANY OTHER CLAIM OR CAUSE \r\nOF ACTION. HOWEVER STATED, THE EXCLUSION
+    OF CONSEQUENTIAL DAMAGES \r\nUNDER THIS SECTION IS INDEPENDENT OF YOUR EXCLUSIVE
+    REMEDY AND \r\nSURVIVES IF SUCH REMEDY FAILS OF ITS ESSENTIAL PURPOSE OR IS OTHERWISE
+    \r\nDEEMED TO BE VOIDABLE OR UNENFORCEABLE.\r\nSection 13: Time Limit to Bring
+    a Claim\r\nYou and Crusadia Connected: Duel of Heroes agree that any claim or
+    cause of \r\naction arising out of or related to this EULA or the Software must
+    commence within \r\none (1) year after the claim or cause of action accrues.
+    Otherwise, such claim or \r\ncause of action is permanently barred.\r\nSection
+    14: Miscellaneous\r\nThe laws of the State of Georgia shall govern the interpretation
+    and performance \r\nof this EULA, without regard to any conflicts of law provisions.
+    The exclusive \r\njurisdiction for all claims or causes of actions based on this
+    EULA or arising from \r\nthe use of the Site or Software shall be in the State
+    of Georgia. This EULA \r\nconstitutes the entire agreement under which Crusadia
+    Connected: Duel of Heroes\r\nallows you to use the Site and Software. If there
+    are any clauses or provisions in \r\nthis EULA which may now or in the future
+    be held to be illegal, unenforceable or \r\ninvalid, only those specific terms
+    shall be deemed unenforceable, and the \r\nremainder of the EULA shall remain
+    in full force and effect. In addition to any other \r\nlimitations which may
+    be set forth herein, Crusadia Connected: Duel of Heroes shall \r\nnot be responsible
+    for events which are out of the control of Crusadia Connected: \r\nDuel of Heroes
+    and which negatively impact the performance or use of the Site \r\nand Software,
+    such as acts by governmental authorities, acts of God or other acts \r\nno within
+    the reasonable control of Crusadia Connected: Duel of Heroes"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 44.33
+  m_fontSizeBase: 44.33
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 10
+  m_lineSpacing: 20
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &721738402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721738398}
   m_CullTransparentMesh: 1
 --- !u!1 &729442934
 GameObject:
@@ -6645,6 +7308,8 @@ MonoBehaviour:
   MultiplayerMode: {fileID: 1876995393}
   usernamePanel: {fileID: 2016225}
   usernameInuput: {fileID: 114601551}
+  sound: {fileID: 1076765505}
+  music: {fileID: 1544012147}
 --- !u!4 &875861466
 Transform:
   m_ObjectHideFlags: 0
@@ -6924,9 +7589,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "https://cc.loginfra.com/cc?a=enc.list&r=&i=&bw=1531&px=570&py=795&sx=570&sy=3
-            42&m=1&nsc=webtoons.all&g=en_en&u=https%3A%2F%2Fwww.webtoons.com%2Fen
-            %2Fchallenge%2Fcrusadia-connected%2Fs1-ch-1-the-announcement-part\x021%2Fviewer%3Ftitle_no%3D576083%26episode_no%3D1"
+          m_StringArgument: https://www.webtoons.com/en/challenge/crusadia-connected/list?title_no=576083
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1124051111}
@@ -7363,6 +8026,30 @@ MonoBehaviour:
           m_StringArgument: Btn
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 875861465}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: SoundToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 875861465}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: SetToggleSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1084253589
 GameObject:
@@ -7398,8 +8085,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 185.41248, y: -247.57996}
-  m_SizeDelta: {x: -250.36499, y: -206.13}
+  m_AnchoredPosition: {x: 92, y: -226}
+  m_SizeDelta: {x: -14.2, y: -171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084253591
 MonoBehaviour:
@@ -10635,6 +11322,30 @@ MonoBehaviour:
           m_StringArgument: Btn
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 875861465}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: MusicToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 875861465}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: setToggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1553649205
 GameObject:
@@ -11267,6 +11978,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629498493}
   m_CullTransparentMesh: 1
+--- !u!1 &1639370545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639370546}
+  - component: {fileID: 1639370548}
+  - component: {fileID: 1639370547}
+  m_Layer: 5
+  m_Name: Terms Of Use
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1639370546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639370545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 53415792}
+  - {fileID: 2116855053}
+  - {fileID: 1948545236}
+  m_Father: {fileID: 241530604}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -235}
+  m_SizeDelta: {x: 612.24, y: 1033.78}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1639370547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639370545}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
+--- !u!114 &1639370548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639370545}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 40
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 70
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1641158065
 GameObject:
   m_ObjectHideFlags: 0
@@ -13547,6 +14338,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931480744}
   m_CullTransparentMesh: 1
+--- !u!1 &1948545235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948545236}
+  - component: {fileID: 1948545238}
+  - component: {fileID: 1948545237}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1948545236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948545235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1639370546}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 469.55, y: 117.39}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1948545237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948545235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Terms of user
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ff41060de66fd4746a8551884ea54e02, type: 2}
+  m_sharedMaterial: {fileID: -5372527604998566929, guid: ff41060de66fd4746a8551884ea54e02,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278198349
+  m_fontColor: {r: 0.3018868, g: 0.1270092, b: 0, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: c5a0db17048fa3c44b508cf960e5e88b,
+    type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 62.64
+  m_fontSizeBase: 62.64
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1948545238
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948545235}
+  m_CullTransparentMesh: 1
 --- !u!1 &1985155953
 GameObject:
   m_ObjectHideFlags: 0
@@ -14125,8 +15052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -26.289978, y: 1126.67}
+  m_AnchoredPosition: {x: 0, y: 0.0014038086}
+  m_SizeDelta: {x: -26.289978, y: 44032.67}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2059322636
 MonoBehaviour:
@@ -14162,14 +15089,212 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.
-
-'
+  m_text: "Crusadia Connected Duel of Heroes\r\nPrivacy Policy\r\n10/03/21\r\nWHAT
+    DOES THIS DOCUMENT CONTAIN?\r\nFor the proper functioning of this Game, it is
+    necessary to collect and process certain \r\ninformation obtained from the device
+    where it has been installed. This information enables us to \r\nimprove the app,
+    to optimally tailor the content to each user, or to contact the user if necessary.
+    \r\nIn order to make our concern for our users\u2019 privacy clear, we have adopted
+    this Privacy Policy \r\nwhich explains in a simple and comprehensible language
+    the manner in which we collect, store, \r\nuse and disclose the information users
+    entrust us with.\r\nThese Privacy Policies attempt to cover the widest possible
+    range of scenarios, including many \r\ncases in which the game does not even
+    collect nor process the information described within \r\nthese Privacy Policies.\r\n1.
+    WHAT INFORMATION DOES THE GAME COLLECT?\r\nThis Game collects the necessary information
+    for the normal functioning of our business. Under \r\nno circumstance do we collect
+    personal information with malicious intentions.\r\nThe game does not collect
+    your name, last name, email, phone number, etc., unless you are asked \r\nto
+    enter that information intentionally.\r\nWe may combine this information with
+    other information about you collected from other \r\nsources (e.g. apps or websites).\r\n2.
+    WHAT INFORMATION DOES THIS PRIVACY POLICY COVER?\r\nThe game may collect two
+    types of information: (1) non-personal, anonymous information \r\ncollected automatically,
+    or (2) personally identifiable information (PII) collected manually after \r\nreceiving
+    the user\u2019s consent.\r\nNon-personal information collected automatically\r\nTechnical
+    information, which includes certain information or characteristics regarding
+    the \r\noperating system, including the type of ISP or the type of browser used,
+    the Internet Protocol \r\n(IP), the IP address and the names and versions of
+    the game installed on the device, as well as the \r\ngeographical location of
+    the device (including GPS coordinates). Technical information such as \r\nthe
+    foregoing stays anonymous; in other words, it does not personally identify you
+    or is stored \r\ntogether with any other information that may link it to the
+    user itself, except when the user \r\nsubmits additional information voluntarily.\r\nThis
+    information shall be used to improve the game, learning how, when and where the
+    user browses on it.\r\nInformation freely provided by the user\r\nIf at any moment
+    the game were to request Personally Identifiable Information (PII) that would
+    \r\nallow us to contact him/her, such as his/her name or mobile phone number,
+    the user shall be free \r\nto provide such information. However:\r\n\xA7 If you
+    share your PII over an open format (for example, over social networks), the \r\ninformation
+    we obtained will not be protected by this privacy policy.\r\n\xA7 The PII will
+    not include any type of information collected by the game by any \r\nmeans other
+    than this application which contains the privacy policy. This means that \r\nthe
+    information collected anyplace else other than on this application will not be
+    \r\nprotected by this Privacy Policy. It is worth noting that, in any case the
+    app were to \r\noffer links to other applications, we shall not be liable for
+    the content, activity or \r\ninformation contained therein.\r\nThe following
+    shall be considered Personal Information:\r\n\xA7 Demographic information such
+    as age or birthdate, nationality, educational level, \r\nsex, interests or characteristics.\r\n\xA7
+    User information such as the username or password, confidential replies to \r\ncertain
+    security questions, or similar information that enables us to uniquely identify
+    \r\nyour account or authenticate it before providing personal information about
+    the user \r\naccount.\r\nMost of these data may be obtained when the game offers
+    a social login functionality, and the \r\nuser accepts such a login in the game
+    by using a social account. In some cases, the app \r\nautomatically logs into
+    the user\u2019s social account associated with the device, and the user accepts
+    \r\nto perform such a login by using this app.\r\n3. WHAT HAPPENS WITH THE INFORMATION
+    WE COLLECT \r\nFROM MINORS?\r\nThis game does not collect personal information
+    from children under 13 years old. We take the \r\nprivacy of minors seriously,
+    and encourage the parents to play an active role in their children\u2019s \r\nonline
+    education at all times. Children under 13 should not install our application
+    on any device \r\nof their belonging, and if they do, it will be under the full
+    responsibility of their parents or \r\nguardians. In case we obtain personal
+    information from a child under 13 years old, we shall take \r\nmeasures to erase
+    the information supplied from our server. In case the content of this \r\napplication
+    has been rated as suitable for children under 13, it should be installed exclusively
+    on \r\ndevices belonging to the parents, guardians, or any other person over
+    13 years old. If the \r\napplication were to request personal information at
+    any time, children under 13 should never \r\nenter such information.\r\n4. HOW
+    DO WE COLLECT PERSONAL INFORMATION?\r\nWe collect personally identifiable information
+    (PII), demographic information and user \r\ninformation from our users when they:\r\n\xA7
+    Sign up to our game.\r\n\xA7 Participate in surveys, studies or questionnaires.\r\n\xA7
+    Participate in offers or promotions.\r\nIn addition to the aforementioned information,
+    we use cookies to collect user information when \r\nthey visit our game. Cookies
+    are information that a website or application sends to the device \r\nwhile browsing
+    the application. For example, when you decide to return to our application after
+    \r\nsigning up, cookies provide us information so that our server remembers who
+    you are. You are \r\noffered the opportunity to accept or reject cookies depending
+    on the configuration of your \r\ndevice through the configuration options. If
+    you reject receiving, or decide to delete the cookies, \r\naccess to certain
+    services may not work properly\r\n5. HOW DO WE USE THE INFORMATION YOU PROVIDE
+    US?\r\nWe use the information we collect on the game as follows:\r\n\xA7 Personalize
+    and improve you experience, and enable us to supply you with the \r\ntype of
+    contents and offers that best suit your interests.\r\n\xA7 Deliver, provide and
+    repair products or services.\r\n\xA7 Send notices such as welcome letters, purchase
+    confirmations, payment warnings \r\nor administrative regulations.\r\n\xA7 Create
+    and maintain user accounts and your history.\r\n\xA7 Contact you in regards to
+    our products or services and send you the best offers \r\nand promotions depending
+    on your interests.\r\n\xA7 Study the statistics of our online platform.\r\n\xA7
+    Inform our customer service employees.\r\n\xA7 Create your online account and
+    authenticate it during your user login.\r\n\xA7 Swiftly process your information
+    requests.\r\n\xA7 Enable us to efficiently reply to your inquiries.\r\n\xA7 Analyse
+    a promotion or survey.\r\n\xA7 Send you promotional material.\r\n\xA7 Enable
+    us to share the information with third party companies under the terms set \r\nforth
+    by these privacy policies and with the purposes described in the foregoing items,
+    \r\nas permitted by the law.\r\n6. WHO DO WE SHARE THE INFORMATION WITH?\r\nThis
+    game may monetize your information (in some cases), by giving it up to third
+    parties in the \r\nfollowing situations:\r\n\xA7 When the game is monetized via
+    advertisements, advertisement networks and/or \r\nthe advertisers provide advertisements
+    that may require certain user or device \r\ninformation from the user in order
+    to offer the most appropriate advertisement, or \r\nthat which may interest him
+    the most. This app can be monitized through these ad \r\nnetworks: Google or
+    Mobincube, which mediates with these other networks Startapp, \r\nAirpush, Tappx,
+    Facebook, Amazon, Google o Docomo, and some others.\r\n\xA7 When we employ independent
+    advertisement networks to display our game\u2019s \r\nadvertising banner when
+    visiting third party websites. In order to make it more \r\nefficient, the advertisement
+    network may use and incorporate into your device certain \r\ntechnology, such
+    as cookies, in order to collect non-personal information from you \r\nwhen you
+    visit our application. This information is used to display advertisements \r\ninvolving
+    goods and services that best suit your interests when visiting other websites.\r\nWe
+    often evaluate (sometimes with the assistance of outsourced companies) how our
+    online \r\ncontent and services are performing. The information disclosed for
+    this purpose will remain at \r\nthe company\u2019s server and will be limited
+    to use for professional purposes. Under no \r\ncircumstance the PII or the user
+    information shall be shared except for the purposes mentioned \r\nabove.\r\nWhen
+    disclosure of information is required by law, or is targeted at protecting game
+    security, this \r\napplication has the right to disclose any information collected,
+    no matter when such information \r\nwas collected. We will just perform such
+    an information disclosure when permitted or required \r\nby law, or when we consider
+    there are motives that are in good faith: (I) in order to protect your \r\nsecurity,
+    even that of your property, (ii) to protect the security of your applications
+    or third \r\nparties, and (iii) to enforce the terms of use, updates or promotions.\r\n7.
+    WILL THERE BE THIRD PARTIES WHO COLLECT INFORMATION \r\nFROM YOUR Game?\r\nThere
+    are certain situations where a third party may collect information about the
+    game. This \r\napp uses third-party libraries that offer certain features: analysis
+    tools, communication tools, \r\nsocial networks, advertisers, etc.\r\n\xA7 Analysis
+    tools: in order to improve the game, we sometimes use tools that analyse \r\nthe
+    behaviour of users. In this way, we can better learn which parts of the application
+    \r\nare more important and which need to be improved.\r\n\xA7 Communication tools:
+    in case we need to communicate with users at any time, we \r\nintegrate third-party
+    tools that provide such a communication, whether via push \r\nnotifications,
+    e-mails, in-app alerts, etc.\r\n\xA7 Social networks: if your game connects to
+    any social network at any time, it will \r\nrequest your authorization. Once
+    the connection has been authorized, the social \r\nnetwork shall be able to access
+    certain information.\r\n\xA7 Advertising networks: in case this game were to
+    show advertisements, they \r\nnormally originate from advertising networks that
+    connect with the advertisers. These \r\nnetworks need certain information in
+    order to offer the most appropriate ad to you.\r\nThis game reserves the right
+    to provide certain user information to companies who collaborate \r\nwith us,
+    or to software developers who provide some app feature. We provide this type
+    of \r\naccess to such companies with the purpose of generating interest in our
+    products among the \r\nmembers with whom we have some form of agreement, so as
+    to be able to offer the kind of \r\nproduct we offer to you and your friends.
+    The information collected by us shall be treated as per \r\nthe terms of this
+    Privacy Policy, but the use of the information by a third party shall be treated
+    as \r\nper their own standards. This application does not guarantee that the
+    other party complies with \r\nits security policy.\r\n8. WHAT KIND OF SECURITY
+    MEASURES DO WE TAKE TO \r\nSAFEGUARD YOUR PERSONAL INFORMATION?\r\nSafety and
+    confidentiality of your information are extremely important for us. Therefore,
+    we \r\nhave technical, administrative and physical security measures with the
+    purpose of protecting \r\nyour personal information against unauthorized access
+    and fraudulent use. We also periodically \r\nrevise our security system in order
+    to incorporate technological novelties and updating methods. \r\nHowever, in
+    spite of our efforts, no security measure is completely perfect or infallible.\r\nYou
+    can also play an important role in keeping your information stored securely.
+    If you are \r\nrequested to create a unique password in order to restrict access
+    to your account, choose a \r\npassword that is difficult to find out by other
+    users, and be careful not to disclose it to anyone. It \r\nis your responsibility
+    to keep your password and account information at all times. If you use a \r\npublic
+    or shared mobile device, never opt to save your user and always close your account\u2019s
+    \r\nsession once you no longer use the device.\r\nLastly, in regards to the companies
+    that have an agreement in place with this game, we require \r\nthem to accept
+    to protect our confidentiality, integrity and security terms over any personal
+    \r\ninformation we disclose to them. When your personal information is disclosed
+    or simultaneously \r\ncollected by a third party as mentioned above, it will
+    either be obvious to you considering the \r\ncontext (such as the appearance
+    of a third party on the phone\u2019s screen), or you will be notified \r\nwhen
+    the personal information is requested. Furthermore, you will be given the opportunity
+    to \r\naccept or decline these kinds of practices before they begin. As set forth
+    in section 3 of this \r\nPrivacy Policy, we do not collect personal information
+    of minor children under 13 years old, and \r\nwe inform them that under no circumstance
+    should they use our tool. In this manner, this \r\napplication shall not disclose
+    information collected from children under 13 to any company that \r\nhas signed
+    a collaboration agreement.\r\nIn case we detected that some of our technological
+    partners endangered your integrity or used \r\nyour information to perform any
+    illegal action, we shall take the proper measures to sever the \r\nrelationship
+    with such a provider.\r\n9. HOW CAN YOU MAKE AN INQUIRY OR SEND US COMMENTS \r\nABOUT
+    OUR PRIVACY POLICY?\r\nIf you have any sort of inquiry or wish to contact us
+    in order to clarify any matter, please send us \r\nan e-mail at the developer\u2019s
+    address, which you will find at the website where you downloaded \r\nthis game.\r\n10.
+    HOW WILL YOU KNOW IF WE MODIFY OUR PRIVACY \r\nPOLICIES?\r\nThis game reserves
+    the right to modify this privacy policy at any time, even though such a \r\nrevision
+    is not commonplace. Any policy change will usually be accompanied by an update
+    in the \r\napplication\u2019s version. At the beginning of these policies you
+    can find the version number and the \r\ndate when they have been revised. In
+    case we carry out a material change in the way we collect, \r\nuse or share personal
+    information, we shall add such changes to a new version of these policies.\r\n11.
+    CLARIFICATION REGARDING THE USE OF THE ANDROID \r\nADVERTISEMENT ID (AAID)\r\nVersion
+    4.0 of Google Play services has introduced new APIs and an identifier code (ID)
+    that \r\nanalysis and advertisement providers may use. The terms of use of these
+    APIs and this ID are \r\ndetailed below:\r\nUse. The advertising identifier is
+    used for advertising and user analysis purposes. The state of the \r\noption
+    to disable advertisement based on user interests must be checked in each access
+    to the \r\nID.\r\nAssociation with personally identifiable information or other
+    identifiers. The advertising identifier \r\nis not connected to personally identifiable
+    information or associated with any persistent device \r\nidentifier (for example,
+    SSAID, MAC address or IMEI) without explicit consent of the user.\r\nRespecting
+    users' selections. After reset, a new advertising identifier is not connected
+    to a \r\nprevious advertising identifier or data derived from a previous advertising
+    identifier without the \r\nexplicit consent of the user. Additionally, an option
+    to disable advertisement based on user \r\ninterests is offered. If a user has
+    enabled this setting, the advertising identifier for creating user \r\nprofiles
+    for advertising purposes or for targeting users with interest-based advertising
+    is not \r\nused. Allowed activities include contextual advertising, frequency
+    capping, conversion tracking, \r\nreporting and fraud detection and security.\r\nAbiding
+    by the terms of use. The advertising identifier may only be used in accordance
+    with \r\nthese terms, including the use by any party that you may share it with
+    during your business \r\nactivities. Beginning October 10, 2021, all updates
+    and new applications uploaded to the Play \r\nStore must use the advertising
+    ID (when available on a device) in lieu of any other device \r\nidentifier with
+    advertising purposes."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14203,7 +15328,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14592,6 +15717,113 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104443645}
+  m_CullTransparentMesh: 1
+--- !u!1 &2116855052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116855053}
+  - component: {fileID: 2116855056}
+  - component: {fileID: 2116855055}
+  - component: {fileID: 2116855054}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2116855053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116855052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 220450079}
+  m_Father: {fileID: 1639370546}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 19.230011}
+  m_SizeDelta: {x: 599.57, y: 736.47}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2116855054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116855052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 721738399}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 220450079}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2116855055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116855052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2116855056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116855052}
   m_CullTransparentMesh: 1
 --- !u!1 &2134879660
 GameObject:

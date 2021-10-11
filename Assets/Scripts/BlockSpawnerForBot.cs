@@ -6,7 +6,7 @@ public class BlockSpawnerForBot : MonoBehaviour
 {
     public GameObject[] Blocks;
     public static BlockSpawnerForBot blockSpawner;
-
+    public int blackBlock = 0;
 
     private void Start()
     {
@@ -17,10 +17,19 @@ public class BlockSpawnerForBot : MonoBehaviour
     }
     public void NewBlock()
     {
-        if (LogicManager.intance.canSpawn)
+        if (LogicManager.intance.canSpawn )
         {
-            var a = Instantiate(Blocks[Random.Range(0, Blocks.Length)], transform.position, Quaternion.identity);
-            a.transform.parent = null;
+            if (blackBlock <= 0)
+            {
+                var a = Instantiate(Blocks[Random.Range(0, Blocks.Length - 2)], transform.position, Quaternion.identity);
+                a.transform.parent = null;
+            }
+            else
+            {
+                Instantiate(Blocks[Blocks.Length-1], transform.position, Quaternion.identity);
+                blackBlock--;
+            }
+           
         }
     }
 }

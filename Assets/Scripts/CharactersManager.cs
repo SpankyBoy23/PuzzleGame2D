@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,11 +12,16 @@ public class CharactersManager : MonoBehaviour
     [SerializeField] Sprite[] characterSpirtes;
     [SerializeField] Image characterImage;
 
+
     ///////////IntroPanel..........//////////////////
+    [Space]
+    [Header("IntoPanel")]
     [SerializeField] GameObject panel;
     [SerializeField] Image[] characterIntroImages; 
     [SerializeField] Image[] characterIntroCubbyImage;
     [SerializeField] Sprite[] characterIntroSprites;
+    [SerializeField] TextMeshProUGUI[] namesText;
+    [SerializeField] string[] names;
 
     [Space]
     [Header("RandomPick")]
@@ -31,15 +35,8 @@ public class CharactersManager : MonoBehaviour
     private void Awake()
     {
         timeToAnimate = maxTime;
-        if (charactersManager == null)
-        {
-            charactersManager = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
+      
+     //   DontDestroyOnLoad(gameObject);
        
 
         if (!PlayerPrefs.HasKey("CharacterIndex"))
@@ -98,8 +95,11 @@ public class CharactersManager : MonoBehaviour
         panel.SetActive(true);
         characterIntroImages[0].sprite = characterIntroSprites[PlayerPrefs.GetInt("CharacterIndex")];
         characterIntroImages[1].sprite = characterIntroSprites[PlayerPrefs.GetInt("LevelNumber")];
+       
         characterIntroCubbyImage[0].sprite = characterSpirtes[PlayerPrefs.GetInt("CharacterIndex")];
         characterIntroCubbyImage[1].sprite = characterSpirtes[PlayerPrefs.GetInt("LevelNumber")];
+        namesText[0].text = names[PlayerPrefs.GetInt("CharacterIndex")];
+        namesText[1].text = names[PlayerPrefs.GetInt("LevelNumber")];
         this.Wait(2f, () => { SceneManager.LoadScene("OfflineMode"); });
     }
 

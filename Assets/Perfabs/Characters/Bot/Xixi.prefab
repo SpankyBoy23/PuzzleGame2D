@@ -1817,8 +1817,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5547452845743302105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.56, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 5547452844940807875}
   - {fileID: 5547452845370687364}
@@ -3518,8 +3518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5547452846926916247}
-  - component: {fileID: 7628018054851435109}
-  - component: {fileID: -125517226812393010}
+  - component: {fileID: 8465311290313286812}
   m_Layer: 0
   m_Name: Xixi
   m_TagString: Bot
@@ -3542,7 +3541,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7628018054851435109
+--- !u!114 &8465311290313286812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3551,21 +3550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5547452846926916246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38890e65e9baa94ca0f13268e7e5c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 3509ba402fafc074b9c0e7cb5cff515f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 5547452845743302107}
---- !u!114 &-125517226812393010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5547452846926916246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57f756fa3ad5f146928218a4c9671f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPos: {fileID: 0}
-  prefab: {fileID: 3767356829560019967, guid: 90ba8ee4956c5234c818c9f63498b507, type: 3}

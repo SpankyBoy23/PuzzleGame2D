@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 
@@ -38,5 +38,29 @@ public class UIManager : MonoBehaviour
     public void OnClick_LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+    }
+    public void SoundToggle()
+    {
+        if (PlayerPrefs.GetInt("Sound") == 0)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+        else if (PlayerPrefs.GetInt("Sound") == 1)
+        {
+            PlayerPrefs.SetInt("Sound", 0);
+        }
+    }
+    public void MusicToggle()
+    {
+        if (PlayerPrefs.GetInt("Music") == 0)
+        {
+            PlayerPrefs.SetInt("Music", 1);
+           // FindObjectOfType<MusicManager>().PauseAll();
+        }
+        else if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            PlayerPrefs.SetInt("Music", 0);
+           // FindObjectOfType<MusicManager>().SceneLaod(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

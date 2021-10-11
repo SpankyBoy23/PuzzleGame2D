@@ -8,26 +8,35 @@ public class BlockSpawnerPlayer2 : MonoBehaviour
     public static BlockSpawnerPlayer2 blockSpawner;
     public int secondComingBlock, thirdComingBlock;
     public int currentBlock;
-
+    public int blackBlock;
 
     private void Start()
     {
         blockSpawner = this;
         currentBlock = Random.Range(0, Blocks.Length);
-        secondComingBlock = Random.Range(0, Blocks.Length);
+        secondComingBlock = Random.Range(0, Blocks.Length-2);
         NewBlock();
     }
     public void NewBlock()
     {
         currentBlock = secondComingBlock;
         secondComingBlock = thirdComingBlock;
-        thirdComingBlock = Random.Range(0, Blocks.Length);
+        thirdComingBlock = Random.Range(0, Blocks.Length-2);
         // Debug.Log("Spawning");
         if (LogicManager.intance.canSpawn)
         {
-            var a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
-            a.transform.parent = null;
+            if(blackBlock <= 0)
+            {
+                var a = Instantiate(Blocks[currentBlock], transform.position, Quaternion.identity);
+                a.transform.parent = null;
+            }
+            else
+            {
+                Instantiate(Blocks[Blocks.Length-1], transform.position, Quaternion.identity);
+                blackBlock--;
+            }
         }
-       
+      
+
     }
 }

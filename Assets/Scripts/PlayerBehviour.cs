@@ -24,10 +24,18 @@ public class PlayerBehviour : MonoBehaviour
     public void Walk()
     {
         Debug.Log("SS2343");
-        if(isLucas && LogicManager.intance.finalMove)
-            animator.Play("ChargeAttack");
-        else if (!isLucas && !LogicManager.intance.finalMove)
+
+        if (!LogicManager.intance.finalMove)
+        {
             animator.SetBool("Walk", true);
+        }
+        if (isLucas && LogicManager.intance.finalMove)
+            animator.Play("ChargeAttack");
+        else if (!isLucas && LogicManager.intance.finalMove)
+        {
+            animator.SetBool("Walk", true);
+        }
+            
     }
     private void Update()
     {

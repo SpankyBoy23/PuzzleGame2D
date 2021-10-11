@@ -50,6 +50,7 @@ MonoBehaviour:
   attacked: 0
   intialPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
+  isLucas: 0
   pos: {x: 0, y: 0}
 --- !u!1 &7670024525155766827
 GameObject:
@@ -1906,8 +1907,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7670024526476567623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.43, y: 0.7, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 7670024525601774667}
   - {fileID: 7670024527120700552}
