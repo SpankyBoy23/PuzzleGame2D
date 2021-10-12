@@ -113,6 +113,7 @@ public class MusicManager : MonoBehaviour
         Debug.Log("Paused");
         Sound s = Array.Find(sounds, Sound => Sound.name == name);
         s.source.Pause();
+        
     }
     public void PauseAll()
     {

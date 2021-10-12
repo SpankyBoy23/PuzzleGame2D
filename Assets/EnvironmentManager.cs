@@ -15,7 +15,7 @@ public class EnvironmentManager : MonoBehaviour
                 environment.SetActive(false);
             }
         }
-
+        SetUpEnviorment();
     }
 
     public void SetUpEnviorment() 
