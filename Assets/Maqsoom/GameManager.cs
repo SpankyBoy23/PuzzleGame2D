@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
+using System.Linq;
 
 public class GameManager : NetworkBehaviour
 {
@@ -20,6 +21,14 @@ public class GameManager : NetworkBehaviour
     public int mapId;
 
     public static GameManager singleton;
+
+    public GameObject winOrLoseObj;
+    public Image i;
+    public Sprite loseSprite;
+    public Sprite winSprite;
+    public bool decide;
+
+    public static Dictionary<uint, Player> players = new Dictionary<uint, Player>();
 
     // Start is called before the first frame update
     void Start()
@@ -60,23 +69,43 @@ public class GameManager : NetworkBehaviour
         ProcessGameStateOnServer();
     }
 
+    [Command(requiresAuthority = false)]
+    public void CmdLoseGame(uint netId) 
+    {
+        if (decide == true) return;
+        decide = true;
+
+        RpcLoseGame(netId);
+    }
+    [ClientRpc]
+    void RpcLoseGame(uint netId) 
+    {
+        winOrLoseObj.SetActive(true);
+
+        if(NetworkClient.localPlayer.netId == netId) 
+        {
+            i.sprite = loseSprite;
+        }
+        else 
+        {
+            i.sprite = winSprite;
+        }
+    }
+
     [Server]
     void ProcessGameStateOnServer() 
     {
         if(currentGameState == GameState.Waiting) 
         {
-            statusText.text = $"Waiting for other players";
+         //   statusText.text = $"Waiting for other players";
 
             if(NetworkServer.connections.Count == 2) 
             {
-                Player[] players = (Player[])FindObjectsOfType(typeof(Player));
-              
+               
+                currentGameState = GameState.Starting;
 
-                /*if(players[0].isReady == true && players[1].isReady == true) 
-                {
-                    currentGameState = GameState.Starting;
-                    RpcStartMatch();
-                }*/
+
+              //  RpcStartMatch();
             }
         }
         else
@@ -84,7 +113,7 @@ public class GameManager : NetworkBehaviour
         {
             currentTimer += Time.deltaTime;
 
-            if(currentTimer >= 4f) 
+            if(currentTimer >= 2f) 
             {
                 currentGameState = GameState.Playing;
             }
@@ -94,13 +123,36 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     void RpcStartMatch()
     {
-        Player[] players = (Player[])FindObjectsOfType(typeof(Player));
-        statusText.text = $"{players[0].username} vs {players[1].username}";
+        Player[] players = GetAllPlayers();
+
+      /*  foreach(var player in players) 
+        {
+            if (player.hasAuthority)
+            {
+                player.NewBlock();
+            }
+        }*/
+    }
+
+    public static void RegisterPlayer(Player player , uint netId) 
+    {
+        players.Add(netId, player);
+    }
+
+    public static void UnRegisterPlayer(uint netId) 
+    {
+        players.Remove(netId);
+    }
+
+    public static Player[] GetAllPlayers() 
+    {
+        return players.Values.ToArray();
     }
 
     private void OnDisable()
     {
         firstPlayer = null;
+        currentGameState = GameState.Waiting;
     }
 }
 

@@ -10,10 +10,7 @@ public class EnvironmentManager : MonoBehaviour
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Main") 
         {
-            foreach (GameObject environment in environments)
-            {
-                environment.SetActive(false);
-            }
+           
         }
         SetUpEnviorment();
     }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 424372fbd076c0049992d4710df6b10a
   - enabled: 1
+    path: Assets/Maqsoom/Main.unity
+    guid: 36fcacf5b4388d14abb7712c2619412d
+  - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: c7bbdc897b8d4e042b48a13037da26d4
   - enabled: 1

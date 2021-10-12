@@ -30,7 +30,7 @@ public class Player : NetworkBehaviour
     [ClientRpc]
     void RpcSetup(uint netId) 
     {
-        if (isClient && isServer)
+       /* if (isClient && isServer)
         {
             if (hasAuthority) 
             {
@@ -38,7 +38,7 @@ public class Player : NetworkBehaviour
                 return;
             }
         }
-
+*/
         GameManager.singleton.firstPlayer = NetworkIdentity.spawned[netId].GetComponent<Player>();
         Debug.Log("workingrpcsetup-1");
         if (hasAuthority)
@@ -55,7 +55,7 @@ public class Player : NetworkBehaviour
                 localCam.transform.position = nonLocalCam.transform.position;
                 nonLocalCam.transform.position = localCamPosition;
 
-                NewBlock();
+             //   NewBlock();
             }
         }
     }
@@ -63,6 +63,8 @@ public class Player : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.RegisterPlayer(this, netId);
+
         if (hasAuthority == false) return;
 
         username = PlayerPrefs.GetString("Username");
@@ -117,8 +119,27 @@ public class Player : NetworkBehaviour
         }
     }
 
+    bool firstTime;
+
     // Update is called once per frame
     void Update()
     {
+        if (hasAuthority == false) return;
+
+        if(GameManager.singleton.currentGameState == GameState.Playing) 
+        {
+            if(GameManager.players.Count >= 2) 
+            {
+                if (firstTime == true) return;
+                firstTime = true;
+                NewBlock();
+            }
+        }
+    }
+
+    void OnDestroy()
+    {
+        GameManager.UnRegisterPlayer(netId);
+        
     }
 }

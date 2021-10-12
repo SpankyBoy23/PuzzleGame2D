@@ -29,8 +29,7 @@ public class MenuManager : MonoBehaviour
     }
     private void Start()
     {
-      
-      
+        
     }
     #region Username
 
