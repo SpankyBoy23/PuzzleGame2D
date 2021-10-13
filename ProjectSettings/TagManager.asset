@@ -15,8 +15,6 @@ TagManager:
   - Missile
   - Bot
   - Spawner
-  - MusicToggle
-  - SoundToggle
   layers:
   - Default
   - TransparentFX

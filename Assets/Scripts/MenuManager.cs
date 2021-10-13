@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     public GameObject MultiplayerMode;
     public GameObject usernamePanel;
     [SerializeField] TMP_InputField usernameInuput;
+    public bool sound = true;
+    public bool music = true;
     public Toggle[] toggle;
 
     private void Awake()
@@ -49,15 +51,21 @@ public class MenuManager : MonoBehaviour
     {
         Application.OpenURL(Link);
     }
-    public void SetSound()
+   
+    public void SetToggleSound()
     {
-        Setting.instance.SetToggleSound();
-        toggle[0].isOn = Setting.instance.sound;
+       sound = !sound;
+       toggle[0].isOn = sound;
+        
     }
-    public void SetMusic()
+    public void setToggleMusic()
     {
-        Setting.instance.setToggleMusic();
-        toggle[1].isOn = Setting.instance.music;
+        music = !music;
+        toggle[1].isOn = music;
+        if (!music)
+            MusicManager.instance.PauseAll();
+        else
+            MusicManager.instance.SceneLaod(SceneManager.GetActiveScene().buildIndex);
+                
     }
-
 }

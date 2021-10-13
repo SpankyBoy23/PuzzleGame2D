@@ -37,7 +37,6 @@ public class TeterminosPlayer2 : MonoBehaviour
     private bool swipeRightOn;
     private bool swipeLeftOn;
 
-    public AudioManager am;
     [Space]
     [Header("Effects")]
     public GameObject DestoryEffect;
@@ -51,7 +50,6 @@ public class TeterminosPlayer2 : MonoBehaviour
         swipeDownOn = false;
         swipeRightOn = false;
         swipeLeftOn = false;
-        am = AudioManager.instance;
     }
 
     void Update()
@@ -131,8 +129,8 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe right
                             swipeRightOn = true;
-                            Debug.Log("Swipe right initiated");
-                            AudioManager.instance.Play("Move");
+                          //  Debug.Log("Swipe right initiated");
+                            FindObjectOfType<AudioManager>().Play("Move");
                             transform.position += new Vector3(1, 0, 0);
                             if (!ValidMove())
                             {
@@ -148,8 +146,8 @@ public class TeterminosPlayer2 : MonoBehaviour
                         {
                             //initiate stuff on swipe left
                             swipeLeftOn = true;
-                            Debug.Log("Swipe left initiated");
-                            AudioManager.instance.Play("Move");
+                           // Debug.Log("Swipe left initiated");
+                            FindObjectOfType<AudioManager>().Play("Move");
                             transform.position -= new Vector3(1, 0, 0);
                             if (!ValidMove())
                             {

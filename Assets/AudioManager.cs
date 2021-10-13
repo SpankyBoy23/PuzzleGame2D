@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, Sound => Sound.name == name);
-        if(Setting.instance.sound)
+        if(FindObjectOfType<MenuManager>().sound)
         s.source.Play();
         if(s == null)
         {
