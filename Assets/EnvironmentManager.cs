@@ -37,7 +37,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             MusicManager.instance.Play("3");
         }
-
+        Debug.Log(a);
         environments[a].SetActive(true);
     }
 }
