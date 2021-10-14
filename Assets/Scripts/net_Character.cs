@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using FirstGearGames.Mirrors.Assets.FlexNetworkAnimators;
 
 public class net_Character : NetworkBehaviour
 {
     public Animator animator;
-    public NetworkAnimator networkAnimator;
+    public FlexNetworkAnimator networkAnimator;
 
     [SyncVar]
     public uint playerId;
@@ -33,7 +34,7 @@ public class net_Character : NetworkBehaviour
         {      
             float distance = Vector3.Distance(transform.position, target.position);
 
-            if(distance <= 4) 
+            if(distance <= 2) 
             {
                 animator.SetBool("Walk", false);
 
@@ -74,13 +75,30 @@ public class net_Character : NetworkBehaviour
             animator.Play("Lose");
         }
 
-        target.GetComponentInChildren<Animator>().Play("Hurt");
+        if (target.GetComponentInChildren<Animator>()) 
+        {
+            target.GetComponentInChildren<Animator>().Play("Hurt");
+        }
+
+      
     }
 
     public void Walk() 
     {
         isWalking = true;
         animator.SetBool("Walk", true);
+    }
+
+    public void Spawn(int index , Transform t) 
+    {
+        List<GameObject> chars = net_CharacterManager.Singleton.characters;
+        GameObject go = Instantiate(chars[index], transform.position, transform.rotation);
+        RuntimeCharacter rc = go.GetComponent<RuntimeCharacter>();
+        rc.target = transform;
+
+        animator = rc.animator;
+        networkAnimator.SetAnimator(rc.animator);
+       
     }
 }
 

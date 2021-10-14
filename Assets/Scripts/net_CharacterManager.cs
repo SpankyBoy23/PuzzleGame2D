@@ -7,6 +7,7 @@ public class net_CharacterManager : MonoBehaviour
     public net_Character first;
     public net_Character second;
 
+    public List<GameObject> characters;
 
     public static net_CharacterManager Singleton;
 

@@ -64,4 +64,5 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   username: 
+  cId: -1
   isReady: 0
