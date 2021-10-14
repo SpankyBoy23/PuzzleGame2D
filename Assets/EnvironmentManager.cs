@@ -8,11 +8,14 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Awake()
     {
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Main") 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Main")
         {
-           
+
         }
-        SetUpEnviorment();
+        else
+        {
+            SetUpEnviorment();
+        }
     }
 
     public void SetUpEnviorment() 

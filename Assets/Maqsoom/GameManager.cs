@@ -34,11 +34,6 @@ public class GameManager : NetworkBehaviour
     void Start()
     {
         singleton = this;
-
-        if(isServer == true)
-        {
-            mapId = Random.Range(0, FindObjectOfType<EnvironmentManager>().environments.Length);
-        }
     }
 
     void OnNameChange(int oldValue , int newValue) 
@@ -57,7 +52,7 @@ public class GameManager : NetworkBehaviour
         {
             MusicManager.instance.Play("3");
         }
-
+        if(newValue != -1)
         FindObjectOfType<EnvironmentManager>().environments[a].SetActive(true);
     }
 
@@ -82,6 +77,23 @@ public class GameManager : NetworkBehaviour
     {
         winOrLoseObj.SetActive(true);
 
+        uint loseId = 0;
+        uint winId = 0;
+
+        Player[] players = GetAllPlayers();
+
+        foreach(var player in players) 
+        {
+            if(player.netId == netId) 
+            {
+                loseId = netId;
+            }
+            else 
+            {
+                winId = player.netId;
+            }
+        }
+
         if(NetworkClient.localPlayer.netId == netId) 
         {
             i.sprite = loseSprite;
@@ -90,11 +102,34 @@ public class GameManager : NetworkBehaviour
         {
             i.sprite = winSprite;
         }
+
+        if(net_CharacterManager.Singleton.first.playerId == winId) 
+        {
+            net_CharacterManager.Singleton.first.animator.Play("Win");
+        }
+        else 
+        {
+            net_CharacterManager.Singleton.first.animator.Play("Lose");
+        }
+
+        if (net_CharacterManager.Singleton.second.playerId == winId)
+        {
+            net_CharacterManager.Singleton.second.animator.Play("Win");
+        }
+        else
+        {
+            net_CharacterManager.Singleton.second.animator.Play("Lose");
+        }
     }
 
     [Server]
     void ProcessGameStateOnServer() 
     {
+        if(mapId == -1) 
+        {
+            mapId = Random.Range(0, FindObjectOfType<EnvironmentManager>().environments.Length);
+        }
+
         if(currentGameState == GameState.Waiting) 
         {
          //   statusText.text = $"Waiting for other players";
@@ -123,6 +158,8 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     void RpcStartMatch()
     {
+
+
         Player[] players = GetAllPlayers();
 
       /*  foreach(var player in players) 

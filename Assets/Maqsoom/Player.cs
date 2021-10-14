@@ -25,6 +25,17 @@ public class Player : NetworkBehaviour
         {
             RpcSetup(GameManager.singleton.firstPlayer.netId);
         }
+
+        if(net_CharacterManager.Singleton.first.playerId == 0) 
+        {
+            net_CharacterManager.Singleton.first.playerId = netId;
+            net_CharacterManager.Singleton.first.netIdentity.AssignClientAuthority(connectionToClient);
+        }
+        else
+        {
+            net_CharacterManager.Singleton.second.playerId = netId;
+            net_CharacterManager.Singleton.second.netIdentity.AssignClientAuthority(connectionToClient);
+        }
     }
 
     [ClientRpc]
@@ -128,13 +139,16 @@ public class Player : NetworkBehaviour
 
         if(GameManager.singleton.currentGameState == GameState.Playing) 
         {
-            if(GameManager.players.Count >= 2) 
+            if(GameManager.players.Count >= 2)
             {
+
                 if (firstTime == true) return;
                 firstTime = true;
                 NewBlock();
             }
         }
+
+
     }
 
     void OnDestroy()

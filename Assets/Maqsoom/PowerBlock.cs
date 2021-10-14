@@ -55,6 +55,21 @@ public class PowerBlock : NetworkBehaviour
     void CmdFunction(GameObject go)
     {
         net_LogicManager.intance.objectList.Add(go);
+        RpcFunction();
+    }
+
+    [ClientRpc]
+    void RpcFunction()
+    {
+        if (hasAuthority == false) return;
+        if (net_CharacterManager.Singleton.first.hasAuthority == true)
+        {
+            net_CharacterManager.Singleton.first.Walk();
+        }
+        else
+        {
+            net_CharacterManager.Singleton.second.Walk();
+        }
     }
 
     void Function(int x, int y)
