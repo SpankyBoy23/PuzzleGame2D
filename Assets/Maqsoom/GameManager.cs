@@ -28,6 +28,8 @@ public class GameManager : NetworkBehaviour
     public Sprite winSprite;
     public bool decide;
 
+    public GameObject waitingForOtherPlayers;
+
     public static Dictionary<uint, Player> players = new Dictionary<uint, Player>();
 
     // Start is called before the first frame update
@@ -59,6 +61,18 @@ public class GameManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(decide == true) 
+        {
+            if (net_CharacterManager.Singleton.first.hasAuthority) 
+            {
+                net_CharacterManager.Singleton.first.animator.SetBool("Walk", false);
+            }
+            if (net_CharacterManager.Singleton.second.hasAuthority)
+            {
+                net_CharacterManager.Singleton.second.animator.SetBool("Walk", false);
+            }
+        }
+
         if (isServer == false) return;
 
         ProcessGameStateOnServer();
@@ -75,6 +89,8 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     void RpcLoseGame(uint netId) 
     {
+        decide = true;
+
         winOrLoseObj.SetActive(true);
 
         uint loseId = 0;
@@ -105,20 +121,20 @@ public class GameManager : NetworkBehaviour
 
         if(net_CharacterManager.Singleton.first.playerId == winId) 
         {
-            net_CharacterManager.Singleton.first.animator.Play("Win");
+            net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
         }
         else 
         {
-            net_CharacterManager.Singleton.first.animator.Play("Lose");
+            net_CharacterManager.Singleton.first.animator.SetBool("Lose", true);
         }
 
         if (net_CharacterManager.Singleton.second.playerId == winId)
         {
-            net_CharacterManager.Singleton.second.animator.Play("Win");
+            net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
         }
         else
         {
-            net_CharacterManager.Singleton.second.animator.Play("Lose");
+            net_CharacterManager.Singleton.second.animator.SetBool("Lose", true);
         }
     }
 

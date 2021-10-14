@@ -85,6 +85,8 @@ public class Player : NetworkBehaviour
 
     public void NewBlock() 
     {
+        if (GameManager.singleton.decide == true) return;
+
         if(GameManager.singleton.firstPlayer.netId == netId) 
         {
             if (net_BlockSpawner.blockSpawner.first == false) 
@@ -141,11 +143,21 @@ public class Player : NetworkBehaviour
         {
             if(GameManager.players.Count >= 2)
             {
-
                 if (firstTime == true) return;
                 firstTime = true;
+
                 NewBlock();
             }
+        }
+ 
+        if(GameManager.players.Count >= 2) 
+        {
+            GameManager.singleton.waitingForOtherPlayers.SetActive(false);
+        }
+        else
+        {
+            GameManager.singleton.waitingForOtherPlayers.SetActive(true);
+
         }
 
 

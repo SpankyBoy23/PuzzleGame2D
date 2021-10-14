@@ -27,6 +27,7 @@ public class net_Character : NetworkBehaviour
     void Update()
     {
         if (hasAuthority == false) return;
+        if (GameManager.singleton.decide == true) return;
 
         if(isWalking == true) 
         {      
@@ -35,8 +36,11 @@ public class net_Character : NetworkBehaviour
             if(distance <= 4) 
             {
                 animator.SetBool("Walk", false);
+
                 isWalking = false;
+
                 CmdAnimation(AnimationType.Attack);
+
                 this.Wait(resetDelay, () => {  transform.position = initialPos; });
             }
             else 
@@ -69,6 +73,8 @@ public class net_Character : NetworkBehaviour
         {
             animator.Play("Lose");
         }
+
+        target.GetComponentInChildren<Animator>().Play("Hurt");
     }
 
     public void Walk() 
