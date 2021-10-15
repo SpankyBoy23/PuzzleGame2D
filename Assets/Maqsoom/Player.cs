@@ -19,8 +19,9 @@ public class Player : NetworkBehaviour
         username = name;
         isReady = true;
 
-        cId = characterId;
+        //  cId = characterId;
 
+        cId = 3;
         if(net_CharacterManager.Singleton.first.playerId == 0) 
         {
             net_CharacterManager.Singleton.first.playerId = netId;
@@ -171,6 +172,7 @@ public class Player : NetworkBehaviour
         {
             if(GameManager.players.Count >= 2)
             {
+
                 if (firstTime == true) return;
                 firstTime = true;
 
@@ -187,7 +189,6 @@ public class Player : NetworkBehaviour
             GameManager.singleton.waitingForOtherPlayers.SetActive(true);
 
         }
-
 
     }
 

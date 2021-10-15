@@ -72,6 +72,8 @@ public class PowerBlock : NetworkBehaviour
         }
     }
 
+    public bool destroyed;
+
     void Function(int x, int y)
     {
         if (net_BlockMovement.grid2[roundedX + x, roundedY + y] != null)
@@ -86,6 +88,8 @@ public class PowerBlock : NetworkBehaviour
                 //TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<SpriteRenderer>().color = Color.red;
                 if (!net_LogicManager.intance.objectList.Contains(net_BlockMovement.grid2[roundedX, roundedY].gameObject))
                 {
+                    if (destroyed == true) return;
+                    destroyed = true;
                     CmdFunction(net_BlockMovement.grid2[roundedX, roundedY].gameObject);
                 }
 
