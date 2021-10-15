@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject endGamePanel;
     public Image endGameImage;
     public Sprite[] endGameSprites;
-
+    
     private void Awake()
     {
         intance = this;
@@ -41,14 +41,8 @@ public class UIManager : MonoBehaviour
     }
     public void SoundToggle()
     {
-        if (PlayerPrefs.GetInt("Sound") == 0)
-        {
-            PlayerPrefs.SetInt("Sound", 1);
-        }
-        else if (PlayerPrefs.GetInt("Sound") == 1)
-        {
-            PlayerPrefs.SetInt("Sound", 0);
-        }
+        setting.intance.SetSound();
+        
     }
     public void MusicToggle()
     {

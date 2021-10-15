@@ -98,7 +98,7 @@ public class MusicManager : MonoBehaviour
         Debug.Log("Playing: " + name+ " "+ PlayerPrefs.GetInt("Music"));
         Sound s = Array.Find(sounds, Sound => Sound.name == name);
         
-            if (PlayerPrefs.GetInt("Music") == 0)
+            if (setting.intance.music)
                 s.source.Play();
             if (s == null)
             {

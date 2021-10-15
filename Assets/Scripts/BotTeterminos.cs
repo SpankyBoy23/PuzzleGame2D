@@ -10,7 +10,7 @@ public class BotTeterminos : MonoBehaviour
     public static int height = 12;
     public static int width = 6;
     float previousTime;
-    public float fallTime = 1f;
+    public float fallTime = 0.1f;
     bool moveable = true;
     bool canSpawn = true;
     private float nextUpdate = .2f;
@@ -61,7 +61,7 @@ public class BotTeterminos : MonoBehaviour
                                    // this.enabled = false;
                        if (canSpawn)
                         BlockSpawnerForBot.blockSpawner.NewBlock();
-                     }
+                    }
                 if (botMoves > 0)
                 {
                     

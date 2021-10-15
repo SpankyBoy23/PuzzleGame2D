@@ -54,15 +54,15 @@ public class MenuManager : MonoBehaviour
    
     public void SetToggleSound()
     {
-       sound = !sound;
-       toggle[0].isOn = sound;
+        setting.intance.SetSound();
+        toggle[0].isOn = setting.intance.sound;
         
     }
     public void setToggleMusic()
     {
-        music = !music;
-        toggle[1].isOn = music;
-        if (!music)
+        setting.intance.SetMusic();
+        toggle[1].isOn = setting.intance.music;
+        if (!setting.intance.music)
             MusicManager.instance.PauseAll();
         else
             MusicManager.instance.SceneLaod(SceneManager.GetActiveScene().buildIndex);

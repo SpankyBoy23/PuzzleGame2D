@@ -4400,6 +4400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370534214}
+  - component: {fileID: 370534215}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4421,6 +4422,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370534215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370534213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c0cb2ee039998489aac8790e0b5314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: 1
+  music: 1
 --- !u!1 &390596584
 GameObject:
   m_ObjectHideFlags: 0
@@ -7486,7 +7501,9 @@ MonoBehaviour:
   usernameInuput: {fileID: 114601551}
   sound: 0
   music: 0
-  toggle: []
+  toggle:
+  - {fileID: 1076765505}
+  - {fileID: 1544012147}
 --- !u!4 &875861466
 Transform:
   m_ObjectHideFlags: 0
@@ -8205,18 +8222,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 875861465}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: SoundToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 875861465}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SetToggleSound
         m_Mode: 1
         m_Arguments:
@@ -8262,8 +8267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 92, y: -226}
-  m_SizeDelta: {x: -14.2, y: -171}
+  m_AnchoredPosition: {x: 132.70001, y: -226}
+  m_SizeDelta: {x: -147.6, y: -171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084253591
 MonoBehaviour:
@@ -11497,18 +11502,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Btn
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 875861465}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: MusicToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 875861465}
