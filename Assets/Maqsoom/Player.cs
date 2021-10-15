@@ -8,23 +8,18 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public string username;
 
+    [SyncVar(hook = nameof(OnCharacterChange))]
+    public int cId;
+
     public bool isReady;
 
     [Command]
-    void CmdSetup(string name) 
+    void CmdSetup(string name , int characterId) 
     {
         username = name;
         isReady = true;
 
-        if (GameManager.singleton.firstPlayer == null)
-        {
-            GameManager.singleton.firstPlayer = this;
-            RpcSetup(GameManager.singleton.firstPlayer.netId);
-        }
-        else
-        {
-            RpcSetup(GameManager.singleton.firstPlayer.netId);
-        }
+        cId = characterId;
 
         if(net_CharacterManager.Singleton.first.playerId == 0) 
         {
@@ -36,10 +31,20 @@ public class Player : NetworkBehaviour
             net_CharacterManager.Singleton.second.playerId = netId;
             net_CharacterManager.Singleton.second.netIdentity.AssignClientAuthority(connectionToClient);
         }
+
+        if (GameManager.singleton.firstPlayer == null)
+        {
+            GameManager.singleton.firstPlayer = this;
+            RpcSetup(GameManager.singleton.firstPlayer.netId, characterId);
+        }
+        else
+        {
+            RpcSetup(GameManager.singleton.firstPlayer.netId, characterId);
+        }
     }
 
     [ClientRpc]
-    void RpcSetup(uint netId) 
+    void RpcSetup(uint netId , int characterId) 
     {
        /* if (isClient && isServer)
         {
@@ -69,6 +74,29 @@ public class Player : NetworkBehaviour
              //   NewBlock();
             }
         }
+
+   
+       
+
+    }
+
+    void OnCharacterChange(int oldValue , int newValue) 
+    {
+        bool first = false;
+
+        if(net_CharacterManager.Singleton.first.playerId == 0 || net_CharacterManager.Singleton.first.playerId == netId) 
+        {
+            first = true;
+        }
+
+        if (first)
+        {
+            net_CharacterManager.Singleton.first.Spawn(newValue , net_CharacterManager.Singleton.first.transform);
+        }
+        else
+        {
+            net_CharacterManager.Singleton.second.Spawn(newValue, net_CharacterManager.Singleton.second.transform);
+        }
     }
 
     // Start is called before the first frame update
@@ -79,8 +107,8 @@ public class Player : NetworkBehaviour
         if (hasAuthority == false) return;
 
         username = PlayerPrefs.GetString("Username");
-       
-        CmdSetup(username);
+        int characterId = PlayerPrefs.GetInt("CharacterIndex");
+        CmdSetup(username , characterId);
     }
 
     public void NewBlock() 
