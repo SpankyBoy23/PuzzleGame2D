@@ -185,7 +185,6 @@ public class Player : NetworkBehaviour
         else
         {
             GameManager.singleton.waitingForOtherPlayers.SetActive(true);
-
         }
     }
 

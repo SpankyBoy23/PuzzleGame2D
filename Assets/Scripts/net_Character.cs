@@ -30,6 +30,8 @@ public class net_Character : NetworkBehaviour
 
     public CharacterType type;
 
+    public bool chargeAttack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,22 @@ public class net_Character : NetworkBehaviour
     void Update()
     {
         if (hasAuthority == false) return;
+
+
+        if (chargeAttack == true)
+        {
+            float distance = Vector3.Distance(transform.position, target.position);
+
+            if (distance <= 2)
+            { 
+                this.Wait(2, () => { transform.position = initialPos; chargeAttack = false; });
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, target.position, 10 * Time.deltaTime);
+            }
+        }
+
         if (GameManager.singleton.decide == true) return;
 
         if(isWalking == true) 

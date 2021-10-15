@@ -124,8 +124,12 @@ public class GameManager : NetworkBehaviour
             i.sprite = winSprite;
         }
 
-        if(net_CharacterManager.Singleton.first.playerId == winId) 
+        if (net_CharacterManager.Singleton.first.playerId == winId)
         {
+            net_CharacterManager.Singleton.first.chargeAttack = true;
+
+            this.Wait(1, () => {  net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");   });
+
             net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
         }
         else 
@@ -135,6 +139,10 @@ public class GameManager : NetworkBehaviour
 
         if (net_CharacterManager.Singleton.second.playerId == winId)
         {
+            net_CharacterManager.Singleton.second.chargeAttack = true;
+
+            this.Wait(1, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
+
             net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
         }
         else
