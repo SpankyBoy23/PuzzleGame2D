@@ -45,6 +45,7 @@ public class MenuManager : MonoBehaviour
     #endregion
     public void LoadSceneWithIndex(int index)
     {
+        PlayerPrefs.SetInt("SceneId", 0);
         SceneManager.LoadScene(index);
     }
     public void OpenLink(string Link)

@@ -92,15 +92,24 @@ public class CharactersManager : MonoBehaviour
     }
     public void StartBtn()
     {
-        panel.SetActive(true);
-        characterIntroImages[0].sprite = characterIntroSprites[PlayerPrefs.GetInt("CharacterIndex")];
-        characterIntroImages[1].sprite = characterIntroSprites[PlayerPrefs.GetInt("LevelNumber")];
-       
-        characterIntroCubbyImage[0].sprite = characterSpirtes[PlayerPrefs.GetInt("CharacterIndex")];
-        characterIntroCubbyImage[1].sprite = characterSpirtes[PlayerPrefs.GetInt("LevelNumber")];
-        namesText[0].text = names[PlayerPrefs.GetInt("CharacterIndex")];
-        namesText[1].text = names[PlayerPrefs.GetInt("LevelNumber")];
-        this.Wait(2f, () => { SceneManager.LoadScene("OfflineMode"); });
+        int sceneId = PlayerPrefs.GetInt("SceneId");
+
+        if (sceneId != 1)
+        {
+            panel.SetActive(true);
+            characterIntroImages[0].sprite = characterIntroSprites[PlayerPrefs.GetInt("CharacterIndex")];
+            characterIntroImages[1].sprite = characterIntroSprites[PlayerPrefs.GetInt("LevelNumber")];
+
+            characterIntroCubbyImage[0].sprite = characterSpirtes[PlayerPrefs.GetInt("CharacterIndex")];
+            characterIntroCubbyImage[1].sprite = characterSpirtes[PlayerPrefs.GetInt("LevelNumber")];
+            namesText[0].text = names[PlayerPrefs.GetInt("CharacterIndex")];
+            namesText[1].text = names[PlayerPrefs.GetInt("LevelNumber")];
+            this.Wait(2f, () => { SceneManager.LoadScene("OfflineMode"); });
+        }
+        else 
+        {
+            Mirror.NetworkManager.singleton.GetComponent<Menu>().RequestServersList();
+        }
     }
 
     public void Random()

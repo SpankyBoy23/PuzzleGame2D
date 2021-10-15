@@ -22,6 +22,12 @@ public class Menu : MonoBehaviour
 
     }
 
+    public void ShowCharacterSelectionScene() 
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("CharacterSelection");
+        PlayerPrefs.SetInt("SceneId", 1);
+    }
+
     public void RequestServersList()
     {
         lightReflectiveMirrorTransport.RequestServerList();
