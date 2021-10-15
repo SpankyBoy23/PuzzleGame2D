@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 69288088}
+  cType: 1
 --- !u!95 &69288088 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5547452845743302107, guid: c661c3f7152983e49be02f6c089450bf,
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 424250942}
+  cType: 0
 --- !u!1 &432409798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 473745944}
+  cType: 0
 --- !u!95 &473745944 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7670024526476567617, guid: 868b12cdd9e77064fbbf7d6692473d09,
@@ -1810,6 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 551956093}
+  cType: 0
 --- !u!95 &551956093 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3187145754967956046, guid: 89ce1e3a6fccd9b48bc9489454b6ddc9,
@@ -1945,6 +1949,8 @@ MonoBehaviour:
   target: {fileID: 1395682805}
   isWalking: 0
   resetDelay: 1
+  currentCharacter: {fileID: 0}
+  type: 0
 --- !u!114 &610018149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,6 +3692,8 @@ MonoBehaviour:
   target: {fileID: 610018147}
   isWalking: 0
   resetDelay: 1
+  currentCharacter: {fileID: 0}
+  type: 0
 --- !u!114 &1395682804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10127,6 +10135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 1775251939}
+  cType: 1
 --- !u!95 &1775251939 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6369888807430912341, guid: e8043765c5a40de48831842e8a8f7f59,
@@ -10480,6 +10489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 1913149553}
+  cType: 0
 --- !u!95 &1913149553 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8793284367005021824, guid: 62a0774c365b84f4796e3ab071a94d18,
@@ -10627,6 +10637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 2035847201}
+  cType: 0
 --- !u!1 &2048150745
 GameObject:
   m_ObjectHideFlags: 0
@@ -15551,6 +15562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 2069167570}
+  cType: 1
 --- !u!95 &2069167570 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4741772202789038592, guid: 688e5d33772e0e34fad751f7eef5d53f,

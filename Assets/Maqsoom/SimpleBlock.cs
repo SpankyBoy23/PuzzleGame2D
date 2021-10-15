@@ -78,6 +78,8 @@ public class SimpleBlock : NetworkBehaviour
         }
     }
 
+    public bool destroyed;
+
     void Function(int x, int y, int call)
     {
         //Debug.Log(call);
@@ -92,6 +94,8 @@ public class SimpleBlock : NetworkBehaviour
                 //TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<SpriteRenderer>().color = Color.red;
                 if (!net_LogicManager.intance.objectList.Contains(net_BlockMovement.grid2[roundedX, roundedY].gameObject))
                 {
+                    if (destroyed == true) return;
+                    destroyed = true;
                     CmdFunction(net_BlockMovement.grid2[roundedX, roundedY].gameObject);
                 }
 

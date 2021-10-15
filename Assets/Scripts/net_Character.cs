@@ -18,6 +18,18 @@ public class net_Character : NetworkBehaviour
 
     Vector3 initialPos;
 
+    public GameObject currentCharacter;
+
+    public enum CharacterType 
+    {
+        Alexander,
+        Fassa,
+        Xixi,
+        Mina
+    }
+
+    public CharacterType type;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,18 +87,31 @@ public class net_Character : NetworkBehaviour
             animator.Play("Lose");
         }
 
-        if (target.GetComponentInChildren<Animator>()) 
+        if(this.type == CharacterType.Alexander) 
         {
-            target.GetComponentInChildren<Animator>().Play("Hurt");
+            target.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
         }
-
-      
+        else 
+        {
+            WindPlayerAnimation wpa = currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
+            GameObject a = Instantiate(wpa.prefab , wpa.spawnPos.position, Quaternion.identity);
+            a.GetComponent<net_Orb>().target = target;
+            a.GetComponent<net_Orb>().mainScene = true;
+        }
     }
 
     public void Walk() 
     {
-        isWalking = true;
-        animator.SetBool("Walk", true);
+        Debug.Log("calling");
+        if (type == CharacterType.Alexander)
+        {
+            isWalking = true;
+            animator.SetBool("Walk", true);
+        }
+        else 
+        {
+            CmdAnimation(AnimationType.Attack);
+        }
     }
 
     public void Spawn(int index , Transform t) 
@@ -96,9 +121,11 @@ public class net_Character : NetworkBehaviour
         RuntimeCharacter rc = go.GetComponent<RuntimeCharacter>();
         rc.target = transform;
 
+        currentCharacter = go;
+
+        type = rc.cType;
         animator = rc.animator;
         networkAnimator.SetAnimator(rc.animator);
-       
     }
 }
 

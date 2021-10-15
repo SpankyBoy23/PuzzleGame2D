@@ -13,6 +13,8 @@ public class Orb : MonoBehaviour
     public float damageDelay;
     bool effect = false;
 
+    public bool mainScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,8 @@ public class Orb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (mainScene == true) return;
+
         transform.Translate(Vector3.right * speed * Time.deltaTime);
          Debug.Log(Vector2.Distance(transform.position, target.transform.position));
         //Debug.Log(Vector2.Distance(transform.position, targetTransform.position));
