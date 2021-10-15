@@ -19,9 +19,8 @@ public class Player : NetworkBehaviour
         username = name;
         isReady = true;
 
-        //  cId = characterId;
+        cId = characterId;
 
-        cId = 3;
         if(net_CharacterManager.Singleton.first.playerId == 0) 
         {
             net_CharacterManager.Singleton.first.playerId = netId;
