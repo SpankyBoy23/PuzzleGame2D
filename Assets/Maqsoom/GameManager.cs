@@ -38,9 +38,14 @@ public class GameManager : NetworkBehaviour
         singleton = this;
     }
 
+    public bool mapSet;
+
     void OnNameChange(int oldValue , int newValue) 
     {
         int a = newValue;
+        mapSet = true;
+
+        if (mapSet == true) return;
 
         if (a < 2)
         {
@@ -144,6 +149,7 @@ public class GameManager : NetworkBehaviour
         if(mapId == -1) 
         {
             mapId = Random.Range(0, FindObjectOfType<EnvironmentManager>().environments.Length);
+            Debug.LogError(mapId);
         }
 
         if(currentGameState == GameState.Waiting) 
