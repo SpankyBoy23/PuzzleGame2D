@@ -15,6 +15,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("SceneId", 0);
         menuManager = this;
         
     }

@@ -89,7 +89,7 @@ public class net_Character : NetworkBehaviour
 
         if(this.type == CharacterType.Alexander) 
         {
-            target.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
+            target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
         }
         else 
         {
