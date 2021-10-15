@@ -54,7 +54,7 @@ public class MusicManager : MonoBehaviour
             Pause("1");
             Pause("2");
             Pause("3");
-        }else if(scene.buildIndex == 2)
+        }else if(scene.buildIndex >= 2)
         {
             Pause("CharacterSelection");
             Pause("MainMenu");
@@ -82,7 +82,7 @@ public class MusicManager : MonoBehaviour
             Pause("2");
             Pause("3");
         }
-        else if (a == 2)
+        else if (a >= 2)
         {
             Pause("CharacterSelection");
             Pause("MainMenu");
