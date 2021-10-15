@@ -68,7 +68,10 @@ public class SimpleBlock : NetworkBehaviour
     {
         if (hasAuthority == false) return;
 
-        if(net_CharacterManager.Singleton.first.hasAuthority == true) 
+        if (destroyed == true) return;
+        destroyed = true;
+
+        if (net_CharacterManager.Singleton.first.hasAuthority == true) 
         {
             net_CharacterManager.Singleton.first.Walk();
         }
@@ -94,8 +97,6 @@ public class SimpleBlock : NetworkBehaviour
                 //TeterminosPlayer2.grid2[roundedX+x, roundedY + y].GetComponent<SpriteRenderer>().color = Color.red;
                 if (!net_LogicManager.intance.objectList.Contains(net_BlockMovement.grid2[roundedX, roundedY].gameObject))
                 {
-                    if (destroyed == true) return;
-                    destroyed = true;
                     CmdFunction(net_BlockMovement.grid2[roundedX, roundedY].gameObject);
                 }
 
