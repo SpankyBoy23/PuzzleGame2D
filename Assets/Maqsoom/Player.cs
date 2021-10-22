@@ -53,8 +53,8 @@ public class Player : NetworkBehaviour
                 NewBlock();
                 return;
             }
-        }
-*/
+        }*/
+
         GameManager.singleton.firstPlayer = NetworkIdentity.spawned[netId].GetComponent<Player>();
         Debug.Log("workingrpcsetup-1");
         if (hasAuthority)
@@ -75,7 +75,7 @@ public class Player : NetworkBehaviour
             }
         }
 
-   
+        isReady = true;
        
 
     }
@@ -110,18 +110,25 @@ public class Player : NetworkBehaviour
         int characterId = PlayerPrefs.GetInt("CharacterIndex");
         CmdSetup(username , characterId);
     }
-
+    
     public void NewBlock() 
     {
+      
         if (GameManager.singleton.decide == true) return;
-
-        if(GameManager.singleton.firstPlayer.netId == netId) 
+        Debug.Log("Multiplayer BlockSpwan");
+        if (GameManager.singleton.firstPlayer == null)
+        {
+            Debug.Log("GameManager " + GameManager.singleton.firstPlayer);
+            Debug.Log(netId);
+        }
+        Debug.Log(NetworkIdentity.spawned[netId].GetComponent<Player>().netId);
+       
+        if (GameManager.singleton.firstPlayer.netId == netId) 
         {
             if (net_BlockSpawner.blockSpawner.first == false) 
             {
                 net_BlockSpawner.blockSpawner.currentBlock = Random.Range(0, 12);
                 net_BlockSpawner.blockSpawner.secondComingBlock = Random.Range(0, 12);
-                net_BlockSpawner.blockSpawner.thirdComingBlock = Random.Range(0, 12);
 
                 net_BlockSpawner.blockSpawner.NewBlock(netId , net_BlockSpawner.blockSpawner.currentBlock);
 
@@ -166,6 +173,7 @@ public class Player : NetworkBehaviour
     void Update()
     {
         if (hasAuthority == false) return;
+        if (isReady == false) return;
 
         if(GameManager.singleton.currentGameState == GameState.Playing) 
         {

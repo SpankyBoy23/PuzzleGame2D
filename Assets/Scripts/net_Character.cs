@@ -48,7 +48,7 @@ public class net_Character : NetworkBehaviour
         {
             float distance = Vector3.Distance(transform.position, target.position);
 
-            if (distance <= 2)
+            if (distance <= 5)
             { 
                 this.Wait(2, () => { transform.position = initialPos; chargeAttack = false; });
             }
@@ -64,7 +64,7 @@ public class net_Character : NetworkBehaviour
         {      
             float distance = Vector3.Distance(transform.position, target.position);
 
-            if(distance <= 2) 
+            if(distance <= 5) 
             {
                 animator.SetBool("Walk", false);
 
