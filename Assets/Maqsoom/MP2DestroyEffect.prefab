@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1944033325554663749}
   - component: {fileID: 1944033325536279155}
   - component: {fileID: 1944033325536260437}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: StarDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4813,7 @@ GameObject:
   - component: {fileID: 1944033325554692621}
   - component: {fileID: 1944033325536288617}
   - component: {fileID: 1944033325536258023}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CentralOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9642,7 +9642,7 @@ GameObject:
   - component: {fileID: 1944033325554695829}
   - component: {fileID: 1944033325536312665}
   - component: {fileID: 1944033325534639237}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14426,7 +14426,7 @@ GameObject:
   - component: {fileID: 1944033325554626625}
   - component: {fileID: 1944033325536329861}
   - component: {fileID: 1944033325534614381}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Nova
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19192,7 +19192,7 @@ GameObject:
   - component: {fileID: 1944033325554674155}
   - component: {fileID: 1944033325536332227}
   - component: {fileID: 1944033325534653293}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23994,7 +23994,7 @@ GameObject:
   - component: {fileID: 1944033325554681949}
   - component: {fileID: 1944033325536319355}
   - component: {fileID: 1944033325534657539}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MP2DestroyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

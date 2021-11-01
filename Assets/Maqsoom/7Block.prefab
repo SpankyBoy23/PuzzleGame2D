@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2466818436457544397}
   - component: {fileID: 7451069097538175452}
   - component: {fileID: 5616305995772782894}
-  - component: {fileID: 8362450675717520098}
-  m_Layer: 6
-  m_Name: P2Block 1
-  m_TagString: Grey
+  - component: {fileID: 524384056898951044}
+  m_Layer: 7
+  m_Name: 7Block
+  m_TagString: Dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 8476920352493059660, guid: 9f5afb26bec1ce041aebb8bf3229e78a,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78bf346d318490748baf32543d2e43dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +122,7 @@ MonoBehaviour:
   dragDistance: 0
   test: 0
   drag: 0
-  DestoryEffect: {fileID: 1944033325554485321, guid: 9ddcd9bfd3c49534c9d5cca42a928da3,
+  DestoryEffect: {fileID: 1944033325554485321, guid: bf79bb18a43dc404ca923ae8f775b09d,
     type: 3}
   PlacedEffect: {fileID: 7696325898009484874, guid: 3b45e63b30b23614c9fc4c2545f0ae84,
     type: 3}
@@ -151,7 +150,7 @@ MonoBehaviour:
   interpolateRotation: 1
   interpolatePosition: 1
   syncScale: 1
---- !u!114 &8362450675717520098
+--- !u!114 &524384056898951044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,12 +159,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4327843849220610932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ab582abc30bd3d47aeeb7fd92475249, type: 3}
+  m_Script: {fileID: 11500000, guid: fc5200a5fe6098a40828bc36dd7183e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   isFallen: 0
   breakNow: 0
-  tP: {fileID: 0}
+  tp: {fileID: 0}
   destroyed: 0

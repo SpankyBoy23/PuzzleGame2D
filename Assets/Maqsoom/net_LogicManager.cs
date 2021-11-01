@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class net_LogicManager : MonoBehaviour
+public class net_LogicManager : NetworkBehaviour
 {
 
     public static net_LogicManager intance;
@@ -11,6 +12,8 @@ public class net_LogicManager : MonoBehaviour
     public int noOfBlocksLastDestoryed;
     bool justBroke = false;
     [SerializeField] float coolDown = 1f;
+
+    public bool first;
    
 /*    public PlayerBehviour playerBehviour;
     public BotBehaviour botBehaviour;*/
@@ -71,9 +74,26 @@ public class net_LogicManager : MonoBehaviour
         if (coolDown < 0)
         {
             justBroke = false;
+            Debug.Log(noOfBlocksLastDestoryed);
+            JustBroke(noOfBlocksLastDestoryed , first);
             coolDown = 1;
         }
     }
+
+    [ClientRpc]
+    void JustBroke(int data , bool first) 
+    {
+        Debug.Log(data);
+        if (first)
+        {
+            net_BlockSpawner.blockSpawner.blackBlock = data;
+        }
+        else 
+        {
+            net_BlockSpawner2.blockSpawner2.blackBlock = data;
+        }
+    }
+
     private void ResetList()
     {
         justBroke = true;

@@ -15,6 +15,8 @@ public class net_BlockSpawner2 : NetworkBehaviour
 
     public bool first;
 
+    public int blackBlock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,18 @@ public class net_BlockSpawner2 : NetworkBehaviour
 
     public void NewBlock(uint netId, int currentBlockId)
     {
-        CmdNewBlock(netId, currentBlockId);
+        if (blackBlock <= 0)
+        {
+            CmdNewBlock(netId, currentBlockId);
+        }
+        else 
+        {
+            blackBlock--;
+
+            currentBlockId = Blocks.Length - 1;
+
+            CmdNewBlock(netId, currentBlockId);
+        }
     }
 
     [Command(requiresAuthority = false)]

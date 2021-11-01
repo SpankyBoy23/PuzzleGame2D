@@ -26,13 +26,29 @@ public class net_Predictor : MonoBehaviour
 
         if (GameManager.singleton.firstPlayer.netId == NetworkClient.localPlayer.GetComponent<Player>().netId)
         {
-            secondComingBlock.sprite = blockSprites[net_BlockSpawner.blockSpawner.secondComingBlock];
-            thirdComingBlock.sprite = blockSprites[net_BlockSpawner.blockSpawner.thirdComingBlock];
+            if (net_BlockSpawner.blockSpawner.blackBlock <= 0)
+            {
+                secondComingBlock.sprite = blockSprites[net_BlockSpawner.blockSpawner.secondComingBlock];
+                thirdComingBlock.sprite = blockSprites[net_BlockSpawner.blockSpawner.thirdComingBlock];
+            }
+            else
+            {
+                secondComingBlock.sprite = blockSprites[blockSprites.Length - 1];
+                thirdComingBlock.sprite = blockSprites[blockSprites.Length - 1];
+            }
         }
         else
         {
-            secondComingBlock.sprite = blockSprites[net_BlockSpawner2.blockSpawner2.secondComingBlock];
-            thirdComingBlock.sprite = blockSprites[net_BlockSpawner2.blockSpawner2.thirdComingBlock];
-        }       
+            if (net_BlockSpawner2.blockSpawner2.blackBlock <= 0)
+            {
+                secondComingBlock.sprite = blockSprites[net_BlockSpawner2.blockSpawner2.secondComingBlock];
+                thirdComingBlock.sprite = blockSprites[net_BlockSpawner2.blockSpawner2.thirdComingBlock];
+            }
+            else
+            {
+                secondComingBlock.sprite = blockSprites[blockSprites.Length - 1];
+                thirdComingBlock.sprite = blockSprites[blockSprites.Length - 1];
+            }
+        }
     }
 }

@@ -123,7 +123,7 @@ MonoBehaviour:
   dragDistance: 0
   test: 0
   drag: 0
-  DestoryEffect: {fileID: 1944033325554485321, guid: bf79bb18a43dc404ca923ae8f775b09d,
+  DestoryEffect: {fileID: 1944033325554485321, guid: 9ddcd9bfd3c49534c9d5cca42a928da3,
     type: 3}
   PlacedEffect: {fileID: 7696325898009484874, guid: 3b45e63b30b23614c9fc4c2545f0ae84,
     type: 3}
