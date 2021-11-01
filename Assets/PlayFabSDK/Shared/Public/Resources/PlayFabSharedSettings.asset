@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: 18A9B
   DeveloperSecretKey: K94SIYNHD9NOKWZXSNIJXGWWG6UDYW6XMEGKW8PUS676KQSCDP
   ProductionEnvironmentUrl: 
-  RequestType: 2
+  RequestType: 0
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000

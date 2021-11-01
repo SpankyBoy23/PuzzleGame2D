@@ -70,13 +70,12 @@ public class Player : NetworkBehaviour
 
                 localCam.transform.position = nonLocalCam.transform.position;
                 nonLocalCam.transform.position = localCamPosition;
-
-             //   NewBlock();
+              
+                //   NewBlock();
             }
         }
 
         isReady = true;
-       
 
     }
 

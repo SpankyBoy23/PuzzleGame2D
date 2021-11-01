@@ -17,17 +17,29 @@ public class MenuManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("SceneId", 0);
         menuManager = this;
-        
+
+        if (string.IsNullOrEmpty(PlayerPrefs.GetString("playerName")) == false)
+        {
+            usernamePanel.SetActive(false);
+        }
+
     }
     private void Update()
     {
-        if (!PlayerPrefs.HasKey("UserName") && MultiplayerMode.activeSelf)
+  /*      if (!PlayerPrefs.HasKey("UserName") && MultiplayerMode.activeSelf)
         {
             usernamePanel.SetActive(true);
         }
+*/
 
-     
+
     }
+
+    public void FindMatch() 
+    {
+        Mirror.NetworkManager.singleton.GetComponent<Menu>().ShowCharacterSelectionScene();
+    }
+
     private void Start()
     {
         
@@ -38,7 +50,7 @@ public class MenuManager : MonoBehaviour
     { 
         if(usernameInuput.text != "")
         {
-            PlayerPrefs.SetString("UserName", usernameInuput.text);
+         //   PlayerPrefs.SetString("UserName", usernameInuput.text);
             usernamePanel.SetActive(false);
         }
     }

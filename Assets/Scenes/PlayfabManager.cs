@@ -34,6 +34,8 @@ public class PlayfabManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerNameField == null) return;
+
         if (!string.IsNullOrEmpty(playerNameField.text))
         { 
             if(playerName != playerNameField.text) 
@@ -156,6 +158,7 @@ public class PlayfabManager : MonoBehaviour
 
         playerRankText.text = $"Rank                         {result.Leaderboard[0].Position+1}";
         playerWinsText.text = $"Win                        {result.Leaderboard[0].StatValue}";
+        currentScore.wins = result.Leaderboard[0].StatValue;
     }
 
     public void GetLeaderboardAroundPlayerLoses()
@@ -176,6 +179,7 @@ public class PlayfabManager : MonoBehaviour
     void OnLeaderboardAroundPlayerGetLosses(GetLeaderboardAroundPlayerResult result)
     {
         playerLosesText.text = $"Lose                        {result.Leaderboard[0].StatValue}";
+        currentScore.loses = result.Leaderboard[0].StatValue;
     }
 
     void OnError(PlayFabError error)

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using System.Linq;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class GameManager : NetworkBehaviour
 {
@@ -118,10 +120,26 @@ public class GameManager : NetworkBehaviour
         if(NetworkClient.localPlayer.netId == netId) 
         {
             i.sprite = loseSprite;
+
+            Score score = new Score
+            {
+                wins = PlayerPrefs.GetInt("Wins"),
+                loses = PlayerPrefs.GetInt("Loses")
+            };
+
+            SendLeaderboard(score, true);
         }
         else 
         {
             i.sprite = winSprite;
+
+            Score score = new Score
+            {
+                wins = PlayerPrefs.GetInt("Wins"),
+                loses = PlayerPrefs.GetInt("Loses")
+            };
+
+            SendLeaderboard(score, false);
         }
 
         if (net_CharacterManager.Singleton.first.playerId == winId)
@@ -220,6 +238,61 @@ public class GameManager : NetworkBehaviour
     {
         firstPlayer = null;
         currentGameState = GameState.Waiting;
+    }
+
+    public void ExitGame() 
+    {
+        if(NetworkServer.active && NetworkClient.active) 
+        {
+            NetworkManager.singleton.StopHost();
+        }
+        else
+        {
+            NetworkManager.singleton.StopClient();
+        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
+
+    public void SendLeaderboard(Score score , bool lose)
+    {
+        if (lose)
+            score.loses++;
+        else
+            score.wins++;
+
+        PlayerPrefs.SetInt("Wins", score.wins);
+        PlayerPrefs.SetInt("Loses", score.loses);
+
+        var request = new UpdatePlayerStatisticsRequest()
+        {
+            Statistics = new List<StatisticUpdate>()
+            {
+                new StatisticUpdate()
+                {
+                    StatisticName = "Wins",
+                    Value = score.wins
+                },
+
+                new StatisticUpdate()
+                {
+                    StatisticName = "Loses",
+                    Value = score.loses
+                }
+            }
+        };
+
+        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
+    }
+
+    public void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
+    {
+        Debug.Log("Leaderboard sended");
+    }
+
+    void OnError(PlayFabError error)
+    {
+        Debug.Log("Error while logging in/creating account!");
+        Debug.Log(error.GenerateErrorReport());
     }
 }
 
