@@ -180,7 +180,7 @@ public class Player : NetworkBehaviour
             {
                 if (firstTime == true) return;
                 firstTime = true;
-
+                GameManager.singleton.exitButton.SetActive(false);
                 NewBlock();
             }
         }

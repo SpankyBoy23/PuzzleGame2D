@@ -31,6 +31,7 @@ public class GameManager : NetworkBehaviour
     public bool decide;
 
     public GameObject waitingForOtherPlayers;
+    public GameObject exitButton;
 
     public static Dictionary<uint, Player> players = new Dictionary<uint, Player>();
 
