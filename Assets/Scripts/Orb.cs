@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Orb : MonoBehaviour
 {
@@ -27,8 +28,11 @@ public class Orb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mainScene == true) return;
-
+      //  if (mainScene == true) return;
+      if(SceneManager.GetActiveScene().buildIndex != 2)
+        {
+            return;
+        }
         transform.Translate(Vector3.right * speed * Time.deltaTime);
          Debug.Log(Vector2.Distance(transform.position, target.transform.position));
         //Debug.Log(Vector2.Distance(transform.position, targetTransform.position));

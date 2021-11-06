@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3767356829577993037}
   - component: {fileID: -7656885329775557617}
   - component: {fileID: 1554678641239366148}
+  - component: {fileID: 4432830096844932797}
   m_Layer: 0
   m_Name: FlamethrowerCartoonyFire
   m_TagString: Untagged
@@ -4838,6 +4839,19 @@ MonoBehaviour:
   distoryEffect: {fileID: 1859229547943123754, guid: 71b72eec9c373d34eae125610e5245b5,
     type: 3}
   mainScene: 0
+--- !u!114 &4432830096844932797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767356829560019967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c71c45cf14c164f8f1831c86952af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5
 --- !u!1 &3767356829560032399
 GameObject:
   m_ObjectHideFlags: 0

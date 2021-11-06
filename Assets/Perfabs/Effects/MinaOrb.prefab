@@ -4767,6 +4767,7 @@ GameObject:
   - component: {fileID: 5981601817583721566}
   - component: {fileID: 2873311356940552383}
   - component: {fileID: -1582238363026759853}
+  - component: {fileID: -8395698517984504255}
   m_Layer: 0
   m_Name: MinaOrb
   m_TagString: Untagged
@@ -9603,6 +9604,19 @@ MonoBehaviour:
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
   mainScene: 0
+--- !u!114 &-8395698517984504255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944837130740583784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c71c45cf14c164f8f1831c86952af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 5
 --- !u!1 &5944837130740792110
 GameObject:
   m_ObjectHideFlags: 0

@@ -145,15 +145,16 @@ public class GameManager : NetworkBehaviour
 
         if (net_CharacterManager.Singleton.first.playerId == winId)
         {
-            net_CharacterManager.Singleton.first.chargeAttack = true;
+            this.Wait(1, () => { net_CharacterManager.Singleton.first.chargeAttack = true; });
 
-            this.Wait(1, () => {  net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");   });
+            this.Wait(1.5f, () => {  net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");   });
 
             net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
         }
         else 
         {
-            net_CharacterManager.Singleton.first.animator.SetBool("Lose", true);
+            this.Wait(1.5f, () => { net_CharacterManager.Singleton.first.animator.SetBool("Lose", true); });
+            
         }
 
         if (net_CharacterManager.Singleton.second.playerId == winId)

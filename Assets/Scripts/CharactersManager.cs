@@ -57,6 +57,7 @@ public class CharactersManager : MonoBehaviour
         }
         CharacterManagement();
         topReach = PlayerPrefs.GetInt("CharacterUnlocked") -1;
+        Debug.Log(PlayerPrefs.GetInt("CharacterUnlocked"));
     }
 
     public void UnlockAll()
@@ -154,5 +155,9 @@ public class CharactersManager : MonoBehaviour
                 characterImage.sprite = characterSpirtes[effect];
             }
         }
+    }
+    public void UnLockAll()
+    {
+        PlayerPrefs.SetInt("CharacterUnlocked", 10);
     }
 }

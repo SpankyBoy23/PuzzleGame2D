@@ -5302,7 +5302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Trems Of Use
+  m_text: Terms Of Use
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff41060de66fd4746a8551884ea54e02, type: 2}
   m_sharedMaterial: {fileID: -5372527604998566929, guid: ff41060de66fd4746a8551884ea54e02,
@@ -8304,8 +8304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 132.70001, y: -226}
-  m_SizeDelta: {x: -147.6, y: -171}
+  m_AnchoredPosition: {x: 27.71997, y: -218.02002}
+  m_SizeDelta: {x: -55.44, y: -171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084253591
 MonoBehaviour:
