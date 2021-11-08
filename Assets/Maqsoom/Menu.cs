@@ -8,12 +8,19 @@ using LightReflectiveMirror;
 public class Menu : MonoBehaviour
 {
     public LightReflectiveMirrorTransport lightReflectiveMirrorTransport;
+    public GameObject disconnectMenu;
     bool firstTime;
 
     // Start is called before the first frame update
     void Start()
     {
         lightReflectiveMirrorTransport.serverListUpdated.AddListener(() => OnRefreshServersList());
+        lightReflectiveMirrorTransport.diconnectedFromRelay.AddListener(() => OnDisconnectFromRelay());
+    }
+
+    void OnDisconnectFromRelay() 
+    {
+        disconnectMenu.SetActive(true);
     }
 
     // Update is called once per frame
