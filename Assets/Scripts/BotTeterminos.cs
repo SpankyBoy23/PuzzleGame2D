@@ -24,7 +24,7 @@ public class BotTeterminos : MonoBehaviour
 
     private void Start()
     {
-        botMoves = Random.Range(-1, 5);
+        botMoves = Random.Range(0, 5);
     }
     void Update()
     {

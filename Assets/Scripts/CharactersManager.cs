@@ -35,10 +35,11 @@ public class CharactersManager : MonoBehaviour
     private void Awake()
     {
         timeToAnimate = maxTime;
-      
-     //   DontDestroyOnLoad(gameObject);
-       
 
+        //   DontDestroyOnLoad(gameObject);
+
+        // PlayerPrefs.SetInt("CharacterUnlocked",9);
+       // PlayerPrefs.SetInt("LevelNumber", 9);
         if (!PlayerPrefs.HasKey("CharacterIndex"))
         {
             PlayerPrefs.SetInt("CharacterIndex", 1);

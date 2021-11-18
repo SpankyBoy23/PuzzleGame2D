@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb6e65aca1d12c42bd8293ed23cc416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallTime: 0.3
+  fallTime: 0.2
   botMoves: 0
   test: 0
   DestoryEffect: {fileID: 1944033325554485321, guid: 5b9c74e807abb0a4593e0da58cf9bdc4,
