@@ -27,7 +27,7 @@ public class BotOrb : MonoBehaviour
     {
        
         transform.Translate(Vector3.right * speed * Time.deltaTime);
-         Debug.Log(Vector2.Distance(transform.position, target.transform.position));
+        // Debug.Log(Vector2.Distance(transform.position, target.transform.position));
         //Debug.Log(Vector2.Distance(transform.position, targetTransform.position));
         if (Vector2.Distance(transform.position, targetTransform.position) < hitRange)
         {

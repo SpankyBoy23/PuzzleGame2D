@@ -9604,6 +9604,8 @@ MonoBehaviour:
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
   mainScene: 0
+  breakDis: 5
+  speed: 2.5
 --- !u!114 &-8395698517984504255
 MonoBehaviour:
   m_ObjectHideFlags: 0

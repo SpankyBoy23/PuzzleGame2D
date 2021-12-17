@@ -99,6 +99,7 @@ public class CharactersManager : MonoBehaviour
         if (sceneId != 1)
         {
             panel.SetActive(true);
+            Debug.Log("Character " + PlayerPrefs.GetInt("CharacterIndex") + ", Level " + PlayerPrefs.GetInt("LevelNumber"));
             characterIntroImages[0].sprite = characterIntroSprites[PlayerPrefs.GetInt("CharacterIndex")];
             characterIntroImages[1].sprite = characterIntroSprites[PlayerPrefs.GetInt("LevelNumber")];
 
@@ -113,7 +114,10 @@ public class CharactersManager : MonoBehaviour
             Mirror.NetworkManager.singleton.GetComponent<Menu>().RequestServersList();
         }
     }
-
+    public void Level(int level)
+    {
+        PlayerPrefs.SetInt("LevelNumber", level);
+    }
     public void Random()
     {
         isRandom = true;

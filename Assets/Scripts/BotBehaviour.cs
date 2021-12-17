@@ -21,19 +21,19 @@ public class BotBehaviour : MonoBehaviour
     }
     public void Walk()
     {
-        Debug.Log("Its worked");
+      //  Debug.Log("Its worked");
         if (!isLucas && !LogicManager.intance.finalMove)
         {
-            Debug.Log("First Works");
+            //Debug.Log("First Works");
             animator.SetBool("Walk", true);
         }else if(isLucas && !LogicManager.intance.finalMove)
         {
-            Debug.Log("2 Works");
+           // Debug.Log("2 Works");
             animator.SetBool("Walk", true);
         }
          else if (isLucas && LogicManager.intance.finalMove)
         {
-            Debug.Log("3 Works");
+         //   Debug.Log("3 Works");
             animator.Play("ChargeAttack");
         }
             

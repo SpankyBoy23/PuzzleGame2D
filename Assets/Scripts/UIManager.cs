@@ -23,9 +23,14 @@ public class UIManager : MonoBehaviour
         endGameImage.sprite = endGameSprites[a];
         if (a == 0)
         {
-            if (PlayerPrefs.GetInt("LevelNumber") < 10)
+            if (PlayerPrefs.GetInt("LevelNumber") < 9)
             {
                 PlayerPrefs.SetInt("LevelNumber", PlayerPrefs.GetInt("LevelNumber") + 1);
+            }
+            else if(PlayerPrefs.GetInt("LevelNumber") == 9)
+            {
+                PlayerPrefs.SetInt("CharacterUnlocked", PlayerPrefs.GetInt("CharacterUnlocked") + 1);
+                PlayerPrefs.SetInt("LevelNumber", 2);
             }
             else
             {
