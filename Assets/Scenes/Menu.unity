@@ -4507,6 +4507,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3043759821811290764, guid: 4054f20f290bd804fa0014561766ab25,
         type: 3}
       propertyPath: m_Name
@@ -4984,6 +5009,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403143479}
   m_CullTransparentMesh: 1
+--- !u!1 &413702797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413702799}
+  - component: {fileID: 413702798}
+  m_Layer: 0
+  m_Name: In-App Purchase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &413702798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413702797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72b1c3226279ed4f89b8b19f2ae056a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 703073510}
+--- !u!4 &413702799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413702797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 720, y: 1480, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413828156
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,7 +5588,7 @@ GameObject:
   - component: {fileID: 464842358}
   - component: {fileID: 464842357}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Discrubation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6619,7 +6688,7 @@ GameObject:
   - component: {fileID: 703073511}
   - component: {fileID: 703073510}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Buy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9541,7 +9610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -193}
+  m_AnchoredPosition: {x: 146.69, y: -100}
   m_SizeDelta: {x: 1024.2, y: 1820.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084253591
@@ -11614,7 +11683,7 @@ GameObject:
   - component: {fileID: 1358605146}
   - component: {fileID: 1358605147}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Pictures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13242,7 +13311,7 @@ GameObject:
   - component: {fileID: 1534560299}
   - component: {fileID: 1534560298}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: CloseBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14655,7 +14724,7 @@ GameObject:
   - component: {fileID: 1664087832}
   - component: {fileID: 1664087831}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

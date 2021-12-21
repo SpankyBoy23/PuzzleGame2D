@@ -2114,7 +2114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 5547452846275786612}
-  prefab: {fileID: 3767356829560019967, guid: c498719075c5a82499de754ad3abfd1c, type: 3}
+  prefab: {fileID: 2194451576592417073, guid: 98df7168a557e7e458034d0ebc3014b5, type: 3}
 --- !u!1 &5547452845747866538
 GameObject:
   m_ObjectHideFlags: 0

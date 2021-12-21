@@ -11,6 +11,7 @@ public class CharactersManager : MonoBehaviour
     [SerializeField] Sprite[] characterBtnSpirtes;
     [SerializeField] Sprite[] characterSpirtes;
     [SerializeField] Image characterImage;
+    [SerializeField] GameObject newCharacters;
 
 
     ///////////IntroPanel..........//////////////////
@@ -84,13 +85,18 @@ public class CharactersManager : MonoBehaviour
     }
     public void CharacterSelection(int index)
     {
-        PlayerPrefs.SetInt("CharacterIndex", index);
-        characterImage.sprite = characterSpirtes[index];
-        foreach (Button btn in charactersBtn)
+        if(index < 10 || PlayerPrefs.GetInt("Unlocked") == 1)
         {
-            btn.GetComponent<Image>().color = Color.white;
+            PlayerPrefs.SetInt("CharacterIndex", index);
+            characterImage.sprite = characterSpirtes[index];
+            foreach (Button btn in charactersBtn)
+            {
+                btn.GetComponent<Image>().color = Color.white;
+            }
+            charactersBtn[index].GetComponent<Image>().color = Color.gray;
         }
-        charactersBtn[index].GetComponent<Image>().color = Color.gray;
+        
+       
     }
     public void StartBtn()
     {
@@ -125,6 +131,14 @@ public class CharactersManager : MonoBehaviour
     bool test = false;
     private void LateUpdate()
     {
+        if(PlayerPrefs.GetInt("Unlocked") == 0)
+        {
+            newCharacters.SetActive(false);
+        }
+        else
+        {
+            newCharacters.SetActive(true);
+        }
         if (isRandom)
         {
            
