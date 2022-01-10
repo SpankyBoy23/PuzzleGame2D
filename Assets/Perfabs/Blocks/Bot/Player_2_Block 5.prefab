@@ -98,7 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallTime: 0.2
   botMoves: 0
-  test: 0
+  target: {x: 3, y: 0}
+  random: 0
+  lastElement: 000000000000000000000000000000000000000000000000
   DestoryEffect: {fileID: 1944033325554485321, guid: 5b9c74e807abb0a4593e0da58cf9bdc4,
     type: 3}
 --- !u!114 &6185559098298101530

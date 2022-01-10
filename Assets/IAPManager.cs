@@ -12,6 +12,6 @@ public class IAPManager : MonoBehaviour
 
     void Buy()
     {
-        PlayerPrefs.SetInt("Unlocked", 1);
+        GetComponent<iapManager>().OnClick_BuyProduct();
     }
 }

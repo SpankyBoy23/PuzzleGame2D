@@ -19,12 +19,12 @@ public class AnimationController : MonoBehaviour
         if (transform.parent.tag == "Bot")
         {
             target = GameObject.FindGameObjectWithTag("Player");
-            Debug.Log("Finding Player");
+         //   Debug.Log("Finding Player");
         }
         else
         {
             target = GameObject.FindGameObjectWithTag("Bot");
-            Debug.Log("Bot");
+          //  Debug.Log("Bot");
             // speed = speed;
         }
         animatorTarget = target.GetComponentInChildren<Animator>();

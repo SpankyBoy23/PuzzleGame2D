@@ -23,24 +23,43 @@ public class UIManager : MonoBehaviour
         endGameImage.sprite = endGameSprites[a];
         if (a == 0)
         {
-            if (PlayerPrefs.GetInt("LevelNumber") < 9)
+            if (PlayerPrefs.GetInt("LevelNumber") < 9 && PlayerPrefs.GetInt("Unlocked")!= 1)
             {
+                Debug.Log("Woring");
                 PlayerPrefs.SetInt("LevelNumber", PlayerPrefs.GetInt("LevelNumber") + 1);
             }
-            else if(PlayerPrefs.GetInt("LevelNumber") == 9)
+            else if(PlayerPrefs.GetInt("LevelNumber") == 9 && PlayerPrefs.GetInt("Unlocked") != 1)
             {
                 PlayerPrefs.SetInt("CharacterUnlocked", PlayerPrefs.GetInt("CharacterUnlocked") + 1);
                 PlayerPrefs.SetInt("LevelNumber", 2);
             }
-            else
+            if (PlayerPrefs.GetInt("LevelNumber") < 13 && PlayerPrefs.GetInt("Unlocked") == 1)
             {
+                PlayerPrefs.SetInt("LevelNumber", PlayerPrefs.GetInt("LevelNumber") + 1);
+            }
+            else if (PlayerPrefs.GetInt("LevelNumber") == 13 && PlayerPrefs.GetInt("Unlocked") == 1)
+            {
+               // PlayerPrefs.SetInt("CharacterUnlocked", PlayerPrefs.GetInt("CharacterUnlocked") + 1);
                 PlayerPrefs.SetInt("LevelNumber", 2);
             }
+          
         }
 
     }
 
     public void OnClick_LoadScene(int index)
+    {
+        if(SceneManager.GetActiveScene().buildIndex > 1 && index == 1)
+        {
+            FindObjectOfType<AdManager>().ShowInterstitial();
+           
+        }
+        else
+        {
+            Load(index);
+        }
+    }
+    public void Load(int index)
     {
         SceneManager.LoadScene(index);
     }
@@ -61,5 +80,9 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetInt("Music", 0);
            // FindObjectOfType<MusicManager>().SceneLaod(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+    public void showAd()
+    {
+        
     }
 }

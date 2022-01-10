@@ -22,24 +22,18 @@ public class BotTeterminosBlock : MonoBehaviour
             if (roundedY < 11)
             {
                 Function(0, 1, 1);
-
             }
-
 
             // X 0 , y -1
             if (roundedY > 0)
             {
-
                 Function(0, -1, 2);
             }
-
 
             // X -1 , y 0
             if (roundedX > 0)
             {
-
                 Function(-1, 0, 3);
-
             }
 
 
@@ -48,7 +42,6 @@ public class BotTeterminosBlock : MonoBehaviour
             if (roundedX < 5)
             {
                 Function(1, 0, 4);
-
             }
 
         }

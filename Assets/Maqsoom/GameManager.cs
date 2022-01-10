@@ -6,6 +6,7 @@ using Mirror;
 using System.Linq;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEngine.SceneManagement;
 
 public class GameManager : NetworkBehaviour
 {
@@ -252,7 +253,8 @@ public class GameManager : NetworkBehaviour
         {
             NetworkManager.singleton.StopClient();
         }
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        AdManager.instance.ShowInterstitial();
+      // SceneManager.LoadScene("Menu");
     }
 
     public void SendLeaderboard(Score score , bool lose)
@@ -295,6 +297,10 @@ public class GameManager : NetworkBehaviour
     {
         Debug.Log("Error while logging in/creating account!");
         Debug.Log(error.GenerateErrorReport());
+    }
+    public void showAd()
+    {
+      //  FindObjectOfType<AdManager>().ShowInterstitial();
     }
 }
 

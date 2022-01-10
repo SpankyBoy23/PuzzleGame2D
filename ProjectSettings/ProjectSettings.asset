@@ -156,7 +156,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 19
+  AndroidMinSdkVersion: 26
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -231,7 +231,7 @@ PlayerSettings:
   clonedFromGUID: 01b2588d5351bba4fa63465dc7c08199
   templatePackageId: 
   templateDefaultScene: 
-  useCustomMainManifest: 1
+  useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
   useCustomLauncherGradleManifest: 0
@@ -406,6 +406,9 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 080000000b000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Android
     m_Enabled: 0
@@ -822,12 +825,12 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 1
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Game Performance: 0
     Game_Performance: 0
     Hub: 0
-    Purchasing: 0
+    Purchasing: 1
     UDP: 0
     UNet: 1
     Unity Ads: 0
@@ -845,10 +848,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: c48c4db4-f3ed-499f-9f9c-4fbe22e67da2
+  cloudProjectId: 55cfbae8-b4c5-469a-86e1-d42bee9b6e8c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Puzzle Fighting Game 2D
+  projectName: 'Crusadia Connected: Duel of Heroes'
   organizationId: ts991122
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
