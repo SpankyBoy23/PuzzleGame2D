@@ -20,6 +20,7 @@ public class Orb : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Bot");
+        if (target == null) return;
         targetTransform = target.transform;
         animatorTarget = target.GetComponentInChildren<Animator>();
 

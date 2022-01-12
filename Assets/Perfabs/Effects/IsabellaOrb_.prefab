@@ -51,7 +51,7 @@ MonoBehaviour:
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
   hitRange: 6
-  speed: 6
+  speed: 3
   animatorTarget: {fileID: 0}
   damageDelay: 0
   mainScene: 1
@@ -68,12 +68,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  hitRange: 0
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
   mainScene: 0
   breakDis: 5.5
-  speed: 3
+  speed: 2
+  test: 0
 --- !u!114 &5154496649955678744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c71c45cf14c164f8f1831c86952af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 4
 --- !u!212 &8302041862810927569
 SpriteRenderer:
   m_ObjectHideFlags: 0

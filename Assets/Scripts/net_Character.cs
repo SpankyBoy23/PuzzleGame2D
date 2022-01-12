@@ -19,6 +19,9 @@ public class net_Character : NetworkBehaviour
     Vector3 initialPos;
 
     public GameObject currentCharacter;
+    public GameObject cachedOrb;
+
+    public bool first;
 
     public enum CharacterType 
     {
@@ -90,6 +93,7 @@ public class net_Character : NetworkBehaviour
     [ClientRpc]
     void RpcShowAnimation(AnimationType type) 
     {
+      
         if (type == AnimationType.Attack) 
         {
             animator.Play("Attack");
@@ -109,12 +113,23 @@ public class net_Character : NetworkBehaviour
         {
             target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
         }
-        else 
+        else
         {
+            if (cachedOrb != null) return;
+      
+
             WindPlayerAnimation wpa = currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
             GameObject a = Instantiate(wpa.prefab , wpa.spawnPos.position, Quaternion.identity);
+
+            if(first == false) 
+            {
+                a.GetComponent<SpriteRenderer>().flipX = true;
+              
+            }
+
             a.GetComponent<net_Orb>().target = target;
             a.GetComponent<net_Orb>().mainScene = true;
+            cachedOrb = a;
         }
     }
 

@@ -1378,122 +1378,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &416375270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 416375274}
-  - component: {fileID: 416375273}
-  - component: {fileID: 416375271}
-  - component: {fileID: 416375272}
-  m_Layer: 0
-  m_Name: NetworkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &416375271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416375270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
---- !u!114 &416375272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416375270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Port: 7777
-  NoDelay: 1
-  Interval: 10
-  FastResend: 2
-  CongestionWindow: 0
-  SendWindowSize: 4096
-  ReceiveWindowSize: 4096
-  debugLog: 0
-  statisticsGUI: 0
-  statisticsLog: 0
---- !u!114 &416375273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416375270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  PersistNetworkManagerToOfflineScene: 0
-  runInBackground: 1
-  autoStartServerBuild: 1
-  serverTickRate: 30
-  serverBatching: 1
-  serverBatchInterval: 0
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 416375272}
-  networkAddress: localhost
-  maxConnections: 100
-  disconnectInactiveConnections: 0
-  disconnectInactiveTimeout: 60
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 3339352762033180268, guid: 27322bb04b5230841a1a014736edf6ae,
-    type: 3}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 0
-  spawnPrefabs:
-  - {fileID: 4327843849220610932, guid: 8d8414faeb6754b4ca52256684befd62, type: 3}
-  - {fileID: 4327843849220610932, guid: 402f3bbe4a510334c9def36c564cc977, type: 3}
-  - {fileID: 4327843849220610932, guid: d2be1cd903c874649a128907c7eaaa4f, type: 3}
-  - {fileID: 4327843849220610932, guid: 6bc9f277c98d9024ba08cb3a26b57821, type: 3}
-  - {fileID: 4327843849220610932, guid: 6d1556794444c1e4abf91ea12c527842, type: 3}
-  - {fileID: 4327843849220610932, guid: 41cb8133ce06c934cae9800d7d93faa8, type: 3}
-  - {fileID: 4327843849220610932, guid: 47bf6a713c93f2148be9e5952fb6ad48, type: 3}
-  - {fileID: 4327843849220610932, guid: 9c2c29727cafab649b85e38ef0635c64, type: 3}
-  - {fileID: 4327843849220610932, guid: da6a7a4e52a5819429f3acf4c89f7c52, type: 3}
-  - {fileID: 4327843849220610932, guid: 0e23fab5091357c45870f36aa9cabd84, type: 3}
-  - {fileID: 4327843849220610932, guid: efd107aa50d37c5438fd7e9c7eb50c75, type: 3}
-  - {fileID: 4327843849220610932, guid: 665ad839b6179704590f1122323f56d3, type: 3}
-  - {fileID: 4327843849220610932, guid: d72d4db9e877ca84186d054d7474b5c6, type: 3}
-  - {fileID: 4327843849220610932, guid: 5c54fd3af48cc304cbd0a29748f63ccc, type: 3}
---- !u!4 &416375274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416375270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &424250940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2499,6 +2383,8 @@ MonoBehaviour:
   isWalking: 0
   resetDelay: 1
   currentCharacter: {fileID: 0}
+  cachedOrb: {fileID: 0}
+  first: 1
   type: 0
   chargeAttack: 0
 --- !u!114 &610018149
@@ -4632,6 +4518,8 @@ MonoBehaviour:
   isWalking: 0
   resetDelay: 1
   currentCharacter: {fileID: 0}
+  cachedOrb: {fileID: 0}
+  first: 0
   type: 0
   chargeAttack: 0
 --- !u!114 &1395682804
@@ -11327,7 +11215,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 2194451576592417073, guid: 98df7168a557e7e458034d0ebc3014b5,
+      objectReference: {fileID: 2194451576592417073, guid: 50045bd43d17220439852fba2fbc5b87,
         type: 3}
     - target: {fileID: 5547452845743302107, guid: bc991620032e8ee45bf0feaa7d13ac45,
         type: 3}
