@@ -72,7 +72,7 @@ MonoBehaviour:
     type: 3}
   mainScene: 0
   breakDis: 5.5
-  speed: 2
+  speed: 7
   test: 0
 --- !u!114 &5154496649955678744
 MonoBehaviour:
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2194451576592417073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91c71c45cf14c164f8f1831c86952af1, type: 3}
   m_Name: 

@@ -179,4 +179,8 @@ public class CharactersManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("CharacterUnlocked", 10);
     }
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

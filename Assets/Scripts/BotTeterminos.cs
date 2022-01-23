@@ -31,7 +31,7 @@ public class BotTeterminos : MonoBehaviour
     {
         
         botMoves = Random.Range(0, 5);
-        Debug.Log(hight);
+      //  Debug.Log(hight);
         for(int i = 0; i <= 5; i++)
         {
             

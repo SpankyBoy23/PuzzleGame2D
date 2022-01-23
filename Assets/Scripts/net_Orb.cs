@@ -28,7 +28,7 @@ public class net_Orb : MonoBehaviour
     {
         if (target == null)
         {
-            Destroy(gameObject);
+          //  Destroy(gameObject);
         }
         if (mainScene == false) return;
         Vector3 targetPos = target.transform.position;

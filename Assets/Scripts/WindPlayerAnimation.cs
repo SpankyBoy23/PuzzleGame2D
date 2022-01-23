@@ -15,8 +15,8 @@ public class WindPlayerAnimation : MonoBehaviour
 
     public void SpawnOrb()
     {
-        Debug.Log("Working");
+        
         GameObject a = Instantiate(prefab, spawnPos.position, Quaternion.identity);
-
+        Debug.Log("Working"+a.name);
     }
 }
