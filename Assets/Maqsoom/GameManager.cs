@@ -285,6 +285,7 @@ public class GameManager : NetworkBehaviour
             }
         };
 
+        if(PlayFabClientAPI.IsClientLoggedIn())
         PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
     }
 

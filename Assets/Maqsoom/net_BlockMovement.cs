@@ -222,6 +222,7 @@ public class net_BlockMovement : NetworkBehaviour
                 {
                     if (grid2[roundedX2, 11] != null)
                     {
+                        Debug.LogError("Losing Game");
                         GameManager.singleton.CmdLoseGame(NetworkClient.localPlayer.netId);
 
                         /*Debug.Log("You Lost!");
