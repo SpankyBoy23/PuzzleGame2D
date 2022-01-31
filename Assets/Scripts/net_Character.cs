@@ -124,7 +124,7 @@ public class net_Character : NetworkBehaviour
             if(first == false) 
             {
                 a.GetComponent<SpriteRenderer>().flipX = true;
-              
+                Debug.LogError("fliping");
             }
 
             a.GetComponent<net_Orb>().target = target;

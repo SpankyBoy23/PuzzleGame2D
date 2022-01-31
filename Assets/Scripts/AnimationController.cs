@@ -29,6 +29,7 @@ public class AnimationController : MonoBehaviour
           //  Debug.Log("Bot");
             // speed = speed;
         }
+        if(target != null)
         animatorTarget = target.GetComponentInChildren<Animator>();
     }
 

@@ -114,14 +114,7 @@ public class Player : NetworkBehaviour
     {
       
         if (GameManager.singleton.decide == true) return;
-        Debug.Log("Multiplayer BlockSpwan");
-        if (GameManager.singleton.firstPlayer == null)
-        {
-            Debug.Log("GameManager " + GameManager.singleton.firstPlayer);
-            Debug.Log(netId);
-        }
-        Debug.Log(NetworkIdentity.spawned[netId].GetComponent<Player>().netId);
-       
+
         if (GameManager.singleton.firstPlayer.netId == netId) 
         {
             if (net_BlockSpawner.blockSpawner.first == false) 
