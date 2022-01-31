@@ -94,7 +94,7 @@ public class BotTeterminos : MonoBehaviour
                     }
                 if (botMoves > 0)
                 {
-                    if(random)
+                 /*   if(random)
                     {
                         if (target.x > transform.position.x)
                         {
@@ -108,28 +108,40 @@ public class BotTeterminos : MonoBehaviour
                         }                     
                     }
 
-                    else
+                    else*/
                     {
-                        int a = Random.Range(1, 3);
-                        if (a == 1)
+                     /*   if(transform.position.x == hight.x)
                         {
-                            if(hight.x != transform.position.x-1)
+                            int a = Random.Range(1, 3);
+                            if (a == 1)
                             {
                                 MoveLeft();
                             }
-                            
-                            botMoves--;
-                        }
-                        else if (a == 2)
-                        {
-                            if (hight.x != transform.position.x + 1)
+                            else if (a == 2)
                             {
                                 MoveRight();
                             }
-                            botMoves--;
+                        }
+                        else*/
+                        {
+                            int a = Random.Range(1, 3);
+                            if (a == 1)
+                            {
+
+                                MoveLeft();
+                                botMoves--;
+                            }
+                            else if (a == 2)
+                            {
+
+                                MoveRight();
+                                botMoves--;
+                            }
+                            Debug.Log(transform.position.x == hight.x);
                         }
                     }
-
+                      
+                    
                    
                 }
                 previousTime = Time.time;
@@ -143,7 +155,7 @@ public class BotTeterminos : MonoBehaviour
             {
                 //   Debug.Log(Time.time + ">=" + nextUpdate);
                 // Change the next update (current second+1)
-                nextUpdate = Time.time + 0.1f;
+                nextUpdate = Time.time + 0.3f;
                 // Call your fonction
                 UpdateEverySecond();
             }
@@ -202,6 +214,7 @@ public class BotTeterminos : MonoBehaviour
         }
         void MoveLeft()
         {
+            if (transform.position.x - 1 != hight.x)
             transform.position += new Vector3(-1, 0, 0);
             if (!ValidMove())
             {
@@ -211,7 +224,7 @@ public class BotTeterminos : MonoBehaviour
         }
         void MoveRight()
         {
-
+            if (transform.position.x + 1 != hight.x)
             transform.position += new Vector3(1, 0, 0);
             if (!ValidMove())
             {

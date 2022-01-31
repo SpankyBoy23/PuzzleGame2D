@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DeathState { player,bot}
 public class AnimationController : MonoBehaviour
 {
     public static AnimationController intance;
+    public static DeathState state;
     public GameObject target;
     [SerializeField] Animator animatorTarget;
     public float damageDelay;
@@ -32,7 +34,23 @@ public class AnimationController : MonoBehaviour
 
     public void HitEnemy()
     {
-        if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
-        else animatorTarget.SetTrigger("Die");
+        if (LogicManager.intance.finalMove)
+        { 
+            if (state == DeathState.player && gameObject.tag == "Bot")
+            {
+          //  if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+                 animatorTarget.SetTrigger("Die");
+            }
+            else if (state == DeathState.bot && gameObject.tag == "Player")
+            {
+           // if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+                 animatorTarget.SetTrigger("Die");
+            }
+        }
+        else
+        {
+                animatorTarget.SetTrigger("Hit");
+        }
+
     }
 }

@@ -77,6 +77,7 @@ public class LogicManager : MonoBehaviour
     public void LastMovePlayer()
     {
         finalMove = true;
+        AnimationController.state = DeathState.player;
         if (runOnce)
         {  
                 if (botBehaviour.GetComponent<BotBehaviour>())
@@ -91,6 +92,7 @@ public class LogicManager : MonoBehaviour
     }  public void LastMoveBot()
     {
         finalMove = true;
+        AnimationController.state = DeathState.bot;
         if (runOnce)
         {
             if (playerBehviour.GetComponent<PlayerBehviour>())
