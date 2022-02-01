@@ -28,7 +28,8 @@ public class net_Character : NetworkBehaviour
         Alexander,
         Fassa,
         Xixi,
-        Mina
+        Mina,
+        Isabella
     }
 
     public CharacterType type;
@@ -116,20 +117,40 @@ public class net_Character : NetworkBehaviour
         else
         {
             if (cachedOrb != null) return;
-      
 
-            WindPlayerAnimation wpa = currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
-            GameObject a = Instantiate(wpa.prefab , wpa.spawnPos.position, Quaternion.identity);
-
-            if(first == false) 
+            if (this.type == CharacterType.Isabella)
             {
-                a.GetComponent<SpriteRenderer>().flipX = true;
-                Debug.LogError("fliping");
-            }
+                this.Wait(2f, () =>
+                {
+                    WindPlayerAnimation wpa = currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
+                    GameObject a = Instantiate(wpa.prefab, wpa.spawnPos.position, Quaternion.identity);
 
-            a.GetComponent<net_Orb>().target = target;
-            a.GetComponent<net_Orb>().mainScene = true;
-            cachedOrb = a;
+                    if (first == false)
+                    {
+                        a.GetComponent<SpriteRenderer>().flipX = true;
+                        Debug.LogError("fliping");
+                    }
+
+                    a.GetComponent<net_Orb>().target = target;
+                    a.GetComponent<net_Orb>().mainScene = true;
+                    cachedOrb = a;
+                });
+            }
+            else
+            {
+                WindPlayerAnimation wpa = currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
+                GameObject a = Instantiate(wpa.prefab, wpa.spawnPos.position, Quaternion.identity);
+
+                if (first == false)
+                {
+                    a.GetComponent<SpriteRenderer>().flipX = true;
+                    Debug.LogError("fliping");
+                }
+
+                a.GetComponent<net_Orb>().target = target;
+                a.GetComponent<net_Orb>().mainScene = true;
+                cachedOrb = a;
+            }
         }
     }
 

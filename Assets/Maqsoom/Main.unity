@@ -1551,7 +1551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &416375271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11901,7 +11901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 1792326439}
-  cType: 2
+  cType: 4
 --- !u!95 &1792326439 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5547452845743302107, guid: bc991620032e8ee45bf0feaa7d13ac45,
