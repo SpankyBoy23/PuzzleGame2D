@@ -56,7 +56,7 @@ public class Player : NetworkBehaviour
         }*/
 
         GameManager.singleton.firstPlayer = NetworkIdentity.spawned[netId].GetComponent<Player>();
-        Debug.Log("workingrpcsetup-1");
+     //   Debug.Log("workingrpcsetup-1");
         if (hasAuthority)
         {
             if (GameManager.singleton.firstPlayer.netId != this.netId)
@@ -64,7 +64,7 @@ public class Player : NetworkBehaviour
                 Camera localCam = GameObject.Find("Main Camera (1)").GetComponent<Camera>();
                 Camera nonLocalCam = GameObject.Find("Main Camera (2)").GetComponent<Camera>();
 
-                Debug.Log("workingrpcsetup");
+               // Debug.Log("workingrpcsetup");
 
                 Vector3 localCamPosition = localCam.transform.position;
 

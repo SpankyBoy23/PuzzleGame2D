@@ -151,6 +151,8 @@ public class GameManager : NetworkBehaviour
             this.Wait(1.5f, () => {  net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");   });
 
             net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
+
+            this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
         }
         else 
         {
@@ -165,6 +167,8 @@ public class GameManager : NetworkBehaviour
             this.Wait(1, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
 
             net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
+
+            this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
         }
         else
         {

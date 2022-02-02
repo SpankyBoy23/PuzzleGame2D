@@ -83,7 +83,7 @@ public class net_LogicManager : NetworkBehaviour
     [ClientRpc]
     void JustBroke(int data , bool first) 
     {
-        Debug.Log(data);
+      //  Debug.Log(data);
         if (first)
         {
             net_BlockSpawner.blockSpawner.blackBlock = data;

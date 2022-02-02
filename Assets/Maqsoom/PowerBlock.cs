@@ -94,7 +94,7 @@ public class PowerBlock : NetworkBehaviour
     {
         if (net_BlockMovement.grid2[roundedX + x, roundedY + y] != null)
         {
-            Debug.Log("working power");
+         //   Debug.Log("working power");
             if (net_BlockMovement.grid2[roundedX + x, roundedY + y].tag == this.tag)
             {
                 //  Debug.Log((TeterminosPlayer2.grid2[roundedX + x, roundedY + y].GetComponent<TeterminosPlayer2>().blockColor == tP.blockColor) +":" + tP.blockColor);

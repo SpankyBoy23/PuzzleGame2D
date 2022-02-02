@@ -35,7 +35,7 @@ public class net_Orb : MonoBehaviour
         targetPos.y = 7f;
         targetPos.z = 0;
         transform.position = Vector3.Lerp(transform.position,targetPos, speed * Time.deltaTime);
-        Debug.Log(Vector2.Distance(transform.position, target.position));
+    //    Debug.Log(Vector2.Distance(transform.position, target.position));
         if (Vector2.Distance(transform.position, target.position) <= breakDis)
         {
             if (!effect)

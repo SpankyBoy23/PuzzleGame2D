@@ -99,12 +99,23 @@ public class net_Character : NetworkBehaviour
         {
             animator.Play("Attack");
         }
-        else
+       
         if(type == AnimationType.Win)
         {
             animator.Play("Win");
+
+            Debug.LogError("Calling win");
+            if(currentCharacter.GetComponent<net_Character>().type == CharacterType.Isabella) 
+            {
+                this.Wait(0.1f, () =>
+                {
+                    Debug.Log("calling isebella");
+                    animator.SetBool("Win", false);
+                    animator.enabled = false;
+                });
+            }
         }
-        else
+    
         if (type == AnimationType.Lose)
         {
             animator.Play("Lose");
@@ -127,7 +138,9 @@ public class net_Character : NetworkBehaviour
 
                     if (first == false)
                     {
-                        a.GetComponent<SpriteRenderer>().flipX = true;
+                        if(a.GetComponent<SpriteRenderer>())
+                            a.GetComponent<SpriteRenderer>().flipX = true;
+                      
                         Debug.LogError("fliping");
                     }
 
@@ -143,7 +156,9 @@ public class net_Character : NetworkBehaviour
 
                 if (first == false)
                 {
-                    a.GetComponent<SpriteRenderer>().flipX = true;
+                    if (a.GetComponent<SpriteRenderer>())
+                        a.GetComponent<SpriteRenderer>().flipX = true;
+                 
                     Debug.LogError("fliping");
                 }
 
