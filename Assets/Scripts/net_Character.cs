@@ -140,8 +140,6 @@ public class net_Character : NetworkBehaviour
                     {
                         if(a.GetComponent<SpriteRenderer>())
                             a.GetComponent<SpriteRenderer>().flipX = true;
-                      
-                        Debug.LogError("fliping");
                     }
 
                     a.GetComponent<net_Orb>().target = target;
@@ -158,8 +156,6 @@ public class net_Character : NetworkBehaviour
                 {
                     if (a.GetComponent<SpriteRenderer>())
                         a.GetComponent<SpriteRenderer>().flipX = true;
-                 
-                    Debug.LogError("fliping");
                 }
 
                 a.GetComponent<net_Orb>().target = target;

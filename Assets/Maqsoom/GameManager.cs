@@ -146,33 +146,89 @@ public class GameManager : NetworkBehaviour
 
         if (net_CharacterManager.Singleton.first.playerId == winId)
         {
-            this.Wait(1, () => { net_CharacterManager.Singleton.first.chargeAttack = true; });
+            if (net_CharacterManager.Singleton.first.type != net_Character.CharacterType.Isabella)
+            {
+                this.Wait(1, () => { net_CharacterManager.Singleton.first.chargeAttack = true; });
 
-            this.Wait(1.5f, () => {  net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");   });
+                this.Wait(1.5f, () => { net_CharacterManager.Singleton.first.animator.Play("ChargeAttack"); });
 
-            net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
+                net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
 
-            this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
+                this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
+            }
+            else
+            {
+                net_CharacterManager.Singleton.first.animator.Play("ChargeAttack");
+
+                this.Wait(2f, () =>
+                {
+                    WindPlayerAnimation wpa = net_CharacterManager.Singleton.first.currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
+                    GameObject a = Instantiate(wpa.prefab, wpa.spawnPos.position, Quaternion.identity);
+                    Debug.LogError("flipingcc");
+                    if (net_CharacterManager.Singleton.first.first == false)
+                    {
+                        if (a.GetComponent<SpriteRenderer>())
+                            a.GetComponent<SpriteRenderer>().flipX = true;
+
+                       
+                    }
+
+                    a.GetComponent<net_Orb>().target = net_CharacterManager.Singleton.first.target;
+                    a.GetComponent<net_Orb>().mainScene = true;
+                });
+            }
         }
-        else 
+        else
         {
-            this.Wait(1.5f, () => { net_CharacterManager.Singleton.first.animator.SetBool("Lose", true); });
-            
+            net_CharacterManager.Singleton.first.animator.Play("Lose"); 
+            this.Wait(1, () =>
+            {
+                net_CharacterManager.Singleton.first.animator.enabled = false;
+            });
         }
 
         if (net_CharacterManager.Singleton.second.playerId == winId)
         {
-            net_CharacterManager.Singleton.second.chargeAttack = true;
+            if (net_CharacterManager.Singleton.second.type != net_Character.CharacterType.Isabella)
+            {
+                net_CharacterManager.Singleton.second.chargeAttack = true;
 
-            this.Wait(1, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
+                this.Wait(1, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
 
-            net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
+                net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
 
-            this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
+                this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
+            }
+            else 
+            {
+                net_CharacterManager.Singleton.second.animator.Play("ChargeAttack");
+
+                this.Wait(2f, () =>
+                {
+                    WindPlayerAnimation wpa = net_CharacterManager.Singleton.second.currentCharacter.GetComponentInChildren<WindPlayerAnimation>();
+                    GameObject a = Instantiate(wpa.prefab, wpa.spawnPos.position, Quaternion.identity);
+                    Debug.LogError("flipingcc");
+                    if (net_CharacterManager.Singleton.first.first == false)
+                    {
+                        if (a.GetComponent<SpriteRenderer>())
+                            a.GetComponent<SpriteRenderer>().flipX = true;
+
+
+                    }
+
+                    a.GetComponent<net_Orb>().target = net_CharacterManager.Singleton.second.target;
+                    a.GetComponent<net_Orb>().mainScene = true;
+                });
+            }
         }
         else
         {
-            net_CharacterManager.Singleton.second.animator.SetBool("Lose", true);
+            net_CharacterManager.Singleton.second.animator.Play("Lose");
+
+            this.Wait(1, () =>
+            {
+                net_CharacterManager.Singleton.second.animator.enabled = false;
+            });
         }
     }
 
