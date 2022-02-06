@@ -23,6 +23,13 @@ public class Orb : MonoBehaviour
         if (target == null) return;
         targetTransform = target.transform;
         animatorTarget = target.GetComponentInChildren<Animator>();
+        if(SceneManager.GetActiveScene().buildIndex > 2)
+        {
+            GetComponent<net_Orb>().enabled = false;
+        }else
+        {
+            GetComponent<net_Orb>().enabled = true;
+        }
 
     }
 

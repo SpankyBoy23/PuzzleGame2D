@@ -28726,12 +28726,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  hitRange: 0
   distoryEffect: {fileID: 7226629151775165732, guid: 777ef437f6c3fce429304ca943bd47a2,
     type: 3}
   mainScene: 0
   breakDis: 5
-  speed: 4
+  speed: 2.4
+  test: 0
 --- !u!114 &6716025705151624968
 MonoBehaviour:
   m_ObjectHideFlags: 0

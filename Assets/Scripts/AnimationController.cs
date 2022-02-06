@@ -35,17 +35,19 @@ public class AnimationController : MonoBehaviour
 
     public void HitEnemy()
     {
+        Debug.Log(state+" , "+transform.parent.tag);
         if (LogicManager.intance.finalMove)
         { 
-            if (state == DeathState.player && gameObject.tag == "Bot")
+            if (state == DeathState.player && transform.parent.tag == "Player")
             {
-          //  if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+                Debug.Log("ss");
                  animatorTarget.SetTrigger("Die");
             }
-            else if (state == DeathState.bot && gameObject.tag == "Player")
+            else if (state == DeathState.bot && transform.parent.tag == "Bot")
             {
-           // if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
-                 animatorTarget.SetTrigger("Die");
+                // if (!LogicManager.intance.finalMove) animatorTarget.SetTrigger("Hit");
+                Debug.Log("ss2");
+                animatorTarget.SetTrigger("Die");
             }
         }
         else

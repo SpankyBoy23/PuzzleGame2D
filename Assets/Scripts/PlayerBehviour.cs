@@ -23,7 +23,7 @@ public class PlayerBehviour : MonoBehaviour
     }
     public void Walk()
     {
-        Debug.Log("SS2343");
+        
 
         if (!LogicManager.intance.finalMove)
         {
