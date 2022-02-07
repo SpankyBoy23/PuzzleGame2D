@@ -28730,7 +28730,7 @@ MonoBehaviour:
     type: 3}
   mainScene: 0
   breakDis: 5
-  speed: 2.4
+  speed: 1.6
   test: 0
 --- !u!114 &6716025705151624968
 MonoBehaviour:

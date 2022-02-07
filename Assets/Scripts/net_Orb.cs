@@ -13,6 +13,8 @@ public class net_Orb : MonoBehaviour
     public float speed = 4;
     public bool test; //e
 
+    bool start = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +22,29 @@ public class net_Orb : MonoBehaviour
         {
             GetComponent<Orb>().enabled = false;
         }
+
+        StartCoroutine(Internal_Start());
       
+    }
+
+    IEnumerator Internal_Start() 
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        start = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (start == false) return;
+
         if (target == null)
         {
             Destroy(gameObject);
         }
         if (mainScene == false) return;
+
         Vector3 targetPos = target.transform.position;
         targetPos.y = 7f;
         targetPos.z = 0;

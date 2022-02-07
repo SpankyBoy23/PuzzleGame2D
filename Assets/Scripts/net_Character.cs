@@ -52,7 +52,7 @@ public class net_Character : NetworkBehaviour
         {
             float distance = Vector3.Distance(transform.position, target.position);
 
-            if (distance <= 5)
+            if (distance <= 1)
             { 
                 this.Wait(2, () => { transform.position = initialPos; chargeAttack = false; });
             }
@@ -94,10 +94,12 @@ public class net_Character : NetworkBehaviour
     [ClientRpc]
     void RpcShowAnimation(AnimationType type) 
     {
-      
-        if (type == AnimationType.Attack) 
+        if (GameManager.singleton.decide == true) return;
+        if (type == AnimationType.Attack)
         {
             animator.Play("Attack");
+         
+
         }
        
         if(type == AnimationType.Win)
@@ -121,9 +123,14 @@ public class net_Character : NetworkBehaviour
             animator.Play("Lose");
         }
 
-        if(this.type == CharacterType.Alexander) 
+        if(this.type == CharacterType.Alexander)
         {
-            target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
+            this.Wait(0.4f, () =>
+            {
+                Debug.LogError("hurt w8"); 
+                target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
+
+            });    
         }
         else
         {
@@ -185,6 +192,22 @@ public class net_Character : NetworkBehaviour
         GameObject go = Instantiate(chars[index], transform.position, transform.rotation);
         RuntimeCharacter rc = go.GetComponent<RuntimeCharacter>();
         rc.target = transform;
+
+        if(rc.cType == CharacterType.Fassa) 
+        {
+            Vector3 pos = transform.position;
+            
+            if(first == true) 
+            {
+                pos.x = -4f;
+            }
+            else 
+            {
+                pos.x = 10f;
+            }
+
+            transform.position = pos;
+        }
 
         currentCharacter = go;
 

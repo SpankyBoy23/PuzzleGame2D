@@ -149,10 +149,10 @@ public class GameManager : NetworkBehaviour
             if (net_CharacterManager.Singleton.first.type != net_Character.CharacterType.Isabella)
             {
                 this.Wait(1, () => { net_CharacterManager.Singleton.first.chargeAttack = true; });
+             
+                this.Wait(0.5f, () => { net_CharacterManager.Singleton.first.animator.Play("ChargeAttack"); });
 
-                this.Wait(1.5f, () => { net_CharacterManager.Singleton.first.animator.Play("ChargeAttack"); });
-
-                net_CharacterManager.Singleton.first.animator.SetBool("Win", true);
+                this.Wait(1, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", true); });
 
                 this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
             }
@@ -180,10 +180,10 @@ public class GameManager : NetworkBehaviour
         }
         else
         {
-            net_CharacterManager.Singleton.first.animator.Play("Lose"); 
-            this.Wait(1, () =>
+
+            this.Wait(1.5f, () =>
             {
-                net_CharacterManager.Singleton.first.animator.enabled = false;
+                net_CharacterManager.Singleton.first.animator.Play("Lose");
             });
         }
 
@@ -191,11 +191,13 @@ public class GameManager : NetworkBehaviour
         {
             if (net_CharacterManager.Singleton.second.type != net_Character.CharacterType.Isabella)
             {
-                net_CharacterManager.Singleton.second.chargeAttack = true;
 
-                this.Wait(1, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
 
-                net_CharacterManager.Singleton.second.animator.SetBool("Win", true);
+                this.Wait(1, () => { net_CharacterManager.Singleton.second.chargeAttack = true; });
+
+                this.Wait(0.5f, () => { net_CharacterManager.Singleton.second.animator.Play("ChargeAttack"); });
+             
+                this.Wait(1, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", true); });
 
                 this.Wait(2, () => { net_CharacterManager.Singleton.first.animator.SetBool("Win", false); });
             }
@@ -223,11 +225,10 @@ public class GameManager : NetworkBehaviour
         }
         else
         {
-            net_CharacterManager.Singleton.second.animator.Play("Lose");
-
-            this.Wait(1, () =>
+           
+            this.Wait(1.5f, () =>
             {
-                net_CharacterManager.Singleton.second.animator.enabled = false;
+                net_CharacterManager.Singleton.second.animator.Play("Lose");
             });
         }
     }
