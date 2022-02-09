@@ -25,10 +25,10 @@ public class Orb : MonoBehaviour
         animatorTarget = target.GetComponentInChildren<Animator>();
         if(SceneManager.GetActiveScene().buildIndex > 2)
         {
-            GetComponent<net_Orb>().enabled = false;
+            GetComponent<net_Orb>().enabled = true;
         }else
         {
-            GetComponent<net_Orb>().enabled = true;
+            GetComponent<net_Orb>().enabled = false;
         }
 
     }

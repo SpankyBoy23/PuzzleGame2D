@@ -17811,7 +17811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3297614795778383302}
-  attackRange: -2
+  attackRange: 3
   isLucas: 0
 --- !u!1 &3297614795665242022
 GameObject:

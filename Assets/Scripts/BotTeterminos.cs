@@ -41,16 +41,11 @@ public class BotTeterminos : MonoBehaviour
                 if (grid[i,j] != null)
                 {
                     
-                 //   print(j);
-                    if (grid[i,j].tag == this.gameObject.tag)
+                    if (grid[i,j].tag == this.gameObject.tag && gameObject.tag != "Black")
                     {
                         target = new Vector2(i, j);
-                        random = true;
-
-                        //  Debug.Log("Position Equal To:" + target);
-                        
-                    }
-                    
+                        random = true; 
+                    }    
                     break;
                 }
             }      
@@ -94,7 +89,7 @@ public class BotTeterminos : MonoBehaviour
                     }
                 if (botMoves > 0)
                 {
-                 /*   if(random)
+                    if(random)
                     {
                         if (target.x > transform.position.x)
                         {
@@ -108,7 +103,7 @@ public class BotTeterminos : MonoBehaviour
                         }                     
                     }
 
-                    else*/
+                    else
                     {
                      /*   if(transform.position.x == hight.x)
                         {
@@ -137,7 +132,7 @@ public class BotTeterminos : MonoBehaviour
                                 MoveRight();
                                 botMoves--;
                             }
-                            Debug.Log(transform.position.x == hight.x);
+                            //Debug.Log(transform.position.x == hight.x);
                         }
                     }
                       
