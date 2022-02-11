@@ -29,7 +29,9 @@ public class net_Character : NetworkBehaviour
         Fassa,
         Xixi,
         Mina,
-        Isabella
+        Isabella,
+        Kyle,
+        Nicholas
     }
 
     public CharacterType type;
@@ -133,6 +135,26 @@ public class net_Character : NetworkBehaviour
             });    
         }
         else
+        if (this.type == CharacterType.Kyle)
+        {
+            this.Wait(0.6f, () =>
+            {
+                Debug.LogError("hurt w8");
+                target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
+
+            });
+        }
+        else
+        if (this.type == CharacterType.Nicholas)
+        {
+            this.Wait(0.7f, () =>
+            {
+                Debug.LogError("hurt w8");
+                target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
+
+            });
+        }
+        else
         {
             if (cachedOrb != null) return;
 
@@ -175,7 +197,7 @@ public class net_Character : NetworkBehaviour
     public void Walk() 
     {
         Debug.Log("calling");
-        if (type == CharacterType.Alexander)
+        if (type == CharacterType.Alexander || type == CharacterType.Kyle || type == CharacterType.Nicholas)
         {
             isWalking = true;
             animator.SetBool("Walk", true);

@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 5547452846926916247, guid: c661c3f7152983e49be02f6c089450bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.99
+      value: -38.26
       objectReference: {fileID: 0}
     - target: {fileID: 5547452846926916247, guid: c661c3f7152983e49be02f6c089450bf,
         type: 3}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 473745944}
-  cType: 0
+  cType: 5
 --- !u!95 &473745944 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7670024526476567617, guid: 868b12cdd9e77064fbbf7d6692473d09,
@@ -2964,7 +2964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 740436931}
-  cType: 0
+  cType: 6
 --- !u!95 &740436931 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5524922703540728610, guid: 90430cef95fc9604a8c16d2232535f31,
