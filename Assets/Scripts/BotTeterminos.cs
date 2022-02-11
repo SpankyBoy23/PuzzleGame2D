@@ -41,7 +41,7 @@ public class BotTeterminos : MonoBehaviour
                 if (grid[i,j] != null)
                 {
                     
-                    if (grid[i,j].tag == this.gameObject.tag && gameObject.tag != "Black")
+                    if (grid[i,j].tag == this.gameObject.tag && gameObject.tag != "Block")
                     {
                         target = new Vector2(i, j);
                         random = true; 
