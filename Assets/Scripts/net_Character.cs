@@ -215,7 +215,7 @@ public class net_Character : NetworkBehaviour
         RuntimeCharacter rc = go.GetComponent<RuntimeCharacter>();
         rc.target = transform;
 
-        if(rc.cType == CharacterType.Fassa) 
+   /*     if(rc.cType == CharacterType.Fassa) 
         {
             Vector3 pos = transform.position;
             
@@ -229,7 +229,7 @@ public class net_Character : NetworkBehaviour
             }
 
             transform.position = pos;
-        }
+        }*/
 
         currentCharacter = go;
 
