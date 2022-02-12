@@ -21,7 +21,10 @@ public class net_Orb : MonoBehaviour
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Main")
         {
             GetComponent<Orb>().enabled = false;
+
         }
+
+
 
         StartCoroutine(Internal_Start());
       
@@ -45,19 +48,23 @@ public class net_Orb : MonoBehaviour
         }
         if (mainScene == false) return;
 
-        Vector3 targetPos = target.transform.position;
+        Vector2 targetPos = target.transform.position;
+
         targetPos.y = 7f;
-        targetPos.z = 0;
-        transform.position = Vector3.Lerp(transform.position,targetPos, speed * Time.deltaTime);
-    //    Debug.Log(Vector2.Distance(transform.position, target.position));
-        if (Vector2.Distance(transform.position, target.position) <= breakDis)
+        transform.position = Vector2.Lerp(transform.position,targetPos, speed * Time.deltaTime);
+
+        //    Debug.Log(Vector2.Distance(transform.position, target.position));
+        if (Vector2.Distance(transform.position, targetPos) <= breakDis)
         {
             if (!effect)
             {
+
                 var a = Instantiate(distoryEffect, transform.position, Quaternion.Inverse(transform.rotation));
 
                 effect = true;
             }
+
+            this.GetComponent<Destroy>().effectDone = true;
             target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
             //Destroy(a, 1f);
             Destroy(gameObject);

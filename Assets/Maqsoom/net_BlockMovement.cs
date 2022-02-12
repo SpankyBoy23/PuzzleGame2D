@@ -217,8 +217,8 @@ public class net_BlockMovement : NetworkBehaviour
 
             //if (Time.time - previousTime > (drag ? fallTime / 10 : fallTime))
             // if (Time.time - previousTime > (Input.GetKey(KeyCode.DownArrow) ? fallTime / 10 : fallTime))
-               if (Time.time - previousTime > (Input.GetKey(KeyCode.DownArrow) ? fallTime / 10 : fallTime))
-                {
+            if (Time.time - previousTime > (drag ? fallTime / 10 : fallTime))
+            {
                 transform.position += new Vector3(0, -1, 0);
                 if (!ValidMove())
                 {

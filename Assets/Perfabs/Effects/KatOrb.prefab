@@ -14263,11 +14263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  hitRange: 0
   distoryEffect: {fileID: 131632, guid: c1ed798bfb0514c4185b9ea81a814309, type: 3}
   mainScene: 0
-  breakDis: 5
-  speed: 2.5
+  breakDis: 1
+  speed: 3.5
+  test: 0
 --- !u!114 &-6158099341518189537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14281,6 +14281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 5
+  distoryEffect: {fileID: 0}
+  effectDone: 0
+  target: {fileID: 0}
 --- !u!1 &2409543528841018486
 GameObject:
   m_ObjectHideFlags: 0
