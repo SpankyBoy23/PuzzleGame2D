@@ -239,7 +239,7 @@ public class GameManager : NetworkBehaviour
         if(mapId == -1) 
         {
             mapId = Random.Range(0, FindObjectOfType<EnvironmentManager>().environments.Length);
-            Debug.LogError(mapId);
+        //    Debug.LogError(mapId);
         }
 
         if(currentGameState == GameState.Waiting) 

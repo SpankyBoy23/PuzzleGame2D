@@ -64,7 +64,7 @@ public class net_Orb : MonoBehaviour
                 effect = true;
             }
 
-            this.GetComponent<Destroy>().effectDone = true;
+       //     this.GetComponent<Destroy>().effectDone = true;
             target.GetComponent<net_Character>().currentCharacter.GetComponent<RuntimeCharacter>().animator.Play("Hurt");
             //Destroy(a, 1f);
             Destroy(gameObject);
