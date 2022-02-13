@@ -12317,7 +12317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   animator: {fileID: 1913149553}
-  cType: 0
+  cType: 6
 --- !u!95 &1913149553 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8793284367005021824, guid: 62a0774c365b84f4796e3ab071a94d18,
