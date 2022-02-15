@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb6e65aca1d12c42bd8293ed23cc416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallTime: 0.2
+  fallTime: 0.6
   botMoves: 0
   target: {x: 3, y: 0}
   random: 0

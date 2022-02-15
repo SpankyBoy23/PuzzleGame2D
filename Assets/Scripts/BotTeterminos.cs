@@ -40,7 +40,6 @@ public class BotTeterminos : MonoBehaviour
               //  print("J:" + j);
                 if (grid[i,j] != null)
                 {
-                    
                     if (grid[i,j].tag == this.gameObject.tag && gameObject.tag != "Block")
                     {
                         target = new Vector2(i, j);
@@ -89,6 +88,7 @@ public class BotTeterminos : MonoBehaviour
                     }
                 if (botMoves > 0)
                 {
+                    Debug.Log("Target Position " + target.x);
                     if(random)
                     {
                         if (target.x > transform.position.x)
@@ -100,7 +100,11 @@ public class BotTeterminos : MonoBehaviour
                         {
                             botMoves--;
                             MoveLeft();
-                        }                     
+                        }    
+                        else if(target.x == transform.position.x)
+                        {
+                            botMoves = 0;
+                        }
                     }
 
                     else
@@ -134,10 +138,15 @@ public class BotTeterminos : MonoBehaviour
                             }
                             //Debug.Log(transform.position.x == hight.x);
                         }
+
                     }
                       
                     
                    
+                }
+                else
+                {
+                    fallTime = 0.08f;
                 }
                 previousTime = Time.time;
                    
