@@ -21,7 +21,7 @@ public class BlockSpawnerForBot : MonoBehaviour
         {
             if (blackBlock <= 0)
             {
-                var a = Instantiate(Blocks[Random.Range(0, Blocks.Length - 2)], transform.position, Quaternion.identity);
+                var a = Instantiate(Blocks[Random.Range(1, Blocks.Length - 1)], transform.position, Quaternion.identity);
                 a.transform.parent = null;
             }
             else

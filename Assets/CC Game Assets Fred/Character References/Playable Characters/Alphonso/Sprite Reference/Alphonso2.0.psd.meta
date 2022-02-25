@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 1b6b1e9fcc78ead418d659de9e2902fe
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4868821778084740087
+    second: Alphonso2.0_0
+  - first:
+      213: 1332878110422132453
+    second: Alphonso2.0_1
+  - first:
+      213: -8869128930808489460
+    second: Alphonso2.0_2
+  - first:
+      213: -658698248693668638
+    second: Alphonso2.0_3
+  - first:
+      213: -8494136662830674127
+    second: Alphonso2.0_4
+  - first:
+      213: 3042446684318926160
+    second: Alphonso2.0_5
+  - first:
+      213: -5353649035915485664
+    second: Alphonso2.0_6
+  - first:
+      213: 3353672111947373577
+    second: Alphonso2.0_7
+  - first:
+      213: 7785355263184470104
+    second: Alphonso2.0_8
+  - first:
+      213: 4141336796434426832
+    second: Alphonso2.0_9
+  - first:
+      213: 729231590224956067
+    second: Alphonso2.0_10
+  - first:
+      213: 765256494337537993
+    second: Alphonso2.0_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +77,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +111,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Alphonso2.0_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 735
+        width: 268
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904c29293687e6cb0800000000000000
+      internalID: -4868821778084740087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_1
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 875
+        width: 113
+        height: 104
+      alignment: 9
+      pivot: {x: 0.83284956, y: 0.79276687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6ea9c54955f7210800000000000000
+      internalID: 1332878110422132453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_2
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 880
+        width: 106
+        height: 112
+      alignment: 9
+      pivot: {x: 0.28034368, y: 0.7878467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a15046a368ae480800000000000000
+      internalID: -8869128930808489460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 588
+        width: 109
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e42178ce65dbd6f0800000000000000
+      internalID: -658698248693668638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_4
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 520
+        width: 127
+        height: 120
+      alignment: 9
+      pivot: {x: 0.16153459, y: 0.7388061}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f0b5285b3ce1a80800000000000000
+      internalID: -8494136662830674127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 335
+        width: 216
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05505eac321f83a20800000000000000
+      internalID: 3042446684318926160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_6
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 321
+        width: 87
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e1522119404b5b0800000000000000
+      internalID: -5353649035915485664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_7
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 280
+        width: 109
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cd1cd6403aa8e20800000000000000
+      internalID: 3353672111947373577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_8
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 85
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85004500d532b0c60800000000000000
+      internalID: 7785355263184470104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 16
+        width: 99
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db6ab6efdbf87930800000000000000
+      internalID: 4141336796434426832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_10
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 75
+        width: 91
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa0a568440ce1a00800000000000000
+      internalID: 729231590224956067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alphonso2.0_11
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 20
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7bc032abcbe9a00800000000000000
+      internalID: 765256494337537993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -90,7 +402,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

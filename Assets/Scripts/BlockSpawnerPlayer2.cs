@@ -13,15 +13,16 @@ public class BlockSpawnerPlayer2 : MonoBehaviour
     private void Start()
     {
         blockSpawner = this;
-        currentBlock = Random.Range(0, Blocks.Length);
+        currentBlock = Random.Range(1, Blocks.Length);
         secondComingBlock = Random.Range(0, Blocks.Length-2);
         NewBlock();
     }
+  
     public void NewBlock()
     {
         currentBlock = secondComingBlock;
         secondComingBlock = thirdComingBlock;
-        thirdComingBlock = Random.Range(0, Blocks.Length-2);
+        thirdComingBlock = Random.Range(0, Blocks.Length-1);
         // Debug.Log("Spawning");
         if (LogicManager.intance.canSpawn)
         {

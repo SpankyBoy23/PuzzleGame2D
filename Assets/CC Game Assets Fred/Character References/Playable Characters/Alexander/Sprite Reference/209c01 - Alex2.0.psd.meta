@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 61ac64d9807783743b6812b47698600b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1106624970705161377
+    second: 209c01 - Alex2.0_0
+  - first:
+      213: -2859879725272624000
+    second: 209c01 - Alex2.0_1
+  - first:
+      213: -1461312820974433847
+    second: 209c01 - Alex2.0_2
+  - first:
+      213: 4316175734862229904
+    second: 209c01 - Alex2.0_3
+  - first:
+      213: 4869789727225133566
+    second: 209c01 - Alex2.0_4
+  - first:
+      213: 4012631492505332794
+    second: 209c01 - Alex2.0_5
+  - first:
+      213: -7156035443193014823
+    second: 209c01 - Alex2.0_6
+  - first:
+      213: -8934491198249646138
+    second: 209c01 - Alex2.0_7
+  - first:
+      213: 6448405828202858984
+    second: 209c01 - Alex2.0_8
+  - first:
+      213: 3683130083318163182
+    second: 209c01 - Alex2.0_9
+  - first:
+      213: -6227082371200876112
+    second: 209c01 - Alex2.0_10
+  - first:
+      213: 4077999504542598149
+    second: 209c01 - Alex2.0_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +77,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +111,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_0
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4580
+        width: 1329
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac45763c858b5f00800000000000000
+      internalID: 1106624970705161377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_1
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 4739
+        width: 660
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08498caca8aaf48d0800000000000000
+      internalID: -2859879725272624000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_2
+      rect:
+        serializedVersion: 2
+        x: 4961
+        y: 4774
+        width: 563
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c948105bbf58bbe0800000000000000
+      internalID: -1461312820974433847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3159
+        width: 1191
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091bf9876f226eb30800000000000000
+      internalID: 4316175734862229904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_4
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 3124
+        width: 539
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9b916a4f7f49340800000000000000
+      internalID: 4869789727225133566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_5
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 2821
+        width: 696
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c6355251bbfa730800000000000000
+      internalID: 4012631492505332794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 2023
+        width: 309
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d51060cda7a0bc90800000000000000
+      internalID: -7156035443193014823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_7
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1904
+        width: 338
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7c977979f420480800000000000000
+      internalID: -8934491198249646138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_8
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 529
+        width: 1619
+        height: 1851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e907958fe65d7950800000000000000
+      internalID: 6448405828202858984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_9
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 316
+        width: 524
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6ebb5fb4b1d1330800000000000000
+      internalID: 3683130083318163182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_10
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 316
+        width: 532
+        height: 821
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1897d6395f499a0800000000000000
+      internalID: -6227082371200876112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 209c01 - Alex2.0_11
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 715
+        width: 1050
+        height: 756
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5040b7671f6f79830800000000000000
+      internalID: 4077999504542598149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -90,7 +402,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

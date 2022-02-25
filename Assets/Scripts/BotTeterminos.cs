@@ -22,7 +22,7 @@ public class BotTeterminos : MonoBehaviour
     [Space]
     [Header("Effects")]
     public GameObject DestoryEffect;
-    public static Vector2 hight;
+    public static Vector2 h_Hight,l_Height;
     private void Awake()
     {
         random = false;
@@ -30,25 +30,93 @@ public class BotTeterminos : MonoBehaviour
     private void Start()
     {
         
-        botMoves = Random.Range(0, 5);
-      //  Debug.Log(hight);
-        for(int i = 0; i <= 5; i++)
+        botMoves = Random.Range(1, 5);
+        //  Debug.Log(hight);
+        if (this.gameObject.tag == "Block")
         {
-            
-            for (int j = 0;j <= 11; j++)
+            l_Height.y = 11;
+            random = false;
+            for (int i = 0; i <= 5; i++)
             {
-              //  print("J:" + j);
-                if (grid[i,j] != null)
+
+                for (int j = 11; j >= 0; j--)
                 {
-                    if (grid[i,j].tag == this.gameObject.tag && gameObject.tag != "Block")
+                    if (grid[i, j] == null)
                     {
-                        target = new Vector2(i, j);
-                        random = true; 
-                    }    
-                    break;
+                        if(j < l_Height.y)
+                        {
+                            l_Height = new Vector2(i, j);
+                        }
+
+                    }
                 }
-            }      
-        }   
+            }
+        }
+        else
+        {
+            for (int i = 0; i <= 5; i++)
+            {
+
+                for (int j = 11; j >= 0; j--)
+                {
+                    //  print("J:" + j);
+                    if (grid[i, j] != null)
+                    {
+
+                        if (grid[i, j].tag == this.gameObject.tag)
+                        {
+                            target = new Vector2(i, j);
+                            random = true;
+                            botMoves = 10;
+                            Debug.Log(gameObject.tag+": "+target+" , Moves "+botMoves);
+                            //  grid[Mathf.RoundToInt(target.x), Mathf.RoundToInt(target.y)].GetComponent<SpriteRenderer>().color = Color.black;
+                        }
+
+                        break;
+                    }
+
+                }
+            }
+            if(random == false)
+            {
+                for (int i = 0; i <= 5; i++)
+                {
+
+                    for (int j = 0; j < 11; j++)
+                    {
+                        //  print("J:" + j);
+                        if (grid[i, j] != null)
+                        {
+
+                            if (grid[i, j].tag == this.gameObject.tag)
+                            {
+                                if(grid[i+1,j] == null)
+                                {
+                                    target = new Vector2(i, j);
+                                    random = true;
+                                    botMoves = 10; Debug.Log(gameObject.tag + ": " + target + " , Moves " + botMoves);
+                                }
+                                else if (grid[i-1, j] == null)
+                                {
+                                    target = new Vector2(i, j);
+                                    random = true;
+                                    botMoves = 10; Debug.Log(gameObject.tag + ": " + target + " , Moves " + botMoves);
+                                }
+
+
+                               
+                                //  grid[Mathf.RoundToInt(target.x), Mathf.RoundToInt(target.y)].GetComponent<SpriteRenderer>().color = Color.black;
+                            }
+
+                            
+                        }
+
+                    }
+                }
+            }
+
+        }
+        
     }
     void Update()
     {
@@ -88,8 +156,8 @@ public class BotTeterminos : MonoBehaviour
                     }
                 if (botMoves > 0)
                 {
-                    Debug.Log("Target Position " + target.x);
-                    if(random)
+                   
+                    if(random && gameObject.tag != "Block")
                     {
                         if (target.x > transform.position.x)
                         {
@@ -105,23 +173,38 @@ public class BotTeterminos : MonoBehaviour
                         {
                             botMoves = 0;
                         }
+ 
                     }
-
-                    else
+                    if(!random && gameObject.tag == "Block")
                     {
-                     /*   if(transform.position.x == hight.x)
+                        Debug.Log(l_Height);
+                        if(botMoves > 0)
                         {
-                            int a = Random.Range(1, 3);
-                            if (a == 1)
-                            {
+                            if (l_Height.x < transform.position.x)
                                 MoveLeft();
-                            }
-                            else if (a == 2)
-                            {
+                            else if (l_Height.x > transform.position.x)
                                 MoveRight();
-                            }
+                            else
+                                botMoves = 0;
+                            botMoves--;
                         }
-                        else*/
+                    }
+                    else if(!random && gameObject.tag != "Block")
+                    {
+                        /*   if(transform.position.x == hight.x)
+                           {
+                               int a = Random.Range(1, 3);
+                               if (a == 1)
+                               {
+                                   MoveLeft();
+                               }
+                               else if (a == 2)
+                               {
+                                   MoveRight();
+                               }
+                           }
+                           else*/
+                        
                         {
                             int a = Random.Range(1, 3);
                             if (a == 1)
@@ -211,14 +294,14 @@ public class BotTeterminos : MonoBehaviour
             int roundedY = Mathf.RoundToInt(transform.position.y);
 
             grid[roundedX, roundedY] = transform;
-            if(hight.y < roundedY)
+            if(h_Hight.y < roundedY)
             {
-                hight = new Vector2(roundedX, roundedY);
+                h_Hight = new Vector2(roundedX, roundedY);
             }
         }
         void MoveLeft()
         {
-            if (transform.position.x - 1 != hight.x)
+            if (transform.position.x - 1 != h_Hight.x)
             transform.position += new Vector3(-1, 0, 0);
             if (!ValidMove())
             {
@@ -228,7 +311,7 @@ public class BotTeterminos : MonoBehaviour
         }
         void MoveRight()
         {
-            if (transform.position.x + 1 != hight.x)
+            if (transform.position.x + 1 != h_Hight.x)
             transform.position += new Vector3(1, 0, 0);
             if (!ValidMove())
             {

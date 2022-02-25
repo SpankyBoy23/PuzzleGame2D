@@ -8748,80 +8748,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1630948972
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083944, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083945, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_Name
-      value: Alphonso
-      objectReference: {fileID: 0}
-    - target: {fileID: 8667942284700083945, guid: aa95ff8a54a631042a29dfc2f4862e56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa95ff8a54a631042a29dfc2f4862e56, type: 3}
 --- !u!1 &1636915922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,8 +9977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4a8e622c176454dad0d8b33f383e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 613751060}
-  img: {fileID: 457920435}
 --- !u!4 &2034662648
 Transform:
   m_ObjectHideFlags: 0
@@ -20259,6 +20183,31 @@ PrefabInstance:
     - target: {fileID: 3043759821811290754, guid: 4054f20f290bd804fa0014561766ab25,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043759821811290755, guid: 4054f20f290bd804fa0014561766ab25,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3043759821811290764, guid: 4054f20f290bd804fa0014561766ab25,
