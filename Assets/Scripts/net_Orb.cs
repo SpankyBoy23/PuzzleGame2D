@@ -50,7 +50,7 @@ public class net_Orb : MonoBehaviour
 
         Vector2 targetPos = target.transform.position;
 
-        targetPos.y = 7f;
+        targetPos.y = 0f;
         transform.position = Vector2.Lerp(transform.position,targetPos, speed * Time.deltaTime);
 
         //    Debug.Log(Vector2.Distance(transform.position, target.position));
