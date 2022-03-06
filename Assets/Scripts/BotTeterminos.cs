@@ -90,17 +90,20 @@ public class BotTeterminos : MonoBehaviour
 
                             if (grid[i, j].tag == this.gameObject.tag)
                             {
-                                if(grid[i+1,j] == null)
+                                
+                                if(i < 5 && grid[i+1,j] == null)
                                 {
-                                    target = new Vector2(i, j);
+                                    if(j > 0 && grid[i + 1, j - 1] != null)
+                                    target = new Vector2(i+1, j);
                                     random = true;
-                                    botMoves = 10; Debug.Log(gameObject.tag + ": " + target + " , Moves " + botMoves);
+                                    botMoves = 10; Debug.Log("Side Move::"+gameObject.tag + ": " + target + " , Moves " + botMoves);
                                 }
-                                else if (grid[i-1, j] == null)
+                                else if (i > 1 && grid[i-1, j] == null)
                                 {
-                                    target = new Vector2(i, j);
+                                    if(j> 0&& grid[i - 1, j - 1] != null)
+                                    target = new Vector2(i-1, j);
                                     random = true;
-                                    botMoves = 10; Debug.Log(gameObject.tag + ": " + target + " , Moves " + botMoves);
+                                    botMoves = 10; Debug.Log("Side Move::" + gameObject.tag + ": " + target + " , Moves " + botMoves);
                                 }
 
 
@@ -159,13 +162,16 @@ public class BotTeterminos : MonoBehaviour
                    
                     if(random && gameObject.tag != "Block")
                     {
+                        Debug.Log("Color Working Working");
                         if (target.x > transform.position.x)
                         {
+                            Debug.Log("1");
                             botMoves--;
                             MoveRight();
                         }
                         else if (target.x < transform.position.x)
                         {
+                           
                             botMoves--;
                             MoveLeft();
                         }    
@@ -177,14 +183,14 @@ public class BotTeterminos : MonoBehaviour
                     }
                     if(!random && gameObject.tag == "Block")
                     {
-                        Debug.Log(l_Height);
+                        Debug.Log("Black Working");
                         if(botMoves > 0)
                         {
                             if (l_Height.x < transform.position.x)
                                 MoveLeft();
                             else if (l_Height.x > transform.position.x)
                                 MoveRight();
-                            else
+                            else if (l_Height.x == transform.position.x)
                                 botMoves = 0;
                             botMoves--;
                         }
@@ -209,14 +215,14 @@ public class BotTeterminos : MonoBehaviour
                             int a = Random.Range(1, 3);
                             if (a == 1)
                             {
-
-                                MoveLeft();
+                                if (transform.position.x - 1 != h_Hight.x)
+                                    MoveLeft();
                                 botMoves--;
                             }
                             else if (a == 2)
                             {
-
-                                MoveRight();
+                                if (transform.position.x + 1 != h_Hight.x)
+                                    MoveRight();
                                 botMoves--;
                             }
                             //Debug.Log(transform.position.x == hight.x);
@@ -301,7 +307,7 @@ public class BotTeterminos : MonoBehaviour
         }
         void MoveLeft()
         {
-            if (transform.position.x - 1 != h_Hight.x)
+            
             transform.position += new Vector3(-1, 0, 0);
             if (!ValidMove())
             {
@@ -311,7 +317,7 @@ public class BotTeterminos : MonoBehaviour
         }
         void MoveRight()
         {
-            if (transform.position.x + 1 != h_Hight.x)
+            
             transform.position += new Vector3(1, 0, 0);
             if (!ValidMove())
             {
