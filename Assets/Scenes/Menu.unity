@@ -5267,7 +5267,7 @@ MonoBehaviour:
   loadBalancerAddress: 127.0.0.1
   serverName: My awesome server!
   extraServerData: Map 1|PuzzleGame
-  maxServerPlayers: 10
+  maxServerPlayers: 2
   isPublicServer: 1
   serverListUpdated:
     m_PersistentCalls:
@@ -5298,7 +5298,7 @@ MonoBehaviour:
   onlineScene: Assets/Maqsoom/Main.unity
   transport: {fileID: 416375272}
   networkAddress: localhost
-  maxConnections: 100
+  maxConnections: 2
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
